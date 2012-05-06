@@ -1,12 +1,14 @@
 require 'film'
+require 'reviewer'
+require 'film_jsonifier'
 
 class FilmServer
-  def initialize reviewer, jsonifier
+  def initialize reviewer = Reviewer.new, jsonifier = FilmJsonifier.new
     @reviewer = reviewer
     @jsonifier = jsonifier
   end
   
-  def do_GET(request, response)
+  def handleGET(request, response)
     film_name = request.query['name']
     if film_name
       json = review film_name

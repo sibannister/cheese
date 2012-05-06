@@ -1,8 +1,11 @@
 require 'webrick'
+require 'film_server'
 
 class MyServlet < WEBrick::HTTPServlet::AbstractServlet
   def do_GET(request, response)
-    FilmServer.new.handleGET request response
+    FilmServer.new.handleGET request, response
+    response.status = 200
+    response.content_type = "text/plain"
   end 
 end
 
