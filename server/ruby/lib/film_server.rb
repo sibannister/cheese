@@ -12,7 +12,6 @@ class FilmServer
     film_name = request.query['name']
     if film_name
       json = review film_name
-      puts json
       response.body = json
     else
       response.body = nil
@@ -21,6 +20,6 @@ class FilmServer
 
   def review film_name
     rating = @reviewer.review film_name
-    @jsonifier.convert(Film.new film_name, rating)
+    rating == nil ? nil : @jsonifier.convert(Film.new film_name, rating)
   end
 end
