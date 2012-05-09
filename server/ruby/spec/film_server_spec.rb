@@ -5,16 +5,16 @@ require 'net/http'
 
 describe FilmServer do
   before :each do
-    @reviewer = Reviewer.new
-    @jsonifier = FilmJsonifier.new
+    @reviewer = stub
+    @jsonifier = stub
     @film_server = FilmServer.new(@reviewer, @jsonifier)
   end
 
   it 'should handle requests and responses' do
     @film_server.stub(:review, 'The Godfather') { '{some json}' }
     response = MockResponse.new
-    request = Object.new
-    request.stub(:query){ {'name' => 'The Godfather'} }
+    request = stub(:query => {'name' => 'The Godfather'} )
+    ##request.stub(:query){ {'name' => 'The Godfather'} }
 
     @film_server.handleGET request, response
     response.body.should eq "{some json}"
@@ -27,6 +27,7 @@ describe FilmServer do
   end
 
   it 'should return nil for unknown films' do
+    @reviewer.stub(:review, 'blah'){nil}
     @film_server.review('blah').should be_nil
   end
 end
