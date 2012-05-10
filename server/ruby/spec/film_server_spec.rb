@@ -1,34 +1,29 @@
 require 'film_server'
-require 'film_jsonifier'
-require 'reviewer'
+require 'film_repository'
 require 'net/http'
 
 describe FilmServer do
   before :each do
-    @reviewer = stub
-    @jsonifier = stub
-    @film_server = FilmServer.new(@reviewer, @jsonifier)
+    @repository = stub
+    @film_server = FilmServer.new(@repository)
+    @response = MockResponse.new
   end
 
-  it 'should handle requests and responses' do
-    @film_server.stub(:review, 'The Godfather') { '{some json}' }
-    response = MockResponse.new
-    request = stub(:query => {'name' => 'The Godfather'} )
-    ##request.stub(:query){ {'name' => 'The Godfather'} }
-
-    @film_server.handleGET request, response
-    response.body.should eq "{some json}"
-  end
-
-  it 'should package films in json objects' do
-    @reviewer.stub(:review, 'The Godfather'){2.3}
-    @jsonifier.stub(:convert){'{json string}'}
-    @film_server.review('The Godfather').should eq '{json string}'
+  it 'should return json for known films' do
+    @repository.stub(:review, 'The Godfather'){2.3}
+    handleGetRequest 'The Godfather'
+    @response.body.should eq Film.new('The Godfather', 2.3).to_json
   end
 
   it 'should return nil for unknown films' do
-    @reviewer.stub(:review, 'blah'){nil}
-    @film_server.review('blah').should be_nil
+    @repository.stub(:review, 'blah'){nil}
+    handleGetRequest 'blah'
+    @response.body.should be_nil
+  end
+
+  def handleGetRequest film_name
+    request = stub(:query => {'name' => film_name} )
+    @film_server.handleGET request, @response
   end
 end
 

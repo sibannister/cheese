@@ -5,4 +5,8 @@ class Film
     @name = name
     @rating = rating
   end
+
+  def to_json
+    '{"name" : "' + name + '", "rating" : ' + rating.to_s + '}'
+  end
 end

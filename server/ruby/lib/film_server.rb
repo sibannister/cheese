@@ -1,11 +1,9 @@
 require 'film'
-require 'reviewer'
-require 'film_jsonifier'
+require 'film_repository'
 
 class FilmServer
-  def initialize reviewer = Reviewer.new, jsonifier = FilmJsonifier.new
-    @reviewer = reviewer
-    @jsonifier = jsonifier
+  def initialize repository = FilmRepository.new
+    @repository = repository
   end
   
   def handleGET(request, response)
@@ -19,7 +17,7 @@ class FilmServer
   end 
 
   def review film_name
-    rating = @reviewer.review film_name
-    rating == nil ? nil : @jsonifier.convert(Film.new film_name, rating)
+    rating = @repository.review film_name
+    rating == nil ? nil : Film.new(film_name, rating).to_json
   end
 end
