@@ -1,0 +1,10 @@
+﻿<Window x:Class="ImdbClientApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Height="174">
+        <TextBlock Height="28" HorizontalAlignment="Left" Margin="17,14,0,132" Name="textBlock1" Text="Enter film title:" VerticalAlignment="Center" Width="82" />
+        <TextBox Height="26" HorizontalAlignment="Right" Margin="0,14,215,0" Name="filmTitleTxtBox" VerticalAlignment="Top" Width="168" />
+        <Button Content="Submit" Height="26" HorizontalAlignment="Left" Margin="308,12,0,0" Name="button1" VerticalAlignment="Top" Width="114" Click="button1_Click" />
+    </Grid>
+</Window>
