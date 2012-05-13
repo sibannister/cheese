@@ -17,7 +17,7 @@ class FilmServer
   end 
 
   def review film_name
-    rating = @repository.review film_name
-    rating == nil ? nil : Film.new(film_name, rating).to_json
+    film = @repository.find film_name
+    film == nil ? nil : film.to_json
   end
 end
