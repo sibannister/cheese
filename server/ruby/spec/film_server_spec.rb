@@ -9,6 +9,12 @@ describe FilmServer do
     @response = MockResponse.new
   end
 
+  it 'should ignore requests which do not start with the "/films" path' do
+    request = stub(:query => {'name' => 'The Godfather'}, :path => "/wibble" )
+    @film_server.handleGET request, @response
+    @response.body.should eq "Unexpected url.  Should be in the format [ip:port]/films?name=[title]"
+  end 
+
   it 'should return json for known films' do
     film = Film.new('The Godfather', 2.3)
     @repository.stub(:find, 'The Godfather'){ film }
@@ -28,7 +34,7 @@ describe FilmServer do
   end
   
   def handleGetRequest film_name
-    request = stub(:query => {'name' => film_name} )
+    request = stub(:query => {'name' => film_name}, :path => "/films" )
     @film_server.handleGET request, @response
   end
 end
