@@ -27,7 +27,13 @@ namespace ImdbClientApp
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(ImdbClientInterface.ImdbWebClient.GetFilmRating(filmTitleTxtBox.Text).ToString(CultureInfo.InvariantCulture));
+            string message = string.Format("Film title: {0} cannot be found", filmTitleTxtBox.Text);
+            double filmRating = ImdbClientInterface.ImdbWebClient.GetFilmRating(filmTitleTxtBox.Text);
+            if(!double.IsNaN(filmRating))
+            {
+                message = filmRating.ToString(CultureInfo.InvariantCulture);
+            }
+            MessageBox.Show(message);
         }
     }
 }
