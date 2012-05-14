@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -26,7 +27,7 @@ namespace ImdbClientApp
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(ImdbClientInterface.ImdbWebClient.GetFilmRating(filmTitleTxtBox.Text));
+            MessageBox.Show(ImdbClientInterface.ImdbWebClient.GetFilmRating(filmTitleTxtBox.Text).ToString(CultureInfo.InvariantCulture));
         }
     }
 }
