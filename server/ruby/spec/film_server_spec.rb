@@ -5,8 +5,18 @@ require 'net/http'
 describe FilmServer do
   before :each do
     @repository = stub
-    @film_server = FilmServer.new(@repository)
+    @tv = stub
+    @film_server = FilmServer.new(@repository, @tv)
     @response = MockResponse.new
+  end
+
+  it 'should return a list of films if no name parameter specified' do
+    request = stub(:query => {}, :path => "/films" )
+    film1 = Film.new('The Godfather', 2.3)
+    film2 = Film.new('Birdemic', 2.3)
+    @tv.stub(:get_films => [film1, film2])
+    @film_server.handleGET request, @response
+    @response.body.should eq '[' + film1.to_json + ', ' + film2.to_json + ']'
   end
 
   it 'should ignore requests which do not start with the "/films" path' do

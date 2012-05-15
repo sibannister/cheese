@@ -1,9 +1,11 @@
 require 'film'
 require 'film_repository'
+require 'television'
 
 class FilmServer
-  def initialize repository = FilmRepository.new
+  def initialize repository = FilmRepository.new, tv = Television.new
     @repository = repository
+    @tv = tv
   end
   
   def handleGET(request, response)
@@ -13,7 +15,8 @@ class FilmServer
       elsif request.query['name']
         review request.query['name']
       else
-        nil
+        films = @tv.get_films
+        '[' + films[0].to_json + ', ' + films[1].to_json + ']'
       end
   end 
 
