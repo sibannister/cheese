@@ -1,6 +1,7 @@
 class Television
   def get_films 
-    [{ "name" : "The Godfather", "rating" : 9.2 },
-     { "name" : "Birdemic", "rating" : 1.4 }]
+    film1 = Film.new('The Godfather', 2.3)
+    film2 = Film.new('Birdemic', 2.3)
+    [film1, film2]
   end
 end

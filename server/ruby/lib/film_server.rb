@@ -11,7 +11,7 @@ class FilmServer
   def handleGET(request, response)
     response.body = 
       if request.path != "/films"
-        "Unexpected url.  Should be in the format [ip:port]/films?name=[title]"
+        "Unexpected url.  Should be in the format [ip:port]/films"
       elsif request.query['name']
         review request.query['name']
       else
