@@ -22,7 +22,7 @@ describe FilmServer do
   it 'should ignore requests which do not start with the "/films" path' do
     request = stub(:query => {'name' => 'The Godfather'}, :path => "/wibble" )
     @film_server.handleGET request, @response
-    @response.body.should eq "Unexpected url.  Should be in the format [ip:port]/films?name=[title]"
+    @response.body.should eq "Unexpected url.  Should be in the format [ip:port]/films"
   end 
 
   it 'should return json for known films' do
@@ -36,11 +36,6 @@ describe FilmServer do
     @repository.stub(:find, 'blah'){nil}
     handleGetRequest 'blah'
     @response.body.should be_nil
-  end
-
-  it 'should integrate with the film repository' do
-    @film_server = FilmServer.new
-    handleGetRequest 'blah'
   end
   
   def handleGetRequest film_name
