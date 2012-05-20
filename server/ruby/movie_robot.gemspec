@@ -8,5 +8,6 @@ Gem::Specification.new do |s|
     s.email       = 'spencerkward@gmail.com'
     s.files       = Dir.glob("lib/**/**")
     s.homepage    = 'https://sites.google.com/site/winecheeseandgrapes/home'
+    s.add_runtime_dependency 'imdb'
 end
 
