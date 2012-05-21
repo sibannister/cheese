@@ -12,7 +12,7 @@ class Film
     @rating = rating
   end
 
-  def match_title candidate_title
+  def match_title? candidate_title
     candidate_title.upcase.start_with? @name.upcase
   end
 

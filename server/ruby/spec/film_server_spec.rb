@@ -2,6 +2,10 @@ require 'film_server'
 require 'film_repository'
 require 'net/http'
 
+class MockResponse
+  attr_accessor :body
+end
+
 describe FilmServer do
   let (:repository) { stub }
   let (:tv) { stub }
@@ -42,7 +46,3 @@ describe FilmServer do
   end
 end
 
-
-class MockResponse
-  attr_accessor :body
-end

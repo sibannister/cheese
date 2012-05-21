@@ -23,6 +23,6 @@ describe Film do
   end
 
   def match title, candidate_title
-    Film.new(title, 10).match_title candidate_title
+    Film.new(title, 10).match_title? candidate_title
   end
 end
