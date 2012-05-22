@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <AuthHeader xmlns="http://services.macrovision.com/v9/common/types">
+      <UserName>spencerward4eb3ss7uuq43s42uhvrj46mp</UserName>
+      <Password>eec71e29-2b15-4331-bfd4-1673e36dd6f4</Password>
+    </AuthHeader>
+  </soap:Header>
+  <soap:Body>
+    <GetLinearSchedule xmlns="http://services.macrovision.com/v9/listings">
+      <request>
+        <Locale>en-GB</Locale>
+        <ServiceId>891296</ServiceId>
+        <StartDate>2012-05-22T12:25:00Z</StartDate>
+        <Duration>240</Duration>
+        <SourceIds>
+          <SourceId>25409</SourceId>
+        </SourceIds>
+      </request>
+    </GetLinearSchedule>
+  </soap:Body>
+</soap:Envelope>

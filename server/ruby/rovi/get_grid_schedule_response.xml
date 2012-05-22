@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<soap:envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soap:body>
+  <getgridscheduleresponse xmlns="http://api.rovicorp.com/v9/listings">
+   <getgridscheduleresult locale="en-GB" serviceid="891296" name="South - Freeview" startdate="2012-05-22T09:57:21.4984541Z" duration="240">
+    <requestid xmlns="http://api.rovicorp.com/v9/common/types">
+     efdb32de-4d28-4ee4-8f11-1f3b4f6b1da8
+    </requestid>
+    <timestamp xmlns="http://api.rovicorp.com/v9/common/types">
+     2012-05-22T09:57:21.498Z
+    </timestamp>
+    <status xmlns="http://api.rovicorp.com/v9/common/types">
+     PNE
+    </status>
+    <errors xmlns="http://api.rovicorp.com/v9/common/types">
+     <endtimestamp xmlns="http://api.rovicorp.com/v9/common/types">
+      2012-05-22T09:57:21.498Z
+     </endtimestamp>
+     <build xmlns="http://api.rovicorp.com/v9/common/types">
+      CPS Phase v9 Build 9.9.3.1
+     </build>
+     <timezones>
+      <timezoneinfogrid startdatetime="2012-03-25T02:00:00Z" enddatetime="2012-10-28T01:00:00Z" offset="60">
+      </timezoneinfogrid>
+     </timezones>
+     <gridchannels>
+      <gridchannel serviceid="891296" sourceid="25409" order="150058" channel="15" callletters="FF4" displayname="FF4" sourcelongname="Film4" type="24-Hours" sourcetype="Broadcast" parentnetworkid="0" iconavailable="false" ischanneloverride="false" sourceattributes="0">
+       <channelschedules>
+        <sourceattributetypes>
+         <airings>
+          <gridairing programid="15144702" title="Closedown" airingtime="2012-05-22T02:05:00Z" duration="475" color="Color" airingtype="Unknown" cc="false" letterbox="false" stereo="false" hd="false" sap="false" tvrating="None" dolby="false" dss="false" hdlevel="HD Level Unknown" dvs="false" category="Other" subcategory="other" sports="false">
+          </gridairing>
+          <gridairing programid="56221" title="David and Bathsheba" airingtime="2012-05-22T10:00:00Z" duration="145" color="Color" airingtype="Unknown" cc="false" letterbox="false" stereo="false" hd="false" sap="false" tvrating="None" movierating="NR" dolby="false" dss="false" hdlevel="HD Level Unknown" dvs="false" category="Movie" subcategory="drama" sports="false">
+          </gridairing>
+          <gridairing programid="1225442" title="White Feather" airingtime="2012-05-22T12:25:00Z" duration="125" color="Color" airingtype="Unknown" cc="false" letterbox="false" stereo="false" hd="false" sap="false" tvrating="None" movierating="NR" dolby="false" dss="false" hdlevel="HD Level Unknown" dvs="false" category="Movie" subcategory="western" sports="false">
+          </gridairing>
+         </airings>
+         <channelimages>
+         </channelimages>
+        </sourceattributetypes>
+       </channelschedules>
+      </gridchannel>
+     </gridchannels>
+    </errors>
+   </getgridscheduleresult>
+  </getgridscheduleresponse>
+ </soap:body>
+</soap:envelope>
