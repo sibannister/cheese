@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://api.rovicorp.com/v9/common/types" xmlns:lis="http://api.rovicorp.com/v9/listings">
+    <soapenv:Header>
+        <typ:AuthHeader>
+            <typ:UserName>spencerward4eb3ss7uuq43s42uhvrj46mp</typ:UserName>
+            <typ:Password>eec71e29-2b15-4331-bfd4-1673e36dd6f4</typ:Password>
+        </typ:AuthHeader>
+    </soapenv:Header>
+    <soapenv:Body>
+        <lis:GetServices>
+            <lis:request>
+                <lis:Locale>en-GB</lis:Locale>
+                <lis:ServiceSearch>
+                    <lis:CountryCode>GB</lis:CountryCode>
+                </lis:ServiceSearch>            
+                <lis:StartDate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                <lis:Duration>263520</lis:Duration>
+            </lis:request>
+        </lis:GetServices>
+    </soapenv:Body>
+</soapenv:Envelope>
+

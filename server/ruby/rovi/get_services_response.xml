@@ -1,0 +1,2148 @@
+XmlPrettyPrint - Pretty print your XML files online
+an online tool from softlion's webtools collection
+
+Enter the URL of your XML/XHTML/... file, or copy/paste the XML text directly:
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soap:Body><GetServicesResponse xmlns="http://api.rovicorp.com/v9/listings"><GetServicesResult><RequestId xmlns="http://api.rovicorp.com/v9/common/types">69b77909-c878-4ae6-a051-c1c1287cd1c0</RequestId><TimeStamp xmlns="http://api.rovicorp.com/v9/common/types">2012-05-22T08:42:33.423Z</TimeStamp><Status xmlns="http://api.rovicorp.com/v9/common/types">PNE</Status><Errors xmlns="http://api.rovicorp.com/v9/common/types"/><EndTimestamp xmlns="http://api.rovicorp.com/v9/common/types">2012-05-22T08:42:33.469Z</EndTimestamp><Build xmlns="http://api.rovicorp.com/v9/common/types">CPS Phase v9 Build 9.9.3.1</Build><Services><Service ServiceClass="DBS"><ServiceId>891466</ServiceId><Name>BSkyB HD with NW. Eng/IoM Area Channels (British Standard)</Name><City>NW. Eng/IoM</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891464</ServiceId><Name>BSkyB HD with E. Yorks/Lincs Area Channels (British Standard)</Name><City>E. Yorks/Lincs</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891463</ServiceId><Name>BSkyB HD with Yorks/N. Mids Area Channels (British Standard)</Name><City>Yorks/N. Mids</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891461</ServiceId><Name>BSkyB HD with East Midlands Area Channels (British Standard)</Name><City>East Midlands</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891454</ServiceId><Name>BSkyB HD with Scotland (Central) Area Channels (British Standard)</Name><City>Scotland (Central)</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891453</ServiceId><Name>BSkyB HD with Northern Ireland Area Channels (British Standard)</Name><City>Northern Ireland</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891359</ServiceId><Name>West Midlands - Virgin Media</Name><City>West Midlands</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891341</ServiceId><Name>BSkyB SD with West Midlands Area Channels (British Standard)</Name><City>West Midlands</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891322</ServiceId><Name>Freesat with West Midlands Area Channels (British Standard)</Name><City>West Midlands</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891289</ServiceId><Name>West Midlands - Freeview</Name><City>West Midlands</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891460</ServiceId><Name>BSkyB HD with East of England Area Channels (British Standard)</Name><City>East of England</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891357</ServiceId><Name>East of England - Virgin Media</Name><City>East of England</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891301</ServiceId><Name>Freesat with London Area Channels (British Standard)</Name><City>London</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891296</ServiceId><Name>South - Freeview</Name><City>South</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891294</ServiceId><Name>NE. Eng/Tyne Tees - Freeview</Name><City>NE. Eng/Tyne Tees</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891293</ServiceId><Name>NW. Eng/loM - Freeview</Name><City>NW. Eng/loM</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891291</ServiceId><Name>E. Yorks/Lincs - Freeview</Name><City>E. Yorks/Lincs</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891290</ServiceId><Name>Yorks/N. Mids - Freeview</Name><City>Yorks/N. Mids</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891288</ServiceId><Name>East Midlands - Freeview</Name><City>East Midlands</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>892276</ServiceId><Name>Freesat with Scotland (North) Area Channels (British Standard)</Name><City>Scotland (North)</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>892275</ServiceId><Name>Scotland (North) - Freeview</Name><City>Scotland (North)</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>892154</ServiceId><Name>Astra 19.2 All Channels with United Kingdom Area Channels (British Standard)</Name><City>United Kingdom</City><Type>Satellite</Type><MSO>SES Astra</MSO><MSOID>305497</MSOID><SystemName>Astra 19.2 All Channels</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>892139</ServiceId><Name>Astra 19.2 FTA with United Kingdom Area Channels (British Standard)</Name><City>United Kingdom</City><Type>Satellite</Type><MSO>SES Astra</MSO><MSOID>305497</MSOID><SystemName>Astra 19.2 FTA</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891469</ServiceId><Name>BSkyB HD with South Area Channels (British Standard)</Name><City>South</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891467</ServiceId><Name>BSkyB HD with NE. Eng/Tyne Tees Area Channels (British Standard)</Name><City>NE. Eng/Tyne Tees</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891286</ServiceId><Name>Wales - Freeview</Name><City>Wales</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891468</ServiceId><Name>BSkyB HD with Border Area Channels (British Standard)</Name><City>Border</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891365</ServiceId><Name>Border - Virgin Media</Name><City>Border</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891347</ServiceId><Name>BSkyB SD with Border Area Channels (British Standard)</Name><City>Border</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891328</ServiceId><Name>Freesat with Border Area Channels (British Standard)</Name><City>Border</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891295</ServiceId><Name>Border - Freeview</Name><City>Border</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891452</ServiceId><Name>BSkyB HD with London Area Channels (British Standard)</Name><City>London</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891366</ServiceId><Name>South - Virgin Media</Name><City>South</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891364</ServiceId><Name>NE. Eng/Tyne Tees - Virgin Media</Name><City>NE. Eng/Tyne Tees</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891363</ServiceId><Name>NW. Eng/loM - Virgin Media</Name><City>NW. Eng/loM</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891361</ServiceId><Name>E. Yorks/Lincs - Virgin Media</Name><City>E. Yorks/Lincs</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891360</ServiceId><Name>Yorks/N. Mids - Virgin Media</Name><City>Yorks/N. Mids</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891330</ServiceId><Name>Freesat with Meridian Area Channels (British Standard)</Name><City>Meridian</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891297</ServiceId><Name>Meridian - Freeview</Name><City>Meridian</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891459</ServiceId><Name>BSkyB HD with Wales Area Channels (British Standard)</Name><City>Wales</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891356</ServiceId><Name>Wales - Virgin Media</Name><City>Wales</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891338</ServiceId><Name>BSkyB SD with Wales Area Channels (British Standard)</Name><City>Wales</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891309</ServiceId><Name>Freesat with Wales Area Channels (British Standard)</Name><City>Wales</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891370</ServiceId><Name>Channel Islands - Virgin Media</Name><City>Channel Islands</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891352</ServiceId><Name>BSkyB SD with Channel Islands Area Channels (British Standard)</Name><City>Channel Islands</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891334</ServiceId><Name>Freesat with Channel Islands Area Channels (British Standard)</Name><City>Channel Islands</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891300</ServiceId><Name>Channel Islands - Freeview</Name><City>Channel Islands</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891472</ServiceId><Name>BSkyB HD with South West Area Channels (British Standard)</Name><City>South West</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891369</ServiceId><Name>South West - Virgin Media</Name><City>South West</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891351</ServiceId><Name>BSkyB SD with South West Area Channels (British Standard)</Name><City>South West</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891333</ServiceId><Name>Freesat with South West Area Channels (British Standard)</Name><City>South West</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891299</ServiceId><Name>South West - Freeview</Name><City>South West</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891470</ServiceId><Name>BSkyB HD with Meridian Area Channels (British Standard)</Name><City>Meridian</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891367</ServiceId><Name>Meridian - Virgin Media</Name><City>Meridian</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891349</ServiceId><Name>BSkyB SD with Meridian Area Channels (British Standard)</Name><City>Meridian</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891327</ServiceId><Name>Freesat with NE. Eng/Tyne Tees Area Channels (British Standard)</Name><City>NE. Eng/Tyne Tees</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891326</ServiceId><Name>Freesat with NW. Eng/loM Area Channels (British Standard)</Name><City>NW. Eng/loM</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891324</ServiceId><Name>Freesat with E. Yorks/Lincs Area Channels (British Standard)</Name><City>E. Yorks/Lincs</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891323</ServiceId><Name>Freesat with Yorks/N. Mids Area Channels (British Standard)</Name><City>Yorks/N. Mids</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891311</ServiceId><Name>Freesat with East of Midlands Area Channels (British Standard)</Name><City>East of Midlands</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891303</ServiceId><Name>Freesat with Scotland (Central) Area Channels (British Standard)</Name><City>Scotland (Central)</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891302</ServiceId><Name>Freesat with Northern Ireland Area Channels (British Standard)</Name><City>Northern Ireland</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891339</ServiceId><Name>BSkyB SD with East of England Area Channels (British Standard)</Name><City>East of England</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891310</ServiceId><Name>Freesat with East of England Area Channels (British Standard)</Name><City>East of England</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891287</ServiceId><Name>East of England - Freeview</Name><City>East of England</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>892279</ServiceId><Name>BSkyB HD with Scotland (North) Area Channels (British Standard)</Name><City>Scotland (North)</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>892278</ServiceId><Name>BSkyB SD with Scotland (North) Area Channels (British Standard)</Name><City>Scotland (North)</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>892277</ServiceId><Name>Scotland (North) - Virgin Media</Name><City>Scotland (North)</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891285</ServiceId><Name>Scotland (Central) - Freeview</Name><City>Scotland (Central)</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891284</ServiceId><Name>Northern Ireland - Freeview</Name><City>Northern Ireland</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891283</ServiceId><Name>London - Freeview</Name><City>London</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>890499</ServiceId><Name>United Kingdom - Virgin Media</Name><City>United Kingdom</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>890498</ServiceId><Name>BSkyB SD with United Kingdom Area Channels (British Standard)</Name><City>United Kingdom</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>890497</ServiceId><Name>Freesat with United Kingdom Area Channels (British Standard)</Name><City>United Kingdom</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>890495</ServiceId><Name>United Kingdom - Freeview</Name><City>United Kingdom</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891358</ServiceId><Name>East Midlands - Virgin Media</Name><City>East Midlands</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891355</ServiceId><Name>Scotland (Central) - Virgin Media</Name><City>Scotland (Central)</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891354</ServiceId><Name>Northern Ireland - Virgin Media</Name><City>Northern Ireland</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891353</ServiceId><Name>London - Virgin Media</Name><City>London</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891348</ServiceId><Name>BSkyB SD with South Area Channels (British Standard)</Name><City>South</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891346</ServiceId><Name>BSkyB SD with NE. Eng/Tyne Tees Area Channels (British Standard)</Name><City>NE. Eng/Tyne Tees</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891345</ServiceId><Name>BSkyB SD with NW. Eng/IoM Area Channels (British Standard)</Name><City>NW. Eng/IoM</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891465</ServiceId><Name>BSkyB HD with West Area Channels (British Standard)</Name><City>West</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891362</ServiceId><Name>West - Virgin Media</Name><City>West</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891344</ServiceId><Name>BSkyB SD with West Area Channels (British Standard)</Name><City>West</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891325</ServiceId><Name>Freesat with West Area Channels (British Standard)</Name><City>West</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891292</ServiceId><Name>West - Freeview</Name><City>West</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891462</ServiceId><Name>BSkyB HD with West Midlands Area Channels (British Standard)</Name><City>West Midlands</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891471</ServiceId><Name>BSkyB HD with Oxford Area Channels (British Standard)</Name><City>Oxford</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="CATV"><ServiceId>891368</ServiceId><Name>Oxford - Virgin Media</Name><City>Oxford</City><Type>Cable</Type><MSO>Virgin Media</MSO><MSOID>305367</MSOID><SystemName>Virgin Media</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891350</ServiceId><Name>BSkyB SD with Oxford Area Channels (British Standard)</Name><City>Oxford</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891331</ServiceId><Name>Freesat with Oxford Area Channels (British Standard)</Name><City>Oxford</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="Over the Air Broadcast"><ServiceId>891298</ServiceId><Name>Oxford - Freeview</Name><City>Oxford</City><Type>Cable</Type><MSO>Freeview</MSO><MSOID>305374</MSOID><SystemName>Freeview</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891473</ServiceId><Name>BSkyB HD with Channel Islands Area Channels (British Standard)</Name><City>Channel Islands</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB HD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891343</ServiceId><Name>BSkyB SD with E. Yorks/Lincs Area Channels (British Standard)</Name><City>E. Yorks/Lincs</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891342</ServiceId><Name>BSkyB SD with Yorks/N. Mids Area Channels (British Standard)</Name><City>Yorks/N. Mids</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891340</ServiceId><Name>BSkyB SD with East Midlands Area Channels (British Standard)</Name><City>East Midlands</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891337</ServiceId><Name>BSkyB SD with Scotland (Central) Area Channels (British Standard)</Name><City>Scotland (Central)</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891336</ServiceId><Name>BSkyB SD with Northern Ireland Area Channels (British Standard)</Name><City>Northern Ireland</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891335</ServiceId><Name>BSkyB SD with London Area Channels (British Standard)</Name><City>London</City><Type>Satellite</Type><MSO>British Sky Broadcasting</MSO><MSOID>302029</MSOID><SystemName>BSkyB SD</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service><Service ServiceClass="DBS"><ServiceId>891329</ServiceId><Name>Freesat with South Area Channels (British Standard)</Name><City>South</City><Type>Satellite</Type><MSO>Freesat</MSO><MSOID>305370</MSOID><SystemName>Freesat</SystemName><TimeZones><TimeZoneInfo><StartDateTime>2012-03-25T02:00:00Z</StartDateTime><EndDateTime>2012-10-28T01:00:00Z</EndDateTime><Offset>60</Offset></TimeZoneInfo><TimeZoneInfo><StartDateTime>2012-10-28T01:00:00Z</StartDateTime><EndDateTime>2013-03-31T03:00:00Z</EndDateTime><Offset>0</Offset></TimeZoneInfo></TimeZones></Service></Services></GetServicesResult></GetServicesResponse></soap:Body></soap:Envelope>
+↑5  ↑20  |  ↓5  ↓20
+
+Normalize text nodes  
+
+<?xml version="1.0" encoding="utf-16"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <GetServicesResponse xmlns="http://api.rovicorp.com/v9/listings">
+            <GetServicesResult>
+                <RequestId xmlns="http://api.rovicorp.com/v9/common/types">69b77909-c878-4ae6-a051-c1c1287cd1c0</RequestId>
+                <TimeStamp xmlns="http://api.rovicorp.com/v9/common/types">2012-05-22T08:42:33.423Z</TimeStamp>
+                <Status xmlns="http://api.rovicorp.com/v9/common/types">PNE</Status>
+                <Errors xmlns="http://api.rovicorp.com/v9/common/types" />
+                <EndTimestamp xmlns="http://api.rovicorp.com/v9/common/types">2012-05-22T08:42:33.469Z</EndTimestamp>
+                <Build xmlns="http://api.rovicorp.com/v9/common/types">CPS Phase v9 Build 9.9.3.1</Build>
+                <Services>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891466</ServiceId>
+                        <Name>BSkyB HD with NW. Eng/IoM Area Channels (British Standard)</Name>
+                        <City>NW. Eng/IoM</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891464</ServiceId>
+                        <Name>BSkyB HD with E. Yorks/Lincs Area Channels (British Standard)</Name>
+                        <City>E. Yorks/Lincs</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891463</ServiceId>
+                        <Name>BSkyB HD with Yorks/N. Mids Area Channels (British Standard)</Name>
+                        <City>Yorks/N. Mids</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891461</ServiceId>
+                        <Name>BSkyB HD with East Midlands Area Channels (British Standard)</Name>
+                        <City>East Midlands</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891454</ServiceId>
+                        <Name>BSkyB HD with Scotland (Central) Area Channels (British Standard)</Name>
+                        <City>Scotland (Central)</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891453</ServiceId>
+                        <Name>BSkyB HD with Northern Ireland Area Channels (British Standard)</Name>
+                        <City>Northern Ireland</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891359</ServiceId>
+                        <Name>West Midlands - Virgin Media</Name>
+                        <City>West Midlands</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891341</ServiceId>
+                        <Name>BSkyB SD with West Midlands Area Channels (British Standard)</Name>
+                        <City>West Midlands</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891322</ServiceId>
+                        <Name>Freesat with West Midlands Area Channels (British Standard)</Name>
+                        <City>West Midlands</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891289</ServiceId>
+                        <Name>West Midlands - Freeview</Name>
+                        <City>West Midlands</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891460</ServiceId>
+                        <Name>BSkyB HD with East of England Area Channels (British Standard)</Name>
+                        <City>East of England</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891357</ServiceId>
+                        <Name>East of England - Virgin Media</Name>
+                        <City>East of England</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891301</ServiceId>
+                        <Name>Freesat with London Area Channels (British Standard)</Name>
+                        <City>London</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891296</ServiceId>
+                        <Name>South - Freeview</Name>
+                        <City>South</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891294</ServiceId>
+                        <Name>NE. Eng/Tyne Tees - Freeview</Name>
+                        <City>NE. Eng/Tyne Tees</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891293</ServiceId>
+                        <Name>NW. Eng/loM - Freeview</Name>
+                        <City>NW. Eng/loM</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891291</ServiceId>
+                        <Name>E. Yorks/Lincs - Freeview</Name>
+                        <City>E. Yorks/Lincs</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891290</ServiceId>
+                        <Name>Yorks/N. Mids - Freeview</Name>
+                        <City>Yorks/N. Mids</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891288</ServiceId>
+                        <Name>East Midlands - Freeview</Name>
+                        <City>East Midlands</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>892276</ServiceId>
+                        <Name>Freesat with Scotland (North) Area Channels (British Standard)</Name>
+                        <City>Scotland (North)</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>892275</ServiceId>
+                        <Name>Scotland (North) - Freeview</Name>
+                        <City>Scotland (North)</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>892154</ServiceId>
+                        <Name>Astra 19.2 All Channels with United Kingdom Area Channels (British Standard)</Name>
+                        <City>United Kingdom</City>
+                        <Type>Satellite</Type>
+                        <MSO>SES Astra</MSO>
+                        <MSOID>305497</MSOID>
+                        <SystemName>Astra 19.2 All Channels</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>892139</ServiceId>
+                        <Name>Astra 19.2 FTA with United Kingdom Area Channels (British Standard)</Name>
+                        <City>United Kingdom</City>
+                        <Type>Satellite</Type>
+                        <MSO>SES Astra</MSO>
+                        <MSOID>305497</MSOID>
+                        <SystemName>Astra 19.2 FTA</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891469</ServiceId>
+                        <Name>BSkyB HD with South Area Channels (British Standard)</Name>
+                        <City>South</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891467</ServiceId>
+                        <Name>BSkyB HD with NE. Eng/Tyne Tees Area Channels (British Standard)</Name>
+                        <City>NE. Eng/Tyne Tees</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891286</ServiceId>
+                        <Name>Wales - Freeview</Name>
+                        <City>Wales</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891468</ServiceId>
+                        <Name>BSkyB HD with Border Area Channels (British Standard)</Name>
+                        <City>Border</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891365</ServiceId>
+                        <Name>Border - Virgin Media</Name>
+                        <City>Border</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891347</ServiceId>
+                        <Name>BSkyB SD with Border Area Channels (British Standard)</Name>
+                        <City>Border</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891328</ServiceId>
+                        <Name>Freesat with Border Area Channels (British Standard)</Name>
+                        <City>Border</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891295</ServiceId>
+                        <Name>Border - Freeview</Name>
+                        <City>Border</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891452</ServiceId>
+                        <Name>BSkyB HD with London Area Channels (British Standard)</Name>
+                        <City>London</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891366</ServiceId>
+                        <Name>South - Virgin Media</Name>
+                        <City>South</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891364</ServiceId>
+                        <Name>NE. Eng/Tyne Tees - Virgin Media</Name>
+                        <City>NE. Eng/Tyne Tees</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891363</ServiceId>
+                        <Name>NW. Eng/loM - Virgin Media</Name>
+                        <City>NW. Eng/loM</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891361</ServiceId>
+                        <Name>E. Yorks/Lincs - Virgin Media</Name>
+                        <City>E. Yorks/Lincs</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891360</ServiceId>
+                        <Name>Yorks/N. Mids - Virgin Media</Name>
+                        <City>Yorks/N. Mids</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891330</ServiceId>
+                        <Name>Freesat with Meridian Area Channels (British Standard)</Name>
+                        <City>Meridian</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891297</ServiceId>
+                        <Name>Meridian - Freeview</Name>
+                        <City>Meridian</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891459</ServiceId>
+                        <Name>BSkyB HD with Wales Area Channels (British Standard)</Name>
+                        <City>Wales</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891356</ServiceId>
+                        <Name>Wales - Virgin Media</Name>
+                        <City>Wales</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891338</ServiceId>
+                        <Name>BSkyB SD with Wales Area Channels (British Standard)</Name>
+                        <City>Wales</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891309</ServiceId>
+                        <Name>Freesat with Wales Area Channels (British Standard)</Name>
+                        <City>Wales</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891370</ServiceId>
+                        <Name>Channel Islands - Virgin Media</Name>
+                        <City>Channel Islands</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891352</ServiceId>
+                        <Name>BSkyB SD with Channel Islands Area Channels (British Standard)</Name>
+                        <City>Channel Islands</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891334</ServiceId>
+                        <Name>Freesat with Channel Islands Area Channels (British Standard)</Name>
+                        <City>Channel Islands</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891300</ServiceId>
+                        <Name>Channel Islands - Freeview</Name>
+                        <City>Channel Islands</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891472</ServiceId>
+                        <Name>BSkyB HD with South West Area Channels (British Standard)</Name>
+                        <City>South West</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891369</ServiceId>
+                        <Name>South West - Virgin Media</Name>
+                        <City>South West</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891351</ServiceId>
+                        <Name>BSkyB SD with South West Area Channels (British Standard)</Name>
+                        <City>South West</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891333</ServiceId>
+                        <Name>Freesat with South West Area Channels (British Standard)</Name>
+                        <City>South West</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891299</ServiceId>
+                        <Name>South West - Freeview</Name>
+                        <City>South West</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891470</ServiceId>
+                        <Name>BSkyB HD with Meridian Area Channels (British Standard)</Name>
+                        <City>Meridian</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891367</ServiceId>
+                        <Name>Meridian - Virgin Media</Name>
+                        <City>Meridian</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891349</ServiceId>
+                        <Name>BSkyB SD with Meridian Area Channels (British Standard)</Name>
+                        <City>Meridian</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891327</ServiceId>
+                        <Name>Freesat with NE. Eng/Tyne Tees Area Channels (British Standard)</Name>
+                        <City>NE. Eng/Tyne Tees</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891326</ServiceId>
+                        <Name>Freesat with NW. Eng/loM Area Channels (British Standard)</Name>
+                        <City>NW. Eng/loM</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891324</ServiceId>
+                        <Name>Freesat with E. Yorks/Lincs Area Channels (British Standard)</Name>
+                        <City>E. Yorks/Lincs</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891323</ServiceId>
+                        <Name>Freesat with Yorks/N. Mids Area Channels (British Standard)</Name>
+                        <City>Yorks/N. Mids</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891311</ServiceId>
+                        <Name>Freesat with East of Midlands Area Channels (British Standard)</Name>
+                        <City>East of Midlands</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891303</ServiceId>
+                        <Name>Freesat with Scotland (Central) Area Channels (British Standard)</Name>
+                        <City>Scotland (Central)</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891302</ServiceId>
+                        <Name>Freesat with Northern Ireland Area Channels (British Standard)</Name>
+                        <City>Northern Ireland</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891339</ServiceId>
+                        <Name>BSkyB SD with East of England Area Channels (British Standard)</Name>
+                        <City>East of England</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891310</ServiceId>
+                        <Name>Freesat with East of England Area Channels (British Standard)</Name>
+                        <City>East of England</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891287</ServiceId>
+                        <Name>East of England - Freeview</Name>
+                        <City>East of England</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>892279</ServiceId>
+                        <Name>BSkyB HD with Scotland (North) Area Channels (British Standard)</Name>
+                        <City>Scotland (North)</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>892278</ServiceId>
+                        <Name>BSkyB SD with Scotland (North) Area Channels (British Standard)</Name>
+                        <City>Scotland (North)</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>892277</ServiceId>
+                        <Name>Scotland (North) - Virgin Media</Name>
+                        <City>Scotland (North)</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891285</ServiceId>
+                        <Name>Scotland (Central) - Freeview</Name>
+                        <City>Scotland (Central)</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891284</ServiceId>
+                        <Name>Northern Ireland - Freeview</Name>
+                        <City>Northern Ireland</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891283</ServiceId>
+                        <Name>London - Freeview</Name>
+                        <City>London</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>890499</ServiceId>
+                        <Name>United Kingdom - Virgin Media</Name>
+                        <City>United Kingdom</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>890498</ServiceId>
+                        <Name>BSkyB SD with United Kingdom Area Channels (British Standard)</Name>
+                        <City>United Kingdom</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>890497</ServiceId>
+                        <Name>Freesat with United Kingdom Area Channels (British Standard)</Name>
+                        <City>United Kingdom</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>890495</ServiceId>
+                        <Name>United Kingdom - Freeview</Name>
+                        <City>United Kingdom</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891358</ServiceId>
+                        <Name>East Midlands - Virgin Media</Name>
+                        <City>East Midlands</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891355</ServiceId>
+                        <Name>Scotland (Central) - Virgin Media</Name>
+                        <City>Scotland (Central)</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891354</ServiceId>
+                        <Name>Northern Ireland - Virgin Media</Name>
+                        <City>Northern Ireland</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891353</ServiceId>
+                        <Name>London - Virgin Media</Name>
+                        <City>London</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891348</ServiceId>
+                        <Name>BSkyB SD with South Area Channels (British Standard)</Name>
+                        <City>South</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891346</ServiceId>
+                        <Name>BSkyB SD with NE. Eng/Tyne Tees Area Channels (British Standard)</Name>
+                        <City>NE. Eng/Tyne Tees</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891345</ServiceId>
+                        <Name>BSkyB SD with NW. Eng/IoM Area Channels (British Standard)</Name>
+                        <City>NW. Eng/IoM</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891465</ServiceId>
+                        <Name>BSkyB HD with West Area Channels (British Standard)</Name>
+                        <City>West</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891362</ServiceId>
+                        <Name>West - Virgin Media</Name>
+                        <City>West</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891344</ServiceId>
+                        <Name>BSkyB SD with West Area Channels (British Standard)</Name>
+                        <City>West</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891325</ServiceId>
+                        <Name>Freesat with West Area Channels (British Standard)</Name>
+                        <City>West</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891292</ServiceId>
+                        <Name>West - Freeview</Name>
+                        <City>West</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891462</ServiceId>
+                        <Name>BSkyB HD with West Midlands Area Channels (British Standard)</Name>
+                        <City>West Midlands</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891471</ServiceId>
+                        <Name>BSkyB HD with Oxford Area Channels (British Standard)</Name>
+                        <City>Oxford</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="CATV">
+                        <ServiceId>891368</ServiceId>
+                        <Name>Oxford - Virgin Media</Name>
+                        <City>Oxford</City>
+                        <Type>Cable</Type>
+                        <MSO>Virgin Media</MSO>
+                        <MSOID>305367</MSOID>
+                        <SystemName>Virgin Media</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891350</ServiceId>
+                        <Name>BSkyB SD with Oxford Area Channels (British Standard)</Name>
+                        <City>Oxford</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891331</ServiceId>
+                        <Name>Freesat with Oxford Area Channels (British Standard)</Name>
+                        <City>Oxford</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="Over the Air Broadcast">
+                        <ServiceId>891298</ServiceId>
+                        <Name>Oxford - Freeview</Name>
+                        <City>Oxford</City>
+                        <Type>Cable</Type>
+                        <MSO>Freeview</MSO>
+                        <MSOID>305374</MSOID>
+                        <SystemName>Freeview</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891473</ServiceId>
+                        <Name>BSkyB HD with Channel Islands Area Channels (British Standard)</Name>
+                        <City>Channel Islands</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB HD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891343</ServiceId>
+                        <Name>BSkyB SD with E. Yorks/Lincs Area Channels (British Standard)</Name>
+                        <City>E. Yorks/Lincs</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891342</ServiceId>
+                        <Name>BSkyB SD with Yorks/N. Mids Area Channels (British Standard)</Name>
+                        <City>Yorks/N. Mids</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891340</ServiceId>
+                        <Name>BSkyB SD with East Midlands Area Channels (British Standard)</Name>
+                        <City>East Midlands</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891337</ServiceId>
+                        <Name>BSkyB SD with Scotland (Central) Area Channels (British Standard)</Name>
+                        <City>Scotland (Central)</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891336</ServiceId>
+                        <Name>BSkyB SD with Northern Ireland Area Channels (British Standard)</Name>
+                        <City>Northern Ireland</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891335</ServiceId>
+                        <Name>BSkyB SD with London Area Channels (British Standard)</Name>
+                        <City>London</City>
+                        <Type>Satellite</Type>
+                        <MSO>British Sky Broadcasting</MSO>
+                        <MSOID>302029</MSOID>
+                        <SystemName>BSkyB SD</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                    <Service ServiceClass="DBS">
+                        <ServiceId>891329</ServiceId>
+                        <Name>Freesat with South Area Channels (British Standard)</Name>
+                        <City>South</City>
+                        <Type>Satellite</Type>
+                        <MSO>Freesat</MSO>
+                        <MSOID>305370</MSOID>
+                        <SystemName>Freesat</SystemName>
+                        <TimeZones>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                                <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                                <Offset>60</Offset>
+                            </TimeZoneInfo>
+                            <TimeZoneInfo>
+                                <StartDateTime>2012-10-28T01:00:00Z</StartDateTime>
+                                <EndDateTime>2013-03-31T03:00:00Z</EndDateTime>
+                                <Offset>0</Offset>
+                            </TimeZoneInfo>
+                        </TimeZones>
+                    </Service>
+                </Services>
+            </GetServicesResult>
+        </GetServicesResponse>
+    </soap:Body>
+</soap:Envelope>
