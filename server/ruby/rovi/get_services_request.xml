@@ -1,21 +1,51 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://api.rovicorp.com/v9/common/types" xmlns:lis="http://api.rovicorp.com/v9/listings">
-    <soapenv:Header>
-        <typ:AuthHeader>
-            <typ:UserName>spencerward4eb3ss7uuq43s42uhvrj46mp</typ:UserName>
-            <typ:Password>eec71e29-2b15-4331-bfd4-1673e36dd6f4</typ:Password>
-        </typ:AuthHeader>
-    </soapenv:Header>
-    <soapenv:Body>
-        <lis:GetServices>
-            <lis:request>
-                <lis:Locale>en-GB</lis:Locale>
-                <lis:ServiceSearch>
-                    <lis:CountryCode>GB</lis:CountryCode>
-                </lis:ServiceSearch>            
-                <lis:StartDate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                <lis:Duration>263520</lis:Duration>
-            </lis:request>
-        </lis:GetServices>
-    </soapenv:Body>
-</soapenv:Envelope>
-
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <AuthHeader xmlns="http://services.macrovision.com/v9/common/types">
+      <UserName>string</UserName>
+      <Password>string</Password>
+    </AuthHeader>
+  </soap:Header>
+  <soap:Body>
+    <GetServiceDetails xmlns="http://services.macrovision.com/v9/listings">
+      <request>
+        <Locale>string</Locale>
+        <ServiceId>int</ServiceId>
+        <StartDate>dateTime</StartDate>
+        <Duration>int</Duration>
+        <IncludeChannelImages>boolean</IncludeChannelImages>
+        <ImageFilter>
+          <ImageUrl>string</ImageUrl>
+          <ImageUseType>Logo or HeroImage or Thumbnail</ImageUseType>
+          <ImageId>int</ImageId>
+          <ImageTitle>string</ImageTitle>
+          <ImageCaption>string</ImageCaption>
+          <ObjectId>string</ObjectId>
+          <ObjectType>Program or Credit or Source</ObjectType>
+          <ObjectName>string</ObjectName>
+          <Relevancy>boolean</Relevancy>
+          <ImageCredit>string</ImageCredit>
+          <ImageCreditDisplay>boolean</ImageCreditDisplay>
+          <ImageCastWeight>float</ImageCastWeight>
+          <ImageZoomLevel>1 or 2 or 3 or 4 or 5</ImageZoomLevel>
+          <ImageHeadcount>int</ImageHeadcount>
+          <ImageType>string</ImageType>
+          <ImageFormat>jpg or png or gif or bmp</ImageFormat>
+          <ImageHorizontalResolution>int</ImageHorizontalResolution>
+          <ImageVerticalResolution>int</ImageVerticalResolution>
+          <ImageMaintainAspectFlag>boolean</ImageMaintainAspectFlag>
+          <ImageExpiryDateTime>dateTime</ImageExpiryDateTime>
+          <LastUpdate>dateTime</LastUpdate>
+          <ImageFormatId>int</ImageFormatId>
+          <Orientation>string</Orientation>
+          <AspectRatio>string</AspectRatio>
+          <ImageOwner>string</ImageOwner>
+          <ParentImageId>int</ParentImageId>
+          <ProgramTitle>string</ProgramTitle>
+          <MaxImageScale>float</MaxImageScale>
+        </ImageFilter>
+        <ImageCount>int</ImageCount>
+      </request>
+    </GetServiceDetails>
+  </soap:Body>
+</soap:Envelope>
