@@ -1,3 +1,5 @@
+require 'film'
+
 class Television
   def get_films 
     film1 = Film.new('The Godfather', 2.3)

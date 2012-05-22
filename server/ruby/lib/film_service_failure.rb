@@ -1,0 +1,2 @@
+class FilmServiceFailure < RuntimeError
+end
