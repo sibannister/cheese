@@ -12,12 +12,16 @@ class Television
   end
 
   def get_films 
-    puts 'getting films from soap response'
     soap = @soap_source.get_films
     return [] if soap.nil? || soap.empty?
+    extract_films soap
+  end
+
+  def extract_films soap
     doc = Hpricot.XML(soap)
     films = (doc/"gridairing")
     raise FilmServiceFailure if films.empty?
+    films.delete_if {|film| film['category'] != 'Movie' }
     films.map {|film| Film.new film['title'], 9.9}
   end
 end
