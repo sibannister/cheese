@@ -3,8 +3,13 @@ require 'film'
 require 'film_service_failure'
 
 class Television
-  def initialize soap_source
+  def initialize soap_source = dummy_source
     @soap_source = soap_source
+  end
+
+  def dummy_source
+    soap_response = File.read('rovi/get_grid_schedule_response.xml')
+    stub(:get_films).and_return soap_response
   end
 
   def get_films 
