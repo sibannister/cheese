@@ -22,8 +22,8 @@ class Television
     doc = Hpricot.XML(soap)
     films = (doc/"GridAiring")
     raise FilmServiceFailure if films.empty?
-    films.delete_if {|film| film['category'] != 'Movie' }
-    films.map {|film| Film.new film['title'], 9.9}
+    films.delete_if {|film| film['Category'] != 'Movie' }
+    films.map {|film| Film.new film['Title'], 9.9 }
   end
 end
 

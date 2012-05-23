@@ -22,7 +22,7 @@ class SoapSource
         '<request>' +
         '<Locale>en-GB</Locale>' +
         '<ServiceId>891296</ServiceId>' +
-        '<StartDate>2012-05-22T12:25:00Z</StartDate>' +
+   #     '<StartDate>2012-05-22T12:25:00Z</StartDate>' +
         '<Duration>240</Duration>' +
         '<SourceFilter>' +
         '<Sources>' +

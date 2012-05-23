@@ -9,4 +9,11 @@ describe FilmServer do
     request = stub(:query => {'name' => 'The Godfather'}, :path => "/films" )
     FilmServer.new.handleGET request, response
   end
+
+  it 'should handle the films url without crashing' do
+    response = mock
+    response.should_receive(:body=)
+    request = stub(:query => {}, :path => "/films")
+    FilmServer.new.handleGET request, response
+  end
 end
