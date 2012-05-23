@@ -1,9 +1,14 @@
 require 'film'
+require 'film_service_failure'
 
 class Television
+  def initialize soap_source
+    @soap_source = soap_source
+  end
+
   def get_films 
-    film1 = Film.new('The Godfather', 2.3)
-    film2 = Film.new('Birdemic', 2.3)
-    [film1, film2]
+    soap = @soap_source.get_films
+    return [] if soap.nil? || soap.empty?
+    raise FilmServiceFailure
   end
 end

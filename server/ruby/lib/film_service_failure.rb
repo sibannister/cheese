@@ -1,2 +1,2 @@
-class FilmServiceFailure < RuntimeError
+class FilmServiceFailure < Exception
 end

@@ -18,7 +18,7 @@ describe FilmServer do
     film2 = Film.new('Birdemic', 2.3)
     tv.stub(:get_films => [film1, film2])
     film_server.handleGET request, response
-    response.body.should == '[' + film1.to_json + ', ' + film2.to_json + ']' 
+    response.body.should == '[' + film1.to_json + ', ' + film2.to_json + ']'
   end
 
   it 'should ignore requests which do not start with the "/films" path' do
