@@ -28,4 +28,5 @@ describe Television do
     films.should include(Film.new 'David and Bathsheba', 9.9)
     films.should include Film.new 'White Feather', 9.9
   end
+  
 end

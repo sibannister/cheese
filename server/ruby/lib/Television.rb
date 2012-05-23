@@ -19,7 +19,7 @@ class Television
 
   def extract_films soap
     doc = Hpricot.XML(soap)
-    films = (doc/"gridairing")
+    films = (doc/"GridAiring")
     raise FilmServiceFailure if films.empty?
     films.delete_if {|film| film['category'] != 'Movie' }
     films.map {|film| Film.new film['title'], 9.9}
