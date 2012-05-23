@@ -3,8 +3,9 @@ class Film
 
   attr_reader :name, :rating
 
-  def <=>(other)
-    @name <=> other.name && @rating <=> other.rating
+  def ==(other)
+    return false if other.nil?
+    @name == other.name && @rating ==  other.rating
   end
 
   def initialize name, rating

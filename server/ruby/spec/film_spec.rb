@@ -6,6 +6,24 @@ describe Film do
     film.to_json().should == '{"name" : "The Godfather", "rating" : 9.2}'
   end
 
+  it 'should recognise two identical films as equal' do
+    film1 = Film.new "Birdemic", 2.3
+    film2 = Film.new "Birdemic", 2.3
+    film1.should == film2
+  end
+
+  it 'should recognise two differently rated films as unequal' do
+    film1 = Film.new "Birdemic", 2.3
+    film2 = Film.new "Birdemic", 4.6
+    film1.should_not == film2
+  end
+
+  it 'should recognise two differently named films as unequal' do
+    film1 = Film.new "Birdemic", 2.3
+    film2 = Film.new "Titanic", 2.3
+    film1.should_not == film2
+  end
+
   it 'should match on exact title' do
     match('The Godfather','The Godfather').should be_true
   end
