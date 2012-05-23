@@ -1,9 +1,10 @@
 require 'hpricot'
 require 'film'
 require 'film_service_failure'
+require 'soap_source'
 
 class Television
-  def initialize soap_source = dummy_source
+  def initialize soap_source = SoapSource.new
     @soap_source = soap_source
   end
 
@@ -12,7 +13,7 @@ class Television
   end
 
   def get_films 
-    soap = @soap_source.get_films
+    soap = @soap_source.read
     return [] if soap.nil? || soap.empty?
     extract_films soap
   end
