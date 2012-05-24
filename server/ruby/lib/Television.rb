@@ -8,10 +8,6 @@ class Television
     @soap_source = soap_source
   end
 
-  def dummy_source
-    DummySource.new
-  end
-
   def get_films 
     soap = @soap_source.read
     return [] if soap.nil? || soap.empty?
@@ -24,12 +20,5 @@ class Television
     raise FilmServiceFailure if films.empty?
     films.delete_if {|film| film['Category'] != 'Movie' }
     films.map {|film| Film.new film['Title'], 9.9 }
-  end
-end
-
-
-class DummySource
-  def get_films
-    File.read('rovi/get_grid_schedule_response.xml')
   end
 end
