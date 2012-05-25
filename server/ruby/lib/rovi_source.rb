@@ -21,8 +21,7 @@ class RoviSource
 
   def get_films start_time
     soap = @soap_source.read
-    return [] if soap.nil? || soap.empty?
-    films = extract_films soap
+    films = (soap.nil? || soap.empty?) ? [] : extract_films(soap)
     FilmBatch.new films
   end
 

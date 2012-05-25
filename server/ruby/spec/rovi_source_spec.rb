@@ -1,11 +1,32 @@
 require 'rovi_source'
 
 describe 'RoviSource' do
-  let (:source) { RoviSource.new }
+  let (:soap_source) { stub }
+  let (:source) { RoviSource.new soap_source }
 
-  it 'should extract films from rovi soap xml' do
-    batch = source.get_films Time.now
-    batch.films.should_not be_empty
+
+  it 'should return no films from a nil soap packet' do
+    soap_source.stub(:read).and_return nil
+    source.get_films(Time.now).films.should be_empty
+  end
+
+  it 'should return no films from an empty soap packet' do
+    soap_source.stub(:read).and_return ''
+    source.get_films(Time.now).films.should be_empty
+  end
+
+  it 'should raise an error from a junk soap packet' do
+    soap_source.stub(:read).and_return 'wibble'
+    expect {source.get_films(Time.now)}.to raise_error(FilmServiceFailure)
+  end
+
+  it 'should extract a film from a soap response' do
+    soap_response = File.read('rovi/get_grid_schedule_response.xml') 
+    soap_source.stub(:read).and_return soap_response
+    films = source.get_films(Time.now).films
+    films.should have(2).items
+    films.should include Film.new 'David and Bathsheba', 9.9
+    films.should include Film.new 'White Feather', 9.9
   end
 end
 
