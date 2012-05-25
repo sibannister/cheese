@@ -1,11 +1,26 @@
+require 'fixnum'
 require 'hpricot'
 require 'film'
 require 'film_service_failure'
 require 'soap_source'
 
 class Television
-  def initialize soap_source = SoapSource.new
+  def initialize soap_source = SoapSource.new, rovi_source
     @soap_source = soap_source
+    @rovi_source = rovi_source
+  end
+
+  def get_films2
+    start = Time.now
+    films = []
+    until start >= Time.now + 7.days
+      batch = @rovi_source.get_films start
+      puts batch.films.count
+      films = films + batch.films
+      puts films.count
+      start = batch.end_date
+    end
+    films
   end
 
   def get_films 

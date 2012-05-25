@@ -10,5 +10,6 @@ Gem::Specification.new do |s|
     s.homepage    = 'https://sites.google.com/site/winecheeseandgrapes/home'
     s.add_runtime_dependency 'imdb'
     s.add_runtime_dependency 'savon'
+    s.add_runtime_dependency 'timecop'
 end
 
