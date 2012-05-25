@@ -5,7 +5,7 @@ require 'film_service_failure'
 require 'soap_source'
 
 class Television
-  def initialize soap_source = SoapSource.new, rovi_source
+  def initialize soap_source = SoapSource.new, rovi_source = RoviSource.new
     @soap_source = soap_source
     @rovi_source = rovi_source
   end
@@ -15,9 +15,7 @@ class Television
     films = []
     until start >= Time.now + 7.days
       batch = @rovi_source.get_films start
-      puts batch.films.count
       films = films + batch.films
-      puts films.count
       start = batch.end_date
     end
     films
