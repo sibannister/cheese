@@ -12,6 +12,10 @@ class FilmBatch
   def films
     @films
   end
+
+  def end_date
+    Time.now + 8.days
+  end
 end
 
 class RoviSource

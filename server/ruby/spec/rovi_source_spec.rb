@@ -1,9 +1,9 @@
 require 'rovi_source'
+require 'timecop'
 
 describe 'RoviSource' do
   let (:soap_source) { stub }
   let (:source) { RoviSource.new soap_source }
-
 
   it 'should return no films from a nil soap packet' do
     soap_source.stub(:read).and_return nil
@@ -27,6 +27,13 @@ describe 'RoviSource' do
     films.should have(2).items
     films.should include Film.new 'David and Bathsheba', 9.9
     films.should include Film.new 'White Feather', 9.9
+  end
+
+  it 'should return the end date of the films in the soap packet' do
+    Timecop.freeze
+    soap_response = File.read('rovi/get_grid_schedule_response.xml') 
+    soap_source.stub(:read).and_return soap_response
+    source.get_films(Time.now).end_date.should == (Time.now + 8.days)
   end
 end
 
