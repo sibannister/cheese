@@ -19,6 +19,7 @@ class Television
       puts 'Batch end date is ' + batch.end_date.to_s
       start = batch.end_date
     end
+    puts 'FIlms retrieved' + films.to_s
     films
   end
 end

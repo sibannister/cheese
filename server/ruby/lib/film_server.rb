@@ -16,7 +16,8 @@ class FilmServer
         review request.query['name']
       else
         films = @tv.get_films
-        '[' + films[0].to_json + ', ' + films[1].to_json + ']'
+        films_json = films.map {|film| film.to_json}
+        '[' + films_json.join(', ') + ']'
       end
   end 
 
