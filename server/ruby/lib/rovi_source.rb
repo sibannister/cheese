@@ -25,9 +25,10 @@ class RoviSource
   end
 
   def get_films start_time
-    soap = @soap_source.read
+    puts 'Requesting films starting at ' + start_time.to_s
+    soap = @soap_source.read start_time
     films = (soap.nil? || soap.empty?) ? [] : extract_films(soap)
-    FilmBatch.new films, (films.empty? ? nil : films.last.end_date)
+    FilmBatch.new films, (films.empty? ? start_time + 4.hours : films.last.end_date)
   end
 
   def extract_films soap

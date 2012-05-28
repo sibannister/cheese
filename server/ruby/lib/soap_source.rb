@@ -1,7 +1,7 @@
 require 'savon' 
 
 class SoapSource
-  def read
+  def read start_date
     Savon.configure { |config| config.log = false }
 
     client = Savon::Client.new do
@@ -22,7 +22,7 @@ class SoapSource
         '<request>' +
         '<Locale>en-GB</Locale>' +
         '<ServiceId>891296</ServiceId>' +
-   #     '<StartDate>2012-05-22T12:25:00Z</StartDate>' +
+        '<StartDate>' + start_date.xmlschema + '</StartDate>' +
         '<Duration>240</Duration>' +
         '<SourceFilter>' +
         '<Sources>' +
