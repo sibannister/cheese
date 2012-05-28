@@ -2,7 +2,7 @@
 <soap:envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <soap:body>
   <getgridscheduleresponse xmlns="http://api.rovicorp.com/v9/listings">
-   <getgridscheduleresult locale="en-GB" serviceid="891296" name="South - Freeview" startdate="2012-05-22T09:57:21.4984541Z" duration="240">
+   <getgridscheduleresult locale="en-GB" serviceid="891296" name="South - Freeview" startdate="2012-05-22T09:57:21.4984541Z" Duration="240">
     <requestid xmlns="http://api.rovicorp.com/v9/common/types">
      efdb32de-4d28-4ee4-8f11-1f3b4f6b1da8
     </requestid>
@@ -28,11 +28,11 @@
        <channelschedules>
         <sourceattributetypes>
          <airings>
-          <GridAiring programid="15144702" Title="Closedown" airingtime="2012-05-22T02:05:00Z" duration="475" color="Color" airingtype="Unknown" cc="false" letterbox="false" stereo="false" hd="false" sap="false" tvrating="None" dolby="false" dss="false" hdlevel="HD Level Unknown" dvs="false" Category="Other" subcategory="other" sports="false">
+          <GridAiring programid="15144702" Title="Closedown" AiringTime="2012-05-22T02:05:00Z" Duration="475" color="Color" airingtype="Unknown" cc="false" letterbox="false" stereo="false" hd="false" sap="false" tvrating="None" dolby="false" dss="false" hdlevel="HD Level Unknown" dvs="false" Category="Other" subcategory="other" sports="false">
           </GridAiring>
-          <GridAiring programid="56221" Title="David and Bathsheba" airingtime="2012-05-22T10:00:00Z" duration="145" color="Color" airingtype="Unknown" cc="false" letterbox="false" stereo="false" hd="false" sap="false" tvrating="None" movierating="NR" dolby="false" dss="false" hdlevel="HD Level Unknown" dvs="false" Category="Movie" subcategory="drama" sports="false">
+          <GridAiring programid="56221" Title="David and Bathsheba" AiringTime="2012-05-22T10:00:00Z" Duration="145" color="Color" airingtype="Unknown" cc="false" letterbox="false" stereo="false" hd="false" sap="false" tvrating="None" movierating="NR" dolby="false" dss="false" hdlevel="HD Level Unknown" dvs="false" Category="Movie" subcategory="drama" sports="false">
           </GridAiring>
-          <GridAiring programid="1225442" Title="White Feather" airingtime="2012-05-22T12:25:00Z" duration="125" color="Color" airingtype="Unknown" cc="false" letterbox="false" stereo="false" hd="false" sap="false" tvrating="None" movierating="NR" dolby="false" dss="false" hdlevel="HD Level Unknown" dvs="false" Category="Movie" subcategory="western" sports="false">
+          <GridAiring programid="1225442" Title="White Feather" AiringTime="2012-05-22T12:25:00Z" Duration="125" color="Color" airingtype="Unknown" cc="false" letterbox="false" stereo="false" hd="false" sap="false" tvrating="None" movierating="NR" dolby="false" dss="false" hdlevel="HD Level Unknown" dvs="false" Category="Movie" subcategory="western" sports="false">
           </GridAiring>
          </airings>
          <channelimages>

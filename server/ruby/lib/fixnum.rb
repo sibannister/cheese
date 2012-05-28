@@ -1,5 +1,13 @@
 class Fixnum
   def days
-    self * 60 * 60 * 24
+    hours * 24
+  end
+
+  def hours
+    minutes * 60
+  end
+  
+  def minutes
+    self * 60
   end
 end

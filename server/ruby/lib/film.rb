@@ -1,16 +1,17 @@
 class Film
   include Comparable
 
-  attr_reader :name, :rating
+  attr_reader :name, :rating, :end_date
 
   def ==(other)
     return false if other.nil?
-    @name == other.name && @rating ==  other.rating
+    @name == other.name && @rating ==  other.rating && @end_date == other.end_date
   end
 
-  def initialize name, rating
+  def initialize name, rating, end_date = nil
     @name = name
     @rating = rating
+    @end_date = end_date
   end
 
   def match_title? candidate_title

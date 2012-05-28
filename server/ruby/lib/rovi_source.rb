@@ -5,8 +5,9 @@ require 'film'
 require 'film_service_failure'
 
 class FilmBatch
-  def initialize films
+  def initialize films, end_date
     @films = films
+    @end_date = end_date
   end
 
   def films
@@ -14,7 +15,7 @@ class FilmBatch
   end
 
   def end_date
-    Time.now + 8.days
+    @end_date
   end
 end
 
@@ -26,7 +27,7 @@ class RoviSource
   def get_films start_time
     soap = @soap_source.read
     films = (soap.nil? || soap.empty?) ? [] : extract_films(soap)
-    FilmBatch.new films
+    FilmBatch.new films, (films.empty? ? nil : films.last.end_date)
   end
 
   def extract_films soap
@@ -34,6 +35,10 @@ class RoviSource
     films = (doc/"GridAiring")
     raise FilmServiceFailure if films.empty?
     films.delete_if {|film| film['Category'] != 'Movie' }
-    films.map {|film| Film.new film['Title'], 9.9 }
+    films.map {|film| Film.new film['Title'], 9.9, end_date(film) }
+  end 
+
+  def end_date film
+    start_date = Time.parse(film['AiringTime']) + film['Duration'].to_i.minutes
   end
 end
