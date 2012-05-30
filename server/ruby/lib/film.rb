@@ -8,7 +8,7 @@ class Film
     @name == other.name && @rating ==  other.rating && @end_date == other.end_date
   end
 
-  def initialize name, rating, end_date = nil
+  def initialize name, rating, end_date
     @name = name
     @rating = rating
     @end_date = end_date
