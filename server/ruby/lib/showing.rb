@@ -14,8 +14,8 @@ class Showing
     @end_date = end_date
   end
 
-  def match_title? candidate_title
-    candidate_title.upcase.start_with? @name.upcase
+  def self.match_title? actual_title, candidate_title
+    candidate_title.upcase.start_with? actual_title.upcase
   end
 
   def to_json

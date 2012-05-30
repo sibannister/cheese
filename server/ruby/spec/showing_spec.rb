@@ -56,7 +56,7 @@ describe Showing do
     end
 
     def match title, candidate_title
-      Showing.new(title, 10, Time.now).match_title? candidate_title
+      Showing.match_title? title, candidate_title
     end
   end
 end
