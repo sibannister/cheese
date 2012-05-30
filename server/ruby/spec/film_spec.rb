@@ -1,4 +1,5 @@
 require 'film'
+require 'fixnum'
 require 'timecop'
 
 describe Film do
@@ -27,6 +28,12 @@ describe Film do
     it 'should recognise two differently named films as unequal' do
       film1 = Film.new "Birdemic", 2.3, Time.now
       film2 = Film.new "Titanic", 2.3, Time.now
+      film1.should_not == film2
+    end
+
+    it 'should recognise two differently timed films as unequal' do
+      film1 = Film.new "Birdemic", 2.3, Time.now
+      film2 = Film.new "Birdemic", 2.3, Time.now + 1.hours
       film1.should_not == film2
     end
   end
