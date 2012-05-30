@@ -1,9 +1,9 @@
 require 'film_server'
-require 'film_repository'
+require 'film_reviewer'
 require 'net/http'
 
 describe FilmServer do
-  it 'should integrate with the film repository' do
+  it 'should integrate with the film reviewer' do
     response = mock
     response.should_receive(:body=).with('{"name" : "The Godfather", "rating" : 9.2}')
     request = stub(:query => {'name' => 'The Godfather'}, :path => "/films" )

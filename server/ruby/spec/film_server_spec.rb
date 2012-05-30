@@ -1,5 +1,5 @@
 require 'film_server'
-require 'film_repository'
+require 'film_reviewer'
 require 'net/http'
 
 class MockResponse
@@ -7,9 +7,9 @@ class MockResponse
 end
 
 describe FilmServer do
-  let (:repository) { stub }
+  let (:reviewer) { stub }
   let (:tv) { stub }
-  let (:film_server) { FilmServer.new(repository, tv) }
+  let (:film_server) { FilmServer.new(reviewer, tv) }
   let (:response) { MockResponse.new }
 
   it 'should return a list of films if no name parameter specified' do
@@ -26,23 +26,5 @@ describe FilmServer do
     film_server.handleGET request, response
     response.body.should == "Unexpected url.  Should be in the format [ip:port]/films"
   end 
-
-  it 'should return json for known films' do
-    film = Showing.new 'The Godfather', 2.3, Time.now
-    repository.stub(:find, 'The Godfather'){ film }
-    handleGetRequest 'The Godfather'
-    response.body.should == film.to_json
-  end
-
-  it 'should return nil for unknown films' do
-    repository.stub(:find, 'blah'){nil}
-    handleGetRequest 'blah'
-    response.body.should be_nil
-  end
-  
-  def handleGetRequest film_name
-    request = stub(:query => {'name' => film_name}, :path => "/films" )
-    film_server.handleGET request, response
-  end
 end
 
