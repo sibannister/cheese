@@ -1,4 +1,4 @@
-class Film
+class Showing
   include Comparable
 
   attr_reader :name, :rating, :end_date

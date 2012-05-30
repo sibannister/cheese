@@ -1,4 +1,4 @@
-require 'film'
+require 'showing'
 require 'film_repository'
 require 'television'
 

@@ -1,6 +1,6 @@
 require 'fixnum'
 require 'hpricot'
-require 'film'
+require 'showing'
 require 'film_service_failure'
 require 'soap_source'
 require 'rovi_source'

@@ -1,5 +1,5 @@
 require 'film_repository'
-require 'film'
+require 'showing'
 
 describe FilmRepository do
   let (:repository) { FilmRepository.new }
@@ -9,6 +9,6 @@ describe FilmRepository do
   end
 
   it 'should return the film for a known unqiue film name' do
-    repository.find('The Godfather').should == Film.new('The Godfather', 9.2)
+    repository.find('The Godfather').should == Showing.new('The Godfather', 9.2)
   end
 end

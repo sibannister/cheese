@@ -25,8 +25,8 @@ describe 'RoviSource' do
     soap_source.stub(:read, Time.now).and_return soap_response
     films = source.get_films(Time.now).films
     films.should have(2).items
-    films.should include Film.new 'David and Bathsheba', 9.9, Time.utc(2012, 5, 22, 12, 25, 0)
-    films.should include Film.new 'White Feather', 9.9, Time.utc(2012, 5, 22, 14, 30, 0)
+    films.should include Showing.new 'David and Bathsheba', 9.9, Time.utc(2012, 5, 22, 12, 25, 0)
+    films.should include Showing.new 'White Feather', 9.9, Time.utc(2012, 5, 22, 14, 30, 0)
   end
 
   it 'should return the end date of the films in the soap packet' do
