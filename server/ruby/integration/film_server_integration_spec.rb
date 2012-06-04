@@ -7,6 +7,8 @@ describe FilmServer do
     response = mock
     response.should_receive(:body=)
     request = stub(:query => {}, :path => "/films")
-    FilmServer.new.handleGET request, response
+    server = FilmServer.new
+    server.days_to_search = 1
+    server.handleGET request, response
   end
 end

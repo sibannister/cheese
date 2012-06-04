@@ -10,7 +10,7 @@ class Television
     @rovi_source = rovi_source
   end
 
-  def get_films
+  def get_films days_to_search
     start = Time.now
     films = []
     until start >= Time.now + 7.days
