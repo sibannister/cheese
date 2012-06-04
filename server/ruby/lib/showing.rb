@@ -1,16 +1,17 @@
 class Showing
   include Comparable
 
-  attr_reader :name, :rating, :end_date
+  attr_reader :name, :rating, :start_date, :end_date
 
   def ==(other)
     return false if other.nil?
-    @name == other.name && @rating ==  other.rating && @end_date == other.end_date
+    @name == other.name && @rating ==  other.rating && @end_date == other.end_date && @start_date == other.start_date
   end
 
-  def initialize name, rating, end_date
+  def initialize name, rating, start_date, end_date 
     @name = name
     @rating = rating
+    @start_date = start_date
     @end_date = end_date
   end
 

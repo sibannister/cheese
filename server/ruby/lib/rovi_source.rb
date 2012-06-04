@@ -37,10 +37,14 @@ class RoviSource
     films = (doc/"GridAiring")
     raise FilmServiceFailure if films.empty?
     films.delete_if {|film| film['Category'] != 'Movie' }
-    films.map {|film| Showing.new film['Title'], 9.9, end_date(film) }
+    films.map {|film| Showing.new film['Title'], 9.9, start_date(film), end_date(film) }
   end 
 
+  def start_date film
+    Time.parse(film['AiringTime'])
+  end
+
   def end_date film
-    start_date = Time.parse(film['AiringTime']) + film['Duration'].to_i.minutes
+    Time.parse(film['AiringTime']) + film['Duration'].to_i.minutes
   end
 end

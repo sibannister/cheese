@@ -14,8 +14,8 @@ describe FilmServer do
 
   it 'should return a list of films if no name parameter specified' do
     request = stub(:query => {}, :path => "/films" )
-    film1 = Showing.new 'The Godfather', 2.3, Time.now
-    film2 = Showing.new 'Birdemic', 2.3, Time.now
+    film1 = Showing.new 'The Godfather', 2.3, Time.now, Time.now
+    film2 = Showing.new 'Birdemic', 2.3, Time.now, Time.now
     tv.stub(:get_films => [film1, film2])
     film_server.handleGET request, response
     response.body.should == '[' + film1.to_json + ', ' + film2.to_json + ']'
