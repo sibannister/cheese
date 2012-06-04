@@ -5,9 +5,8 @@ require 'showing'
 require 'film_service_failure'
 
 class FilmBatch
-  def initialize films, end_date
+  def initialize films
     @films = films
-    @end_date = end_date
   end
 
   def films
@@ -15,7 +14,7 @@ class FilmBatch
   end
 
   def end_date
-    @end_date
+    films.empty? ? nil : films.last.end_date
   end
 end
 
@@ -26,9 +25,9 @@ class RoviSource
 
   def get_films start_time
     puts 'Requesting films starting at ' + start_time.to_s
-    soap = @soap_source.read start_time
+    soap = @soap_source.read start_time, 240
     films = (soap.nil? || soap.empty?) ? [] : extract_films(soap)
-    FilmBatch.new films, (films.empty? ? start_time + 4.hours : films.last.end_date)
+    FilmBatch.new films
   end
 
   def extract_films soap
