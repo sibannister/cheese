@@ -40,9 +40,9 @@ describe 'RoviSource' do
     source.get_films(Time.now).end_date.should == Time.utc(2012, 5, 22, 14, 30, 0)
   end 
 
-  it 'should return a nil end date when there are no films' do
+  it 'should return a end date 4 hours after the start when there are no films' do
     soap_source.stub(:read).with(Time.now, 240).and_return nil
-    source.get_films(Time.now).end_date.should be_nil
+    source.get_films(Time.now).end_date.should == Time.now + 240.minutes
   end
 
 end
