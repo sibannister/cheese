@@ -13,7 +13,7 @@ class Television
   def get_films days_to_search
     start = Time.now
     films = []
-    until start >= Time.now + 7.days
+    until start >= Time.now + days_to_search.days
       batch = @rovi_source.get_films start
       films = films + batch.films
       puts 'Batch end date is ' + batch.end_date.to_s
