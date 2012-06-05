@@ -18,8 +18,13 @@ class FilmServer
       else
         days = request.query['days']
         films = @tv.get_films (days == nil ? @days_to_search : days.to_i)
+        add_ratings films
         films_json = films.map {|film| film.to_json}
         '[' + films_json.join(', ') + ']'
       end
   end 
+
+  def add_ratings films
+    films.each { |film| film.rating = @reviewer.review film.name }
+  end
 end

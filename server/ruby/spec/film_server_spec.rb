@@ -12,10 +12,12 @@ describe FilmServer do
   let (:film_server) { FilmServer.new(reviewer, tv) }
   let (:response) { MockResponse.new }
 
-  it 'should return a list of films if no name parameter specified' do
+  it 'should return a list of films' do
     request = stub(:query => {}, :path => "/films" )
+    reviewer.should_receive(:review).with('The Godfather').and_return(2.3)
+    reviewer.should_receive(:review).with('Birdemic').and_return(5.9)
     film1 = Showing.new 'The Godfather', 2.3, Time.now, Time.now
-    film2 = Showing.new 'Birdemic', 2.3, Time.now, Time.now
+    film2 = Showing.new 'Birdemic', 5.9, Time.now, Time.now
     tv.stub(:get_films => [film1, film2])
     film_server.handleGET request, response
     response.body.should == '[' + film1.to_json + ', ' + film2.to_json + ']'

@@ -1,7 +1,8 @@
 class Showing
   include Comparable
 
-  attr_reader :name, :rating, :start_date, :end_date
+  attr_reader :name, :start_date, :end_date
+  attr_accessor :rating
 
   def ==(other)
     return false if other.nil?
