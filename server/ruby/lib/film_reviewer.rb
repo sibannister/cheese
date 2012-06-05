@@ -1,4 +1,5 @@
 require 'imdb'
+require 'rubygems'
 
 class FilmReviewer
   def review film_name
