@@ -16,7 +16,8 @@ class FilmServer
       if request.path != "/films"
         "Unexpected url.  Should be in the format [ip:port]/films"
       else
-        films = @tv.get_films @days_to_search
+        days = request.query['days']
+        films = @tv.get_films (days == nil ? @days_to_search : days.to_i)
         films_json = films.map {|film| film.to_json}
         '[' + films_json.join(', ') + ']'
       end
