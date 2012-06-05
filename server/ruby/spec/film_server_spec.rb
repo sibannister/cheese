@@ -12,6 +12,12 @@ describe FilmServer do
   let (:film_server) { FilmServer.new(reviewer, tv) }
   let (:response) { MockResponse.new }
 
+  it 'should begin caching films on start up' do
+    cache = stub
+    cache.should_receive :begin_caching
+    FilmServer.new reviewer, tv, cache
+  end
+
   it 'should return a list of films' do
     request = stub(:query => {}, :path => "/films" )
     reviewer.should_receive(:review).with('The Godfather').and_return(2.3)

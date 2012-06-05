@@ -2,13 +2,19 @@ require 'showing'
 require 'film_reviewer'
 require 'television'
 
+class Cache
+  def begin_caching
+  end
+end
+
 class FilmServer
   attr_writer :days_to_search
 
-  def initialize reviewer = FilmReviewer.new, tv = Television.new
+  def initialize reviewer = FilmReviewer.new, tv = Television.new, cache = Cache.new
     @reviewer = reviewer
     @tv = tv
     @days_to_search = 7
+    cache.begin_caching
   end
   
   def handleGET(request, response)
