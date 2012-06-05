@@ -20,6 +20,6 @@ class Showing
   end
 
   def to_json
-    '{"name" : "' + name + '", "rating" : ' + rating.to_s + '}'
+    '{"name" : "' + name + '", "rating" : ' + rating.to_s + ', "start" : "' + @start_date.strftime('%Y-%m-%d %H:%M') + '"}'
   end
 end
