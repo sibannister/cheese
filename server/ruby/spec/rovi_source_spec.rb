@@ -30,11 +30,11 @@ describe 'RoviSource' do
     films = source.get_films(Time.now).films
     films.should have(2).items
     films.should include 
-          Showing.new 'David and Bathsheba', 9.9, 
+          Showing.new 'David and Bathsheba', 
             Time.utc(2012, 5, 22, 10, 0, 0),
             Time.utc(2012, 5, 22, 12, 25, 0)
     films.should include 
-          Showing.new 'White Feather', 9.9, 
+          Showing.new 'White Feather', 
             Time.utc(2012, 5, 22, 12, 25, 0),
             Time.utc(2012, 5, 22, 14, 30, 0)
   end

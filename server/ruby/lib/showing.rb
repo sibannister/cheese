@@ -9,9 +9,8 @@ class Showing
     @name == other.name && @rating ==  other.rating && @end_date == other.end_date && @start_date == other.start_date
   end
 
-  def initialize name, rating, start_date, end_date 
+  def initialize name, start_date, end_date 
     @name = name
-    @rating = rating
     @start_date = start_date
     @end_date = end_date
   end

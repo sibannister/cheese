@@ -4,8 +4,8 @@ require 'showing'
 describe Cache do
   let (:tv) { stub }
   let (:reviewer) { stub }
-  let (:film1) { Showing.new 'Birdemic', 0, Time.now, Time.now }
-  let (:film2) { Showing.new 'The Godfather', 0, Time.now, Time.now }
+  let (:film1) { Showing.new 'Birdemic', Time.now, Time.now }
+  let (:film2) { Showing.new 'The Godfather', Time.now, Time.now }
 
   it 'should begin caching by retrieving and rating films and storing the results' do
     tv.should_receive(:get_films).and_return([film1, film2])
