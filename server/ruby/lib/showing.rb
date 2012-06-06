@@ -13,6 +13,7 @@ class Showing
     @name = name
     @start_date = start_date
     @end_date = end_date
+    @rating = 0
   end
 
   def self.match_title? actual_title, candidate_title
