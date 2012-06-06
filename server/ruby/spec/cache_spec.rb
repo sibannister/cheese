@@ -11,9 +11,7 @@ describe Cache do
     tv.should_receive(:get_films).and_return([film1, film2])
     reviewer.should_receive(:review).with('Birdemic').and_return(1.2)
     reviewer.should_receive(:review).with('The Godfather').and_return(9.2)
-    cache = Cache.new tv, reviewer
-    cache.reset
-    cache.begin_caching
-    cache.get_films.should == [film1, film2]
+    Cache.build tv, reviewer
+    Cache.new.get_films.should == [film1, film2]
   end
 end

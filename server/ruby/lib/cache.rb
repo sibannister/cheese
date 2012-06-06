@@ -2,21 +2,19 @@ require 'television'
 require 'film_reviewer'
 
 class Cache
-  
-  def initialize television = Television.new, reviewer = FilmReviewer.new
-    if !defined?(@@caching)
-      reset
-    end
+  def self.build television = Television.new, reviewer = FilmReviewer.new
     @tv = television
     @reviewer = reviewer
+    reset
+    begin_caching
   end
 
-  def reset
+  def self.reset
     @@caching = false
     @@showings = []
   end
 
-  def begin_caching
+  def self.begin_caching
     if !@@caching
       @@caching = true
       puts "Beginning to cache films"

@@ -9,7 +9,6 @@ class FilmServer
   def initialize cache = Cache.new
     @days_to_search = 7
     @cache = cache
-    cache.begin_caching
   end
   
   def handleGET(request, response)
@@ -17,7 +16,6 @@ class FilmServer
       if request.path != "/films"
         "Unexpected url.  Should be in the format [ip:port]/films"
       else
-        days = request.query['days']
         films = @cache.get_films
         films_json = films.map {|film| film.to_json}
         '[' + films_json.join(', ') + ']'

@@ -13,5 +13,6 @@ end
 server = WEBrick::HTTPServer.new( :Port => 1234 )
 server.mount "/", MyServlet
 trap("INT"){ server.shutdown }
+Cache.build
 server.start
 
