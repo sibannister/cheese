@@ -18,7 +18,7 @@ class Cache
     if !@@caching
       @@caching = true
       puts "Beginning to cache films"
-      @@showings = @tv.get_films 1
+      @@showings = @tv.get_films 7
       @@showings.each {|showing| showing.rating = @reviewer.review(showing.name) }
       puts "Caching complete" 
     end
