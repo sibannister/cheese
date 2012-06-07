@@ -11,17 +11,17 @@ describe 'RoviSource' do
 
   it 'should return no films from a nil soap packet' do
     soap_source.stub(:read).with(Time.now, 240).and_return nil
-    source.get_films(Time.now).films.should be_empty
+    source.get_films(Time.now).should be_nil
   end
 
   it 'should return no films from an empty soap packet' do
     soap_source.stub(:read).with(Time.now, 240).and_return ''
-    source.get_films(Time.now).films.should be_empty
+    source.get_films(Time.now).should be_nil
   end
 
-  it 'should raise an error from a junk soap packet' do
+  it 'should return nil if there were no programmes in the soap packet' do
     soap_source.stub(:read).with(Time.now, 240).and_return 'wibble'
-    expect {source.get_films(Time.now)}.to raise_error(FilmServiceFailure)
+    source.get_films(Time.now).should be_nil
   end
 
   it 'should extract a film from a soap response' do
@@ -46,9 +46,11 @@ describe 'RoviSource' do
     source.get_films(Time.now).end_date.should == Time.utc(2012, 5, 22, 14, 30, 0)
   end 
 
-  it 'should return a end date 4 hours after the start when there are no films' do
-    soap_source.stub(:read).with(Time.now, 240).and_return nil
-    source.get_films(Time.now).end_date.should == Time.now + 240.minutes
+  it 'should return a end date of the last programme when there are no films' do
+    Timecop.freeze
+    soap_response = File.read('rovi/get_grid_schedule_response_no_films.xml') 
+    soap_source.stub(:read).with(Time.now, 240).and_return soap_response
+    source.get_films(Time.now).end_date.should == Time.utc(2012, 5, 22, 10, 0, 0)
   end
 
 end

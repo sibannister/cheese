@@ -23,4 +23,8 @@ class Showing
   def to_json
     '{"name" : "' + name + '", "rating" : ' + rating.to_s + ', "start" : "' + @start_date.strftime('%Y-%m-%d %H:%M') + '"}'
   end
+
+  def to_s
+    name + " (" + @start_date.strftime('%d/%m %H:%M') + " to " + @end_date.strftime('%H:%M') + ")"
+  end
 end

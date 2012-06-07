@@ -27,17 +27,24 @@ class RoviSource
   def get_films start_time
     puts 'Requesting films starting at ' + start_time.to_s
     soap = @soap_source.read start_time, 240
-    films = (soap.nil? || soap.empty?) ? [] : extract_films(soap)
-    end_date = films.empty? ? start_time + 240.minutes : films.last.end_date
-    FilmBatch.new films, end_date
+    puts soap
+    return nil if soap.nil? || soap.empty? || has_no_programmes(soap)
+    extract_films(soap)
+  end
+
+  def has_no_programmes soap
+    !soap.include? "GridAiring"
   end
 
   def extract_films soap
     doc = Hpricot.XML(soap)
     films = (doc/"GridAiring")
-    raise FilmServiceFailure if films.empty?
+    return nil if films.empty?
+    end_date = end_date films.last
     films.delete_if {|film| film['Category'] != 'Movie' }
-    films.map {|film| Showing.new film['Title'], start_date(film), end_date(film) }
+    films = films.map {|film| Showing.new film['Title'], start_date(film), end_date(film) }
+    puts films
+    FilmBatch.new films, end_date
   end 
 
   def start_date film

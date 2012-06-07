@@ -1,4 +1,5 @@
 require 'soap_source'
+require 'fixnum'
 
 describe SoapSource do
   it 'should retrieve some xml from the rovi service' do
