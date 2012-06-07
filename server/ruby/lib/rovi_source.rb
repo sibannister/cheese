@@ -27,7 +27,6 @@ class RoviSource
   def get_films start_time
     puts 'Requesting films starting at ' + start_time.to_s
     soap = @soap_source.read start_time, 240
-    puts soap
     return nil if soap.nil? || soap.empty? || has_no_programmes(soap)
     extract_films(soap)
   end

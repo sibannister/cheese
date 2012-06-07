@@ -1,0 +1,35 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    akami (1.0.0)
+      gyoku (>= 0.4.0)
+    builder (3.0.0)
+    gyoku (0.4.4)
+      builder (>= 2.1.2)
+    hpricot (0.8.6)
+    httpi (0.9.7)
+      rack
+    imdb (0.6.8)
+      hpricot (~> 0.8.4)
+    nokogiri (1.5.2)
+    nori (1.1.0)
+    rack (1.4.1)
+    savon (0.9.9)
+      akami (~> 1.0)
+      builder (>= 2.1.2)
+      gyoku (>= 0.4.0)
+      httpi (~> 0.9)
+      nokogiri (>= 1.4.0)
+      nori (~> 1.1)
+      wasabi (~> 2.1)
+    timecop (0.3.5)
+    wasabi (2.1.1)
+      nokogiri (>= 1.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  imdb
+  savon
+  timecop

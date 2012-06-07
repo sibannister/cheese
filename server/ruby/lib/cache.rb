@@ -32,7 +32,7 @@ class Cache
         Thread.new do
           rating = @reviewer.review(showing.name)
           showing.rating = rating
-          puts "*  Updated showing to " + showing.to_s + " using value " + rating.to_s
+          puts "  Updated showing to " + showing.to_s
         end
       end
     end
