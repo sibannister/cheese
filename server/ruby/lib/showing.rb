@@ -25,6 +25,6 @@ class Showing
   end
 
   def to_s
-    name + " (" + @start_date.strftime('%d/%m %H:%M') + " to " + @end_date.strftime('%H:%M') + ")"
+    name + " (" + @start_date.strftime('%d/%m %H:%M') + " to " + @end_date.strftime('%H:%M') + ") " + rating.to_s + "/10"
   end
 end

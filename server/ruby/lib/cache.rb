@@ -26,9 +26,15 @@ class Cache
   def self.add_films_to_cache
     loop do
       next_batch = @tv.get_films
-      break if next_batch.empty?
+      break if next_batch.nil?
       @@showings += next_batch
-      next_batch.each {|showing| showing.rating = @reviewer.review(showing.name) }
+      next_batch.each do |showing|
+        Thread.new do
+          rating = @reviewer.review(showing.name)
+          showing.rating = rating
+          puts "*  Updated showing to " + showing.to_s + " using value " + rating.to_s
+        end
+      end
     end
   end
 
