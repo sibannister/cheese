@@ -1,4 +1,5 @@
 require 'cache'
+require 'channel'
 require 'showing'
 
 describe Cache do
@@ -6,6 +7,12 @@ describe Cache do
   let (:reviewer) { stub }
   let (:film1) { Showing.new 'Birdemic', Time.now, Time.now }
   let (:film2) { Showing.new 'The Godfather', Time.now, Time.now }
+
+  it 'should ask for the films on Film4' do
+    film4 = Channel.new 'Film 4', 891296
+    tv.should_receive(:get_films).with(film4)
+    Cache.build tv, reviewer
+  end
 
   it 'should handle batches without any films' do
     tv.should_receive(:get_films).and_return([film1], [], [film2], nil)

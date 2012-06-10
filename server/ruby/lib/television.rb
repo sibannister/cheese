@@ -11,8 +11,8 @@ class Television
     @next_batch_start_time = Time.now
   end
 
-  def get_films 
-    batch = @rovi_source.get_films @next_batch_start_time
+  def get_films channel  
+    batch = @rovi_source.get_films @next_batch_start_time, channel
     puts 'Batch end date is ' + batch.end_date.to_s
     @next_batch_start_time = batch.end_date
     batch.films

@@ -1,4 +1,4 @@
-require 'television'
+require 'television' 
 require 'film_reviewer'
 
 class Cache
@@ -25,7 +25,8 @@ class Cache
 
   def self.add_films_to_cache
     loop do
-      next_batch = @tv.get_films
+      film4 = Channel.new 'Film 4', 891296
+      next_batch = @tv.get_films film4
       break if next_batch.nil?
       @@showings += next_batch
       next_batch.each do |showing|
