@@ -1,2 +1,2 @@
-web: bundle exec ruby -Ilib lib/server.rb
+web: bundle exec ruby -Iserver/ruby/lib server/ruby/lib/server.rb
 

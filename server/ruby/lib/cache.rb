@@ -1,4 +1,5 @@
 require 'television' 
+require 'channel'
 require 'film_reviewer'
 
 class Cache

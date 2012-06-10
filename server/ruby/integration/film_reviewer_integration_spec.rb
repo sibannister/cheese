@@ -15,4 +15,8 @@ describe FilmReviewer do
   it 'should handle sequels' do
     reviewer.review('Night at the museum 2').should_not be_nil
   end
+
+  it 'should handle alternative film titles' do
+    reviewer.review('Gegen die Wand').should == reviewer.review('Head on')
+  end
 end
