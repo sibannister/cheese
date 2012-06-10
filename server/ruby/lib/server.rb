@@ -10,7 +10,7 @@ class MyServlet < WEBrick::HTTPServlet::AbstractServlet
   end 
 end
 
-server = WEBrick::HTTPServer.new( :Port => 1234 )
+server = WEBrick::HTTPServer.new( :Port => ARGV[0] )
 server.mount "/", MyServlet
 trap("INT"){ server.shutdown }
 Thread.new { Cache.build }
