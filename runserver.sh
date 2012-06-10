@@ -4,6 +4,6 @@ sudo gem uninstall movie_robot
 
 echo STARTING UP SERVER...
 cd server/ruby
-ruby -Ilib lib/server.rb
+ruby -Ilib lib/server.rb 1234
 
 echo STOPPING SERVER...
