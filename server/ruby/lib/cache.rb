@@ -48,8 +48,11 @@ class Cache
 
   def get_films
     puts "Retrieving films from cache"
-
     @@showings
+  end
+
+  def get_channels
+    [Channel.new('Film 5', 123)]
   end
 end
 

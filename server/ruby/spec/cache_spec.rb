@@ -7,6 +7,11 @@ describe Cache do
   let (:reviewer) { stub }
   let (:film1) { Showing.new 'Birdemic', Time.now, Time.now }
   let (:film2) { Showing.new 'The Godfather', Time.now, Time.now }
+  let (:channel) { Channel.new 'Film', 123 }
+
+  before do
+    channel << film1 << film2
+  end
 
   it 'should ask for the films on Film4' do
     film4 = Channel.new 'Film 4', 891296
@@ -20,6 +25,7 @@ describe Cache do
     reviewer.should_receive(:review).with('The Godfather').and_return(9.2)
     Cache.build tv, reviewer
     Cache.new.get_films.should == [film1, film2]
+    Cache.new.get_channels.should == [channel]
   end
 
   it 'should retrieve films until there are no more' do

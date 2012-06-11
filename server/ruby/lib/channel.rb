@@ -11,6 +11,10 @@ class Channel
     @name = other.name && @code == other.code
   end
 
+  def << film
+    self
+  end
+
   def to_s
     @name.to_s + " (" + @code.to_s + ")" 
   end
