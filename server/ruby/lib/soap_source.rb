@@ -21,12 +21,12 @@ class SoapSource
       soap.body = 
         '<request>' +
         '<Locale>en-GB</Locale>' +
-        '<ServiceId>' + channel.code.to_s + '</ServiceId>' +
+        '<ServiceId>891296</ServiceId>' +
         '<StartDate>' + start_date.xmlschema + '</StartDate>' +
         '<Duration>240</Duration>' +
         '<SourceFilter>' +
         '<Sources>' +
-        '<SourceId>25409</SourceId>' +
+        '<SourceId>' + channel.code.to_s + '</SourceId>' +
         '</Sources>' +
         '</SourceFilter>' +
         '</request>'

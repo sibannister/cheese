@@ -13,6 +13,15 @@ describe Cache do
   before do
   end
 
+  it 'should separate films into channels' do
+    other_channel = Channel.new 'ITV', 456
+    tv.should_receive(:get_films).with(channel).and_return([film1], nil)
+    tv.should_receive(:get_films).with(other_channel).and_return([film2], nil)
+    Cache.build tv, reviewer, [channel, other_channel]
+    Cache.new.get_channels[0].films.should == [film1]
+    Cache.new.get_channels[1].films.should == [film2]
+  end
+
   it 'should ask for the films on correct channels' do
     other_channel = Channel.new 'ITV', 456
     tv.should_receive(:get_films).with(channel).and_return(nil)

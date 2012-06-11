@@ -12,11 +12,11 @@ class Cache
   end
 
   def self.reset
-    @@showings = []
+    @@channels.each {|channel| channel.films = []}
   end
 
   def self.begin_caching
-    puts "Beginning to cache films"
+    puts "Beginning to cache films for channels: " + @@channels.to_s
     add_films_to_cache
     puts "Caching complete" 
   end
@@ -25,7 +25,8 @@ class Cache
     loop do
       no_films_left = true
       @@channels.each do |channel|
-        no_films_left = no_films_left && !(add_from_channel? channel)
+        no_films_left_on_this_channel = add_from_channel? channel
+        no_films_left = no_films_left && !no_films_left_on_this_channel
       end
       break if no_films_left
     end
@@ -35,7 +36,7 @@ class Cache
     puts "Looking for films on channel " + channel.name
     next_batch = @@tv.get_films channel
     return false if next_batch.nil?
-    @@showings += next_batch
+    channel.films += next_batch
     next_batch.each do |showing|
       Thread.new do
         rating = @@reviewer.review(showing.name)
@@ -46,18 +47,12 @@ class Cache
     true
   end
 
-  def << showing
-    @@showings << showing
-    self
-  end
-
   def get_films
     puts "Retrieving films from cache"
-    @@showings
+    @@channels[0].films
   end
 
   def get_channels
-    @@channels[0].films += @@showings
     @@channels
   end
 end
