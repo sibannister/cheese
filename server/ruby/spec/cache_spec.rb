@@ -7,15 +7,14 @@ describe Cache do
   let (:reviewer) { stub }
   let (:film1) { Showing.new 'Birdemic', Time.now, Time.now }
   let (:film2) { Showing.new 'The Godfather', Time.now, Time.now }
-  let (:channel) { Channel.new 'Film 4', 123 }
+  let (:channel) { Channel.new 'Gay Rabbit', 123 }
   let (:channels) { [channel] }
 
   before do
   end
 
-  it 'should ask for the films on Film4' do
-    film4 = Channel.new 'Film 4', 891296
-    tv.should_receive(:get_films).with(film4)
+  it 'should ask for the films on correct channel' do
+    tv.should_receive(:get_films).with(channel).and_return(nil)
     Cache.build tv, reviewer, channels
   end
 

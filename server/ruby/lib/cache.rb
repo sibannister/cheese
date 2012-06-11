@@ -13,7 +13,6 @@ class Cache
 
   def self.reset
     @@showings = []
-    film4 = Channel.new('Film 4', 123)
   end
 
   def self.begin_caching
@@ -24,20 +23,26 @@ class Cache
 
   def self.add_films_to_cache
     loop do
-      film4 = Channel.new 'Film 4', 891296
-      next_batch = @@tv.get_films film4
-      break if next_batch.nil?
-      @@showings += next_batch
-      next_batch.each do |showing|
-        Thread.new do
-          rating = @@reviewer.review(showing.name)
-          showing.rating = rating
-          puts "  Updated showing to " + showing.to_s
-        end
+      @@channels.each do |channel|
+        return unless add_from_channel? channel
       end
     end
   end
 
+  def self.add_from_channel? channel
+    puts "Looking for films on channel " + channel.name
+    next_batch = @@tv.get_films channel
+    return false if next_batch.nil?
+    @@showings += next_batch
+    next_batch.each do |showing|
+      Thread.new do
+        rating = @@reviewer.review(showing.name)
+        showing.rating = rating
+        puts "  Updated showing to " + showing.to_s
+      end
+    end
+    true
+  end
 
   def << showing
     @@showings << showing
