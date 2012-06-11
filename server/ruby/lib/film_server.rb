@@ -13,12 +13,16 @@ class FilmServer
   
   def handleGET(request, response)
     response.body = 
-      if request.path != "/films"
-        "Unexpected url.  Should be in the format [ip:port]/films"
-      else
+      if request.path == "/films"
         films = @cache.get_films
         films_json = films.map {|film| film.to_json}
         '[' + films_json.join(', ') + ']'
+      elsif request.path == "/channels"
+        channels = @cache.get_channels
+        channels_json = channels.map {|channel| channel.to_json}
+        '[' + channels_json.join(', ') + ']'
+      else
+        "Unexpected url.  Should be in the format [ip:port]/films"
       end
   end 
 
