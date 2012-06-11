@@ -18,17 +18,17 @@ describe 'RoviSource' do
   
   it 'should return no films from a nil soap packet' do
     soap_source.stub(:read).with(Time.now, @channel).and_return nil
-    source.get_films(Time.now, @channel).should be_nil
+    source.get_films(Time.now, @channel).end_date.should == Time.now + 240.minutes
   end
 
   it 'should return no films from an empty soap packet' do
     soap_source.stub(:read).with(Time.now, @channel).and_return ''
-    source.get_films(Time.now, @channel).should be_nil
+    source.get_films(Time.now, @channel).end_date.should == Time.now + 240.minutes
   end
 
-  it 'should return nil if there were no programmes in the soap packet' do
+  it 'should return no films if there were no programmes in the soap packet' do
     soap_source.stub(:read).with(Time.now, @channel).and_return 'wibble'
-    source.get_films(Time.now, @channel).should be_nil
+    source.get_films(Time.now, @channel).end_date.should == Time.now + 240.minutes
   end
 
   it 'should extract a film from a soap response' do
