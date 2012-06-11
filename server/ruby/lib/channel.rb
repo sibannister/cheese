@@ -18,6 +18,10 @@ class Channel
     self
   end
 
+  def to_json
+    '{"name" : "' + @name + '", "films" : []}'
+  end
+
   def to_s
     @name.to_s + " (" + @code.to_s + ") " + films.to_s
   end
