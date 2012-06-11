@@ -6,11 +6,16 @@ require 'cache'
 class FilmServer
   attr_writer :days_to_search
 
+  def self.on_server_startup
+    channels = [ Channel.new('BBC 1', 24872) ]
+    Thread.new { Cache.build Television.new, FilmReviewer.new, channels }
+  end
+
   def initialize cache = Cache.new
     @days_to_search = 7
     @cache = cache
   end
-  
+
   def handleGET(request, response)
     response.body = 
       if request.path == "/films"

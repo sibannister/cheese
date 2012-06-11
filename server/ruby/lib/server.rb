@@ -10,10 +10,10 @@ class MyServlet < WEBrick::HTTPServlet::AbstractServlet
   end 
 end
 
+FilmServer.on_server_startup
+
 server = WEBrick::HTTPServer.new( :Port => ARGV[0] )
 server.mount "/", MyServlet
 trap("INT"){ server.shutdown }
-channels = [ Channel.new('BBC 1', 24872) ]
-Thread.new { Cache.build Television.new, FilmReviewer.new, channels }
 server.start
 
