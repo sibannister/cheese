@@ -23,9 +23,11 @@ class Cache
 
   def self.add_films_to_cache
     loop do
+      no_films_left = true
       @@channels.each do |channel|
-        return unless add_from_channel? channel
+        no_films_left = no_films_left && !(add_from_channel? channel)
       end
+      break if no_films_left
     end
   end
 

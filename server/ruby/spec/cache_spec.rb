@@ -13,9 +13,11 @@ describe Cache do
   before do
   end
 
-  it 'should ask for the films on correct channel' do
+  it 'should ask for the films on correct channels' do
+    other_channel = Channel.new 'ITV', 456
     tv.should_receive(:get_films).with(channel).and_return(nil)
-    Cache.build tv, reviewer, channels
+    tv.should_receive(:get_films).with(other_channel).and_return(nil)
+    Cache.build tv, reviewer, [channel, other_channel]
   end
 
   it 'should handle batches without any films' do
