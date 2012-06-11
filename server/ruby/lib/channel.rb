@@ -19,7 +19,9 @@ class Channel
   end
 
   def to_json
-    '{"name" : "' + @name + '", "films" : []}'
+    films_as_json = films.map {|film| film.to_json}
+    films_as_json = '[' + films_as_json.join(', ') + ']'
+    '{"name" : "' + @name + '", "films" : ' + films_as_json + '}'
   end
 
   def to_s
