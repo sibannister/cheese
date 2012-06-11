@@ -7,7 +7,7 @@ describe Cache do
   let (:reviewer) { stub }
   let (:film1) { Showing.new 'Birdemic', Time.now, Time.now }
   let (:film2) { Showing.new 'The Godfather', Time.now, Time.now }
-  let (:channel) { Channel.new 'Film', 123 }
+  let (:channel) { Channel.new 'Film 4', 123 }
 
   before do
     channel << film1 << film2

@@ -13,6 +13,8 @@ class Cache
   def self.reset
     @@caching = false
     @@showings = []
+    film4 = Channel.new('Film 4', 123)
+    @@channels = [film4]
   end
 
   def self.begin_caching
@@ -52,7 +54,8 @@ class Cache
   end
 
   def get_channels
-    [Channel.new('Film 5', 123)]
+    @@channels[0].films += @@showings
+    @@channels
   end
 end
 
