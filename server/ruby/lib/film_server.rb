@@ -7,8 +7,18 @@ class FilmServer
   attr_writer :days_to_search
 
   def self.on_server_startup
-    channels = [ Channel.new('BBC 1', 24872) ]
+    channels = read_channels
     Thread.new { Cache.build Television.new, FilmReviewer.new, channels }
+  end
+
+  def self.read_channels
+    File.open("channels.txt").map {|line| read_channel(line)}
+  end
+
+  def self.read_channel line
+    channel = Channel.new line.split(',')[0], line.split(',')[1].to_i
+    puts channel
+    channel
   end
 
   def initialize cache = Cache.new
