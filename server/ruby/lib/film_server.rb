@@ -2,13 +2,14 @@ require 'showing'
 require 'film_reviewer'
 require 'television'
 require 'cache'
+require 'fixnum'
 
 class FilmServer
   attr_writer :days_to_search
 
   def self.on_server_startup
     channels = read_channels
-    Thread.new { Cache.build Television.new, FilmReviewer.new, channels }
+    Thread.new { Cache.build Television.new, FilmReviewer.new, channels, 1.days }
   end
 
   def self.read_channels

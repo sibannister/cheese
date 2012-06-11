@@ -1,34 +1,36 @@
 require 'cache'
 require 'channel'
 require 'showing'
+require 'timecop'
 
 describe Cache do
   let (:tv) { stub }
   let (:reviewer) { stub }
-  let (:film1) { Showing.new 'Birdemic', Time.now, Time.now }
-  let (:film2) { Showing.new 'The Godfather', Time.now, Time.now }
+  let (:film1) { Showing.new 'Birdemic', Time.now, Time.now + 3.hours }
+  let (:film2) { Showing.new 'The Godfather', Time.now, Time.now + 3.hours}
   let (:channel) { Channel.new 'Gay Rabbit', 123 }
   let (:channels) { [channel] }
 
   before do
+    Timecop.freeze
   end
 
   it 'should separate films into channels' do
     other_channel = Channel.new 'ITV', 456
-    tv.should_receive(:get_films).with(channel).and_return([film1])
-    tv.should_receive(:get_films).with(other_channel).and_return([film2])
+    tv.should_receive(:get_films).with(channel, Time.now + 1.hours).and_return([film1])
+    tv.should_receive(:get_films).with(other_channel, Time.now + 1.hours).and_return([film2])
     tv.should_receive(:films_retrieved_up_to?).and_return(true)
-    Cache.build tv, reviewer, [channel, other_channel], 0.minutes
+    Cache.build tv, reviewer, [channel, other_channel], 1.hours
     Cache.new.get_channels[0].films.should == [film1]
     Cache.new.get_channels[1].films.should == [film2]
   end
 
   it 'should ask for the films on correct channels' do
     other_channel = Channel.new 'ITV', 456
-    tv.should_receive(:get_films).with(channel).and_return([])
-    tv.should_receive(:get_films).with(other_channel).and_return([])
+    tv.should_receive(:get_films).with(channel, Time.now + 1.hours).and_return([])
+    tv.should_receive(:get_films).with(other_channel, Time.now + 1.hours).and_return([])
     tv.should_receive(:films_retrieved_up_to?).and_return(true)
-    Cache.build tv, reviewer, [channel, other_channel], 0.minutes
+    Cache.build tv, reviewer, [channel, other_channel], 1.hours
   end
 
   it 'should handle batches without any films' do

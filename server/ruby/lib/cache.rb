@@ -32,7 +32,7 @@ class Cache
   end
 
   def self.add_from_channel channel
-    next_batch = @@tv.get_films channel
+    next_batch = @@tv.get_films(channel, Time.now + @@cache_duration_in_seconds)
     channel.films += next_batch
     next_batch.each do |showing|
       Thread.new do
