@@ -33,7 +33,6 @@ class Cache
   end
 
   def self.add_from_channel? channel
-    puts "Looking for films on channel " + channel.name
     next_batch = @@tv.get_films channel
     return false if next_batch.nil?
     channel.films += next_batch

@@ -25,8 +25,9 @@ class RoviSource
   end
 
   def get_films start_time, channel
-    puts 'Requesting films starting at ' + start_time.to_s
+    puts 'Requesting films starting at ' + start_time.to_s + " on " + channel.name
     soap = @soap_source.read start_time, channel
+    puts '  Soap response received for ' + channel.name
     return nil if soap.nil? || soap.empty? || has_no_programmes(soap)
     extract_films(soap)
   end
@@ -42,7 +43,7 @@ class RoviSource
     end_date = end_date films.last
     films.delete_if {|film| film['Category'] != 'Movie' }
     films = films.map {|film| Showing.new film['Title'], start_date(film), end_date(film) }
-    puts films
+    puts 'Films in soap: ' + films.to_s
     FilmBatch.new films, end_date
   end 
 
