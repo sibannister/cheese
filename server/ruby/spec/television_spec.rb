@@ -19,6 +19,18 @@ describe Television do
     tv.get_films(@film4).should have(3).items
   end
 
+  it 'should know how far into the future it has retrieved films' do
+    gay_rabbit = Channel.new 'Gay Rabbit', 456
+    now = Time.now
+    rovi_source.should_receive(:get_films).with(now, @film4).and_return film_batch(now + 4.hours, 3)
+    rovi_source.should_receive(:get_films).with(now, gay_rabbit).and_return film_batch(now + 3.hours, 3)
+    tv.get_films(@film4)
+    tv.get_films(gay_rabbit)
+    tv.films_retrieved_up_to?(now).should be_true 
+    tv.films_retrieved_up_to?(now + 3.hours).should be_true 
+    tv.films_retrieved_up_to?(now + 4.hours).should be_false
+  end
+  
   it 'should begin retrieving from the point where it left off' do
     now = Time.now
     rovi_source.should_receive(:get_films).with(now, @film4).and_return film_batch(now + 4.hours, 3)

@@ -22,4 +22,8 @@ class Television
     start_time = @next_batch_start_time[channel]
     start_time.nil? ? Time.now : start_time
   end
+
+  def films_retrieved_up_to? time
+    @next_batch_start_time.values.all? {|end_date| end_date >= time}
+  end
 end
