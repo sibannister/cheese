@@ -8,6 +8,7 @@ class FilmServer
   attr_writer :days_to_search
 
   def self.on_server_startup
+    puts 'Starting up film server'
     channels = read_channels
     Thread.new { Cache.build Television.new, FilmReviewer.new, channels, 1.days }
   end

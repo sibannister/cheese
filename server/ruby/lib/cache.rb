@@ -24,16 +24,20 @@ class Cache
 
   def self.add_films_to_cache
     loop do
+      puts 'Round of channels beginning'
       @@channels.each do |channel|
         add_from_channel channel
       end
+      puts 'Round of channels completed'
       break if @@tv.films_retrieved_up_to? Time.now + @@cache_duration_in_seconds
     end
   end
 
   def self.add_from_channel channel
     next_batch = @@tv.get_films(channel, Time.now + @@cache_duration_in_seconds)
+    puts 'Next batch of ' + next_batch.count.to_s + ' films being added to ' + channel.name
     channel.films += next_batch
+    puts 'Kicking off review gathering on separate thread'
     next_batch.each do |showing|
       Thread.new do
         rating = @@reviewer.review(showing.name)
@@ -41,7 +45,7 @@ class Cache
         puts "  Updated showing to " + showing.to_s
       end
     end
-    true
+    puts 'Threads kicked off'
   end
 
   def get_films
