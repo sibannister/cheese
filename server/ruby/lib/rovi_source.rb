@@ -21,8 +21,8 @@ end
 
 class RoviSource
   def initialize soap_source = SoapSource.new
-    #@soap_source = soap_source
-    @soap_source = DummySoapSource.new
+    @soap_source = soap_source
+    #@soap_source = DummySoapSource.new
   end
 
   def get_films start_time, channel
