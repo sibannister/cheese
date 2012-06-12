@@ -21,7 +21,8 @@ end
 
 class RoviSource
   def initialize soap_source = SoapSource.new
-    @soap_source = soap_source
+    #@soap_source = soap_source
+    @soap_source = DummySoapSource.new
   end
 
   def get_films start_time, channel
@@ -65,5 +66,11 @@ class RoviSource
   def end_date film
     puts 'Duration of ' + film['Duration']
     Time.parse(film['AiringTime']) + film['Duration'].to_i.minutes
+  end
+end
+
+class DummySoapSource
+  def read x, y
+    File.read('server/ruby/rovi/get_grid_schedule_response.xml') 
   end
 end

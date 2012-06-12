@@ -1,5 +1,5 @@
 echo STARTING UP SERVER...
 cd server/ruby
-ruby -Ilib lib/server.rb 1234
+ruby -Ilib lib/server.rb 2345
 
 echo STOPPING SERVER...

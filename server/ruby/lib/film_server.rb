@@ -10,7 +10,7 @@ class FilmServer
   def self.on_server_startup
     puts 'Starting up film server'
     channels = read_channels
-    Thread.new { Cache.build Television.new, FilmReviewer.new, channels, 1.days }
+    Cache.build Television.new, FilmReviewer.new, channels, 1.days
   end
 
   def self.read_channels
@@ -30,7 +30,10 @@ class FilmServer
 
   def handleGET(request, response)
     response.body = 
-      if request.path == "/films"
+      if request.path == "/init"
+        FilmServer.on_server_startup
+        "Initialising movie robot"
+      elsif request.path == "/films"
         films = @cache.get_films
         films_json = films.map {|film| film.to_json}
         '[' + films_json.join(', ') + ']'

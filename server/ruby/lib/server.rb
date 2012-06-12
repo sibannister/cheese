@@ -10,7 +10,6 @@ class MyServlet < WEBrick::HTTPServlet::AbstractServlet
   end 
 end
 
-FilmServer.on_server_startup
 
 server = WEBrick::HTTPServer.new( :Port => ARGV[0] )
 server.mount "/", MyServlet
