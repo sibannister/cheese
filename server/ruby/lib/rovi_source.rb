@@ -1,4 +1,5 @@
 require 'soap_source'
+require 'unreliable_object_delegate'
 require 'fixnum'
 require 'hpricot'
 require 'showing'
@@ -21,7 +22,7 @@ end
 
 class RoviSource
   def initialize soap_source = SoapSource.new
-    @soap_source = soap_source
+    @soap_source = UnreliableObjectDelegate.new soap_source, 4, 4
     #@soap_source = DummySoapSource.new
   end
 
