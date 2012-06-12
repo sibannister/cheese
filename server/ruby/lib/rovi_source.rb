@@ -27,7 +27,6 @@ class RoviSource
   def get_films start_time, channel
     puts 'Requesting films starting at ' + start_time.to_s + " on " + channel.name
     soap = @soap_source.read start_time, channel
-    puts '  Soap response received for ' + channel.name + soap.to_s
     return empty_batch(start_time) if soap.nil? || soap.empty? || has_no_programmes(soap)
     extract_films(soap)
   end
