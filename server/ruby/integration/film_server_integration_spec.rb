@@ -4,13 +4,14 @@ require 'net/http'
 
 describe FilmServer do
   it 'should handle the films url without crashing' do
-    FilmServer.build_cache 2
+    response = mock
+    server = FilmServer.new
+    
+    response.should_receive(:body=)
+    server.handleGET stub(:path => "/cache", :query => {"days" => 1}), response
     sleep 10
 
-    response = mock
     response.should_receive(:body=)
-    request = stub(:path => "/channels")
-    server = FilmServer.new
-    server.handleGET request, response
+    server.handleGET stub(:path => "/films"), response
   end
 end
