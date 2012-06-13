@@ -8,18 +8,15 @@ class Cache
     @@reviewer = reviewer
     @@channels = channels
     @@cache_duration_in_seconds = cache_duration_in_seconds
+
     reset
-    begin_caching
+    puts "BEGINNING TO CACHE " + (cache_duration_in_seconds / (60*60*24)).to_s + " days worth of films for channels: " + @@channels.to_s
+    add_films_to_cache
+    puts "CACHING COMPLETE" 
   end
 
   def self.reset
     @@channels.each {|channel| channel.films = []}
-  end
-
-  def self.begin_caching
-    puts "Beginning to cache films for channels: " + @@channels.to_s
-    add_films_to_cache
-    puts "CACHING COMPLETE" 
   end
 
   def self.add_films_to_cache
