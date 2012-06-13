@@ -6,7 +6,7 @@ class Showing
 
   def ==(other)
     return false if other.nil?
-    @name == other.name && @rating ==  other.rating && @end_date == other.end_date && @start_date == other.start_date
+    @name == other.name && @rating ==  other.rating && @channel == other.channel && @end_date == other.end_date && @start_date == other.start_date
   end
 
   def initialize name, start_date, end_date, rating = 0, channel = 'Unknown'
@@ -26,6 +26,6 @@ class Showing
   end
 
   def to_s
-    name + " (" + @start_date.strftime('%d/%m %H:%M') + " to " + @end_date.strftime('%H:%M') + ") " + rating.to_s + "/10"
+    name + " (" + @channel + " from " + @start_date.strftime('%d/%m %H:%M') + " to " + @end_date.strftime('%H:%M') + ") " + rating.to_s + "/10"
   end
 end

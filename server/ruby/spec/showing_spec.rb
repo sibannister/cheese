@@ -14,21 +14,26 @@ describe Showing do
 
   context 'equality' do
     it 'should recognise two identical films as equal' do
-      film1 = Showing.new "Birdemic", Time.now, Time.now
-      film2 = Showing.new "Birdemic", Time.now, Time.now
+      film1 = Showing.new "Birdemic", Time.now, Time.now, 1.2, 'ITV'
+      film2 = Showing.new "Birdemic", Time.now, Time.now, 1.2, 'ITV'
       film1.should == film2
     end
 
+    it 'should recognise films on different channels as unequal' do
+      film1 = Showing.new "Birdemic", Time.now, Time.now, 1.2, 'ITV'
+      film2 = Showing.new "Birdemic", Time.now, Time.now, 1.2, 'Film 4'
+      film1.should_not == film2
+    end
+
     it 'should recognise two differently rated films as unequal' do
-      film1 = Showing.new "Birdemic", Time.now, Time.now
-      film2 = Showing.new "Birdemic", Time.now, Time.now
-      film2.rating = 3.5
+      film1 = Showing.new "Birdemic", Time.now, Time.now, 1.2, 'ITV'
+      film2 = Showing.new "Birdemic", Time.now, Time.now, 4.2, 'ITV'
       film1.should_not == film2
     end
 
     it 'should recognise two differently named films as unequal' do
-      film1 = Showing.new "Birdemic", Time.now, Time.now
-      film2 = Showing.new "Titanic", Time.now, Time.now
+      film1 = Showing.new "Birdemic", Time.now, Time.now, 1.2, 'ITV'
+      film2 = Showing.new "Titanic", Time.now, Time.now, 1.2, 'ITV'
       film1.should_not == film2
     end
 
