@@ -7,6 +7,8 @@ require 'fixnum'
 class FilmServer
   attr_writer :days_to_search
 
+  @@initialised = false
+
   def self.build_cache days
     @@initialised = true
     puts 'Starting up film server'
@@ -36,20 +38,18 @@ class FilmServer
         days = request.query['days']
         FilmServer.build_cache(days.nil? ? 7 : days.to_i)
         "Initialised movie robot"
+      elsif !@@initialised
+        "Please call /cache to initialise the cache"
+      elsif request.path == "/films"
+        films = @cache.get_films
+        films_json = films.map {|film| film.to_json}
+        '[' + films_json.join(', ') + ']'
+      elsif request.path == "/channels"
+        channels = @cache.get_channels
+        channels_json = channels.map {|channel| channel.to_json}
+        '[' + channels_json.join(', ') + ']'
       else
-        return "Please call /cache to initialise the cache" if !@@initialised
-
-        if request.path == "/films"
-          films = @cache.get_films
-          films_json = films.map {|film| film.to_json}
-          '[' + films_json.join(', ') + ']'
-        elsif request.path == "/channels"
-          channels = @cache.get_channels
-          channels_json = channels.map {|channel| channel.to_json}
-          '[' + channels_json.join(', ') + ']'
-        else
-          "Unexpected url.  Should be in the format [ip:port]/films"
-        end
+        "Unexpected url.  Should be in the format [ip:port]/films"
       end
   end 
 

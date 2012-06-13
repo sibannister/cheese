@@ -12,19 +12,9 @@ describe FilmServer do
   let (:film_server) { FilmServer.new cache  }
   let (:response) { MockResponse.new }
 
-  it 'should allow caching of a configurable number of days' do
-    request = stub(:query => {'days' => '4'}, :path => "/cache" )
-    Cache.should_receive(:build).with(anything(), anything(), anything(), 4.days)
-    film_server.handleGET request, response
-  end
-
-  it 'should respond to a cache call by building up the cache for 7 days' do
-    request = stub(:query => {}, :path => "/cache" )
-    Cache.should_receive(:build).with(anything(), anything(), anything(), 7.days)
-    film_server.handleGET request, response
-  end
 
   it 'should return a list of films' do
+    FilmServer.build_cache 0
     request = stub(:query => {}, :path => "/films" )
     film1 = Showing.new 'The Godfather', Time.now, Time.now
     film2 = Showing.new 'Birdemic', Time.now, Time.now
@@ -46,5 +36,17 @@ describe FilmServer do
     film_server.handleGET request, response
     response.body.should == "Unexpected url.  Should be in the format [ip:port]/films"
   end 
+
+  it 'should allow caching of a configurable number of days' do
+    request = stub(:query => {'days' => '4'}, :path => "/cache" )
+    Cache.should_receive(:build).with(anything(), anything(), anything(), 4.days)
+    film_server.handleGET request, response
+  end
+
+  it 'should respond to a cache call by building up the cache for 7 days' do
+    request = stub(:query => {}, :path => "/cache" )
+    Cache.should_receive(:build).with(anything(), anything(), anything(), 7.days)
+    film_server.handleGET request, response
+  end
 end
 
