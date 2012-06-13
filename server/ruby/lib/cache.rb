@@ -10,16 +10,16 @@ class Cache
     @@cache_duration_in_seconds = cache_duration_in_seconds
 
     reset
-    puts "BEGINNING TO CACHE " + (cache_duration_in_seconds / (60*60*24)).to_s + " days worth of films for channels: " + @@channels.to_s
     add_films_to_cache
-    puts "CACHING COMPLETE" 
   end
 
   def self.reset
-    @@channels.each {|channel| channel.films = []}
+    @@films = []
+    @@channels
   end
 
   def self.add_films_to_cache
+    puts "BEGINNING TO CACHE " + (@@cache_duration_in_seconds / (60*60*24)).to_s + " days worth of films for channels: " + @@channels.to_s
     loop do
       puts 'Round of channels beginning'
       @@channels.each do |channel|
@@ -28,12 +28,13 @@ class Cache
       puts 'Round of channels completed'
       break if @@tv.films_retrieved_up_to? Time.now + @@cache_duration_in_seconds
     end
+    puts "CACHING COMPLETE" 
   end
 
   def self.add_from_channel channel
     next_batch = @@tv.get_films(channel, Time.now + @@cache_duration_in_seconds)
-    puts 'Next batch of ' + next_batch.count.to_s + ' films being added to ' + channel.name
-    channel.films += next_batch
+    puts 'Next batch of ' + next_batch.count.to_s + ' films being added for ' + channel.name
+    @@films += next_batch
     puts 'Kicking off review gathering on separate thread'
     next_batch.each do |showing|
       Thread.new do
@@ -47,12 +48,7 @@ class Cache
 
   def get_films
     puts "Retrieving films from cache"
-    @@channels[0].films
-  end
-
-  def get_channels
-    puts "Retrieving channels from cache"
-    @@channels
+    @@films
   end
 end
 
