@@ -8,9 +8,8 @@ describe Showing do
   end
 
   it 'should convert a film to a json string' do
-    film = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), Time.now
-    film.rating = 9.2
-    film.to_json.should == '{"name" : "The Godfather", "rating" : 9.2, "start" : "2010-04-11 23:45"}'
+    film = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), Time.now, 9.2, 'ITV'
+    film.to_json.should == '{"name" : "The Godfather", "rating" : 9.2, "channel" : "ITV", "start" : "2010-04-11 23:45"}'
   end
 
   context 'equality' do

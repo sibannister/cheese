@@ -12,6 +12,17 @@ describe FilmServer do
   let (:film_server) { FilmServer.new cache  }
   let (:response) { MockResponse.new }
 
+  it 'should handle a large number of films' do
+    FilmServer.build_cache 0
+    request = stub(:query => {}, :path => "/films" )
+    film_names = ['The Godfather', 'Birdemic', 'M', 'Seven', 'Suspicion', 'Notorious', 'Frenzy', 'Torn Curtain', 'Annie Hall', 'Manhatten', 'Gone With The Wind', 'Metropolis', 'The Great Dictator', 'Siwss Young Boys', 'All About Eve', 'It Happened One Night']
+    time = Time.new 2012, 6, 14, 17, 13, 0
+    films = film_names.map { |name| Showing.new name, (time += 4.hours), (time + 2.hours), 7.3 }
+    cache.stub(:get_films => films)
+    film_server.handleGET request, response
+    puts "***"
+    puts response.body
+  end
 
   it 'should return a list of films' do
     FilmServer.build_cache 0

@@ -1,7 +1,7 @@
 class Showing
   include Comparable
 
-  attr_reader :name, :start_date, :end_date
+  attr_reader :name, :start_date, :end_date, :channel
   attr_accessor :rating
 
   def ==(other)
@@ -9,11 +9,12 @@ class Showing
     @name == other.name && @rating ==  other.rating && @end_date == other.end_date && @start_date == other.start_date
   end
 
-  def initialize name, start_date, end_date 
+  def initialize name, start_date, end_date, rating = 0, channel = 'Unknown'
     @name = name
     @start_date = start_date
     @end_date = end_date
-    @rating = 0
+    @rating = rating
+    @channel = channel
   end
 
   def self.match_title? actual_title, candidate_title
@@ -21,7 +22,7 @@ class Showing
   end
 
   def to_json
-    '{"name" : "' + name + '", "rating" : ' + rating.to_s + ', "start" : "' + @start_date.strftime('%Y-%m-%d %H:%M') + '"}'
+    '{"name" : "' + name + '", "rating" : ' + rating.to_s + ', "channel" : "' + @channel + '", "start" : "' + @start_date.strftime('%Y-%m-%d %H:%M') + '"}'
   end
 
   def to_s
