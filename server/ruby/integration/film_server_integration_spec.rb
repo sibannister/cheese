@@ -4,7 +4,7 @@ require 'net/http'
 
 describe FilmServer do
   it 'should handle the films url without crashing' do
-    FilmServer.on_server_startup
+    FilmServer.build_cache 2
     sleep 10
 
     response = mock
