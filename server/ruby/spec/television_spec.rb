@@ -60,7 +60,7 @@ describe Television do
   end
 
   def film_batch end_date, number_of_films
-    film = Showing.new('Birdemic', Time.now, Time.now)
+    film = Showing.new 'Birdemic', Time.now, Time.now, 'ITV'
     stub(:end_date => end_date, :films => [film] * number_of_films)
   end
 end

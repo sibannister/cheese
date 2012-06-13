@@ -17,7 +17,7 @@ describe FilmServer do
     request = stub(:query => {}, :path => "/films" )
     film_names = ['The Godfather', 'Birdemic', 'M', 'Seven', 'Suspicion', 'Notorious', 'Frenzy', 'Torn Curtain', 'Annie Hall', 'Manhatten', 'Gone With The Wind', 'Metropolis', 'The Great Dictator', 'Siwss Young Boys', 'All About Eve', 'It Happened One Night']
     time = Time.new 2012, 6, 14, 17, 13, 0
-    films = film_names.map { |name| Showing.new name, (time += 4.hours), (time + 2.hours), 7.3 }
+    films = film_names.map { |name| Showing.new name, (time += 4.hours), (time + 2.hours), 'ITV', 7.3 }
     cache.stub(:get_films => films)
     film_server.handleGET request, response
     puts "***"
@@ -27,8 +27,8 @@ describe FilmServer do
   it 'should return a list of films' do
     FilmServer.build_cache 0
     request = stub(:query => {}, :path => "/films" )
-    film1 = Showing.new 'The Godfather', Time.now, Time.now
-    film2 = Showing.new 'Birdemic', Time.now, Time.now
+    film1 = Showing.new 'The Godfather', Time.now, Time.now, 'ITV'
+    film2 = Showing.new 'Birdemic', Time.now, Time.now, 'Film 4'
     cache.stub(:get_films => [film1, film2])
     film_server.handleGET request, response
     response.body.should == '[' + film1.to_json + ', ' + film2.to_json + ']'

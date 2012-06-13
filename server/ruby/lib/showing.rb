@@ -9,7 +9,7 @@ class Showing
     @name == other.name && @rating ==  other.rating && @channel == other.channel && @end_date == other.end_date && @start_date == other.start_date
   end
 
-  def initialize name, start_date, end_date, rating = 0, channel = 'Unknown'
+  def initialize name, start_date, end_date, channel, rating = 0
     @name = name
     @start_date = start_date
     @end_date = end_date

@@ -39,11 +39,13 @@ describe 'RoviSource' do
     films.should include 
           Showing.new 'David and Bathsheba', 
             Time.utc(2012, 5, 22, 10, 0, 0),
-            Time.utc(2012, 5, 22, 12, 25, 0)
+            Time.utc(2012, 5, 22, 12, 25, 0),
+            @channel
     films.should include 
           Showing.new 'White Feather', 
             Time.utc(2012, 5, 22, 12, 25, 0),
-            Time.utc(2012, 5, 22, 14, 30, 0)
+            Time.utc(2012, 5, 22, 14, 30, 0),
+            @channel
   end
 
   it 'should return the end date of the films in the soap packet' do
