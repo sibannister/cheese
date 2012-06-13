@@ -21,9 +21,8 @@ class FilmBatch
 end
 
 class RoviSource
-  def initialize soap_source = SoapSource.new
+  def initialize soap_source = DummySoapSource.new
     @soap_source = UnreliableObjectDelegate.new soap_source, 4, 4
-    #@soap_source = DummySoapSource.new
   end
 
   def get_films start_time, channel
@@ -63,6 +62,6 @@ end
 
 class DummySoapSource
   def read x, y
-    File.read('server/ruby/rovi/get_grid_schedule_response.xml') 
+    File.read('rovi/get_grid_schedule_response.xml') 
   end
 end
