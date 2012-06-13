@@ -34,14 +34,6 @@ describe FilmServer do
     response.body.should == '[' + film1.to_json + ', ' + film2.to_json + ']'
   end
 
-  it 'should return a list of channels' do
-    request = stub(:query => {}, :path => "/channels" )
-    channel = Channel.new "Film 4", 123
-    cache.stub(:get_channels => [channel])
-    film_server.handleGET request, response
-    response.body.should == '[' + channel.to_json + ']'
-  end
-
   it 'should ignore requests which start with an unrecognised path' do
     request = stub(:query => {'name' => 'The Godfather'}, :path => "/wibble" )
     film_server.handleGET request, response
