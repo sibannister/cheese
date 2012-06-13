@@ -1,2 +1,6 @@
 /_ReSharper.ImdbClientApp/
 /*.suo
+/ImdbClientApp.sln.DotSettings.user
+/ImdbClientApp.vsmdi
+/Local.testsettings
+/TraceAndTestImpact.testsettings
