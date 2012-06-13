@@ -32,8 +32,12 @@ class FilmServer
   end
 
 
-  def handleGET(request, response)
-    response.body = 
+  def handleGET request, response
+    response.body = get_response_body request
+  end 
+
+  def get_response_body request
+    begin
       if request.path == "/cache"
         days = request.query['days']
         FilmServer.build_cache(days.nil? ? 7 : days.to_i)
@@ -47,7 +51,10 @@ class FilmServer
       else
         "Unexpected url.  Should be in the format [ip:port]/films"
       end
-  end 
+    rescue => e
+      "Error occured - " + e.message 
+    end
+  end
 
   def add_ratings films
     films.each { |film| film.rating = @reviewer.review film.name }
