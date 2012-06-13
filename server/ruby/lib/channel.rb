@@ -1,30 +1,17 @@
 class Channel
   attr_reader :name, :code
-  attr_accessor :films
 
   def initialize name, code
     @name = name
     @code = code
-    @films = []
   end
 
   def == other
     return false if other.nil?
-    @name == other.name && @code == other.code && @films == other.films
-  end
-
-  def << film
-    @films << film
-    self
-  end
-
-  def to_json
-    films_as_json = films.map {|film| film.to_json}
-    films_as_json = '[' + films_as_json.join(', ') + ']'
-    '{"name" : "' + @name + '", "films" : ' + films_as_json + '}'
+    @name == other.name && @code == other.code 
   end
 
   def to_s
-    @name.to_s + " (" + @code.to_s + ") " + films.to_s
+    @name.to_s + " (" + @code.to_s + ")"
   end
 end
