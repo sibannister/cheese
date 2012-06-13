@@ -27,7 +27,7 @@ class UnreliableObjectDelegate
   def try_call method, *args, &block
     Timeout::timeout(@timeout_in_seconds) do
       result = @target.send method, *args, &block
-      puts "Unreliable method " + method.to_s + " succeeded.  Result is " + result.to_s.ljust(40)
+      puts "Unreliable method " + method.to_s + " succeeded.  Result is " + result.to_s[0..40] + "..."
       result
     end
   end
