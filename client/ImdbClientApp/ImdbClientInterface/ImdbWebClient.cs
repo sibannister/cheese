@@ -24,5 +24,5 @@ namespace ImdbClientInterface
                 return filmJObject.GetValue("rating", zero);
             }
         }
-    }
+    }    
 }
