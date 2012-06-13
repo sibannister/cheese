@@ -1,5 +1,8 @@
 echo STARTING UP SERVER...
 cd server/ruby
-ruby -Ilib lib/server.rb 2345
+ruby -Ilib lib/server.rb 1234 &
 
-echo STOPPING SERVER...
+echo INITIALISING THE SERVER...
+sleep 3
+curl http://localhost:1234/init
+
