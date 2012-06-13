@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Channel.cs" />
+    <Compile Include="ChannelsParser.cs" />
+    <Compile Include="Film.cs" />
+    <Compile Include="FilmsParser.cs" />
     <Compile Include="ImdbWebClient.cs" />
     <Compile Include="JTokenExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

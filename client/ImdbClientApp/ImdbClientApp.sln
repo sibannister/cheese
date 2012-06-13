@@ -5,7 +5,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbClientApp", "ImdbClient
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbClientInterface", "ImdbClientInterface\ImdbClientInterface.csproj", "{528DC4EF-C8DF-49FD-9D10-E29BA611943E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbClientInterfaceTest", "ImdbClientInterfaceTest\ImdbClientInterfaceTest.csproj", "{1604BC52-FF5A-4138-B908-5F82829EAF88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4B5D94D3-4B95-401D-8373-2187812B9ADD}"
+	ProjectSection(SolutionItems) = preProject
+		ImdbClientApp.vsmdi = ImdbClientApp.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ImdbClientApp.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -35,6 +47,16 @@ Global
 		{528DC4EF-C8DF-49FD-9D10-E29BA611943E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{528DC4EF-C8DF-49FD-9D10-E29BA611943E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{528DC4EF-C8DF-49FD-9D10-E29BA611943E}.Release|x86.ActiveCfg = Release|Any CPU
+		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
