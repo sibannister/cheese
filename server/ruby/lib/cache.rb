@@ -19,7 +19,7 @@ class Cache
   def self.begin_caching
     puts "Beginning to cache films for channels: " + @@channels.to_s
     add_films_to_cache
-    puts "Caching complete" 
+    puts "CACHING COMPLETE" 
   end
 
   def self.add_films_to_cache

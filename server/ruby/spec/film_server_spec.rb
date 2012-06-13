@@ -1,6 +1,7 @@
 require 'film_server'
 require 'film_reviewer'
 require 'net/http'
+require 'fixnum'
 
 class MockResponse
   attr_accessor :body
@@ -11,8 +12,16 @@ describe FilmServer do
   let (:film_server) { FilmServer.new cache  }
   let (:response) { MockResponse.new }
 
-  it 'should begin caching films on start up' do
-    FilmServer.new cache
+  it 'should allow caching of a configurable number of days' do
+    request = stub(:query => {'days' => '4'}, :path => "/cache" )
+    Cache.should_receive(:build).with(anything(), anything(), anything(), 4.days)
+    film_server.handleGET request, response
+  end
+
+  it 'should respond to a cache call by building up the cache for 7 days' do
+    request = stub(:query => {}, :path => "/cache" )
+    Cache.should_receive(:build).with(anything(), anything(), anything(), 7.days)
+    film_server.handleGET request, response
   end
 
   it 'should return a list of films' do

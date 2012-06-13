@@ -7,10 +7,10 @@ require 'fixnum'
 class FilmServer
   attr_writer :days_to_search
 
-  def self.on_server_startup
+  def self.build_cache days
     puts 'Starting up film server'
     channels = read_channels
-    Cache.build Television.new, FilmReviewer.new, channels, 1.days
+    Cache.build Television.new, FilmReviewer.new, channels, days.days
   end
 
   def self.read_channels
@@ -31,7 +31,8 @@ class FilmServer
   def handleGET(request, response)
     response.body = 
       if request.path == "/cache"
-        FilmServer.on_server_startup
+        days = request.query['days']
+        FilmServer.build_cache(days.nil? ? 7 : days.to_i)
         "Initialised movie robot"
       elsif request.path == "/films"
         films = @cache.get_films
