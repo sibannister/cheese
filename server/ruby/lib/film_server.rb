@@ -30,9 +30,9 @@ class FilmServer
 
   def handleGET(request, response)
     response.body = 
-      if request.path == "/init"
+      if request.path == "/cache"
         FilmServer.on_server_startup
-        "Initialising movie robot"
+        "Initialised movie robot"
       elsif request.path == "/films"
         films = @cache.get_films
         films_json = films.map {|film| film.to_json}
