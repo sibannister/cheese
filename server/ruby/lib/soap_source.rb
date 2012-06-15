@@ -1,9 +1,11 @@
 require 'savon' 
 
 class SoapSource
-  def read start_date, channel
+  def read start_date, channels
     Savon.configure { |config| config.log = false }
 
+    sources = channels.map {|channel| '<SourceId>' + channel.code.to_s + '</SourceId>'}.join('')
+    
     client = Savon::Client.new do
       wsdl.namespace = "http://services.macrovision.com/v9/common/types"
       wsdl.endpoint = "http://api.rovicorp.com/v9/listingsservice.asmx?apikey=4eb3ss7uuq43s42uhvrj46mp"
@@ -25,11 +27,11 @@ class SoapSource
         '<StartDate>' + start_date.xmlschema + '</StartDate>' +
         '<Duration>240</Duration>' +
         '<SourceFilter>' +
-        '<Sources>' +
-        '<SourceId>' + channel.code.to_s + '</SourceId>' +
-        '</Sources>' +
+        '<Sources>' + sources + '</Sources>' +
         '</SourceFilter>' +
         '</request>'
+
+      puts soap.body
     end
     
     response.to_xml
