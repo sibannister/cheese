@@ -8,58 +8,59 @@ describe 'RoviSource' do
 
   before do
     Timecop.freeze
-    @channel = Channel.new 'Gay Rabbit', 123
+    @film4 = Channel.new 'Film 4', 25409
+    @channels = [@film4]
   end
 
   it 'should pass the channel through to the soap source' do
-    soap_source.should_receive(:read).with(Time.now, @channel)
-    source.get_films(Time.now, @channel)
+    soap_source.should_receive(:read).with(Time.now, @channels)
+    source.get_films Time.now, @channels
   end
   
   it 'should return no films from a nil soap packet' do
-    soap_source.stub(:read).with(Time.now, @channel).and_return nil
-    source.get_films(Time.now, @channel).end_date.should == Time.now + 240.minutes
+    soap_source.stub(:read).with(Time.now, @channels).and_return nil
+    source.get_films(Time.now, @channels).end_date.should == Time.now + 240.minutes
   end
 
   it 'should return no films from an empty soap packet' do
-    soap_source.stub(:read).with(Time.now, @channel).and_return ''
-    source.get_films(Time.now, @channel).end_date.should == Time.now + 240.minutes
+    soap_source.stub(:read).with(Time.now, @channels).and_return ''
+    source.get_films(Time.now, @channels).end_date.should == Time.now + 240.minutes
   end
 
   it 'should return no films if there were no programmes in the soap packet' do
-    soap_source.stub(:read).with(Time.now, @channel).and_return 'wibble'
-    source.get_films(Time.now, @channel).end_date.should == Time.now + 240.minutes
+    soap_source.stub(:read).with(Time.now, @channels).and_return 'wibble'
+    source.get_films(Time.now, @channels).end_date.should == Time.now + 240.minutes
   end
 
   it 'should extract a film from a soap response' do
     soap_response = File.read('rovi/get_grid_schedule_response.xml') 
-    soap_source.stub(:read).with(Time.now, @channel).and_return soap_response
-    films = source.get_films(Time.now, @channel).films
+    soap_source.stub(:read).with(Time.now, @channels).and_return soap_response
+    films = source.get_films(Time.now, @channels).films
     films.should have(2).items
     films.should include 
           Showing.new 'David and Bathsheba', 
             Time.utc(2012, 5, 22, 10, 0, 0),
             Time.utc(2012, 5, 22, 12, 25, 0),
-            @channel
+            @film4
     films.should include 
           Showing.new 'White Feather', 
             Time.utc(2012, 5, 22, 12, 25, 0),
             Time.utc(2012, 5, 22, 14, 30, 0),
-            @channel
+            @film4
   end
 
   it 'should return the end date of the films in the soap packet' do
     Timecop.freeze
     soap_response = File.read('rovi/get_grid_schedule_response.xml') 
-    soap_source.stub(:read).with(Time.now, @channel).and_return soap_response
-    source.get_films(Time.now, @channel).end_date.should == Time.utc(2012, 5, 22, 14, 30, 0)
+    soap_source.stub(:read).with(Time.now, @channels).and_return soap_response
+    source.get_films(Time.now, @channels).end_date.should == Time.utc(2012, 5, 22, 14, 30, 0)
   end 
 
   it 'should return a end date of the last programme when there are no films' do
     Timecop.freeze
     soap_response = File.read('rovi/get_grid_schedule_response_no_films.xml') 
-    soap_source.stub(:read).with(Time.now, @channel).and_return soap_response
-    source.get_films(Time.now, @channel).end_date.should == Time.utc(2012, 5, 22, 10, 0, 0)
+    soap_source.stub(:read).with(Time.now, @channels).and_return soap_response
+    source.get_films(Time.now, @channels).end_date.should == Time.utc(2012, 5, 22, 10, 0, 0)
   end
 
 end

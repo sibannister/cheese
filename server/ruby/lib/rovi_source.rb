@@ -25,11 +25,11 @@ class RoviSource
     @soap_source = UnreliableObjectDelegate.new soap_source, 4, 4
   end
 
-  def get_films start_time, channel
-    puts 'Requesting films starting at ' + start_time.to_s + " on " + channel.name
-    soap = @soap_source.read start_time, channel
+  def get_films start_time, channels
+    puts 'Requesting films starting at ' + start_time.to_s
+    soap = @soap_source.read start_time, channels
     return empty_batch(start_time) if soap.nil? || soap.empty? || has_no_programmes(soap)
-    extract_films soap, channel
+    extract_films soap, channels
   end
 
   def empty_batch start_time
@@ -40,13 +40,13 @@ class RoviSource
     !soap.include?("GridAiring")
   end
 
-  def extract_films soap, channel
+  def extract_films soap, channels
     doc = Hpricot.XML(soap)
     films = (doc/"GridAiring")
     puts films.count.to_s + ' showings in soap'
     end_date = end_date films.last
     films.delete_if {|film| film['Category'] != 'Movie' }
-    films = films.map {|film| Showing.new film['Title'], start_date(film), end_date(film), channel.name }
+    films = films.map {|film| Showing.new film['Title'], start_date(film), end_date(film), channels[0].name }
     puts '  Films in soap: ' + films.to_s
     FilmBatch.new films, end_date
   end 

@@ -17,19 +17,10 @@ describe Cache do
 
   it 'should combine films from different channels' do
     other_channel = Channel.new 'ITV', 456
-    tv.should_receive(:get_films).with(channel, Time.now + 1.hours).and_return([film1])
-    tv.should_receive(:get_films).with(other_channel, Time.now + 1.hours).and_return([film2])
+    tv.should_receive(:get_films).with([channel, other_channel], Time.now + 1.hours).and_return([film1, film2])
     tv.should_receive(:films_retrieved_up_to?).and_return(true)
     Cache.build tv, reviewer, [channel, other_channel], 1.hours
     Cache.new.get_films.should == [film1, film2]
-  end
-
-  it 'should ask for the films on correct channels' do
-    other_channel = Channel.new 'ITV', 456
-    tv.should_receive(:get_films).with(channel, Time.now + 1.hours).and_return([])
-    tv.should_receive(:get_films).with(other_channel, Time.now + 1.hours).and_return([])
-    tv.should_receive(:films_retrieved_up_to?).and_return(true)
-    Cache.build tv, reviewer, [channel, other_channel], 1.hours
   end
 
   it 'should handle batches without any films' do
