@@ -1,3 +1,4 @@
+require 'showing'
 require 'rovi_source'
 require 'timecop'
 require 'channel'
@@ -9,7 +10,8 @@ describe 'RoviSource' do
   before do
     Timecop.freeze
     @film4 = Channel.new 'Film 4', 25409
-    @channels = [@film4]
+    @bbc1 = Channel.new 'BBC 1', 24872
+    @channels = [@film4, @bbc1]
   end
 
   it 'should pass the channel through to the soap source' do
@@ -37,30 +39,30 @@ describe 'RoviSource' do
     soap_source.stub(:read).with(Time.now, @channels).and_return soap_response
     films = source.get_films(Time.now, @channels).films
     films.should have(2).items
-    films.should include 
-          Showing.new 'David and Bathsheba', 
+    films[0].should ==
+          Showing.new('David and Bathsheba', 
             Time.utc(2012, 5, 22, 10, 0, 0),
             Time.utc(2012, 5, 22, 12, 25, 0),
-            @film4
-    films.should include 
-          Showing.new 'White Feather', 
+            'Film 4')
+    films[1].should ==
+          Showing.new('White Feather', 
             Time.utc(2012, 5, 22, 12, 25, 0),
             Time.utc(2012, 5, 22, 14, 30, 0),
-            @film4
+            'BBC 1')
   end
 
-  it 'should return the end date of the films in the soap packet' do
+  it 'should return the end date 4 hours after the start reqest time' do
     Timecop.freeze
     soap_response = File.read('rovi/get_grid_schedule_response.xml') 
     soap_source.stub(:read).with(Time.now, @channels).and_return soap_response
-    source.get_films(Time.now, @channels).end_date.should == Time.utc(2012, 5, 22, 14, 30, 0)
+    source.get_films(Time.now, @channels).end_date.should == Time.now + 4.hours
   end 
 
-  it 'should return a end date of the last programme when there are no films' do
+  it 'should return a end date 4 hours after the start reuest time when there are no films' do
     Timecop.freeze
     soap_response = File.read('rovi/get_grid_schedule_response_no_films.xml') 
     soap_source.stub(:read).with(Time.now, @channels).and_return soap_response
-    source.get_films(Time.now, @channels).end_date.should == Time.utc(2012, 5, 22, 10, 0, 0)
+    source.get_films(Time.now, @channels).end_date.should == Time.now + 4.hours
   end
 
 end

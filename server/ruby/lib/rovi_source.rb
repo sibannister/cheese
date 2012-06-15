@@ -29,7 +29,9 @@ class RoviSource
     puts 'Requesting films starting at ' + start_time.to_s
     soap = @soap_source.read start_time, channels
     return empty_batch(start_time) if soap.nil? || soap.empty? || has_no_programmes(soap)
-    extract_films soap, channels
+
+    films = extract_films soap, channels
+    FilmBatch.new films, start_time + 4.hours
   end
 
   def empty_batch start_time
@@ -42,14 +44,27 @@ class RoviSource
 
   def extract_films soap, channels
     doc = Hpricot.XML(soap)
-    films = (doc/"GridAiring")
-    puts films.count.to_s + ' showings in soap'
-    end_date = end_date films.last
-    films.delete_if {|film| film['Category'] != 'Movie' }
-    films = films.map {|film| Showing.new film['Title'], start_date(film), end_date(film), channels[0].name }
+    channels_xml = (doc/"gridchannel")
+    
+    films = []
+    channels_xml.each {|channel_xml| films += parse_channel_xml channel_xml, channels}
+    
     puts '  Films in soap: ' + films.to_s
-    FilmBatch.new films, end_date
+    films
+  end
+
+  def parse_channel_xml channel_xml, channels
+    puts 'Soap contains films for channel ' + channel_xml['sourceid']
+
+    films = (channel_xml/"GridAiring")
+    puts films.count.to_s + ' showings in soap'
+    films.delete_if {|film| film['Category'] != 'Movie' }
+    films.map {|film| Showing.new film['Title'], start_date(film), end_date(film), channel(channel_xml, channels) }
   end 
+
+  def channel channel_xml, channels
+    channels.find {|channel| channel.code.to_s == channel_xml['sourceid']}.name
+  end
 
   def start_date film
     Time.parse(film['AiringTime'])
