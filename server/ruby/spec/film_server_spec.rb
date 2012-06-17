@@ -20,8 +20,6 @@ describe FilmServer do
     films = film_names.map { |name| Showing.new name, (time += 4.hours), (time + 2.hours), 'ITV', 7.3 }
     cache.stub(:get_films => films)
     film_server.handleGET request, response
-    puts "***"
-    puts response.body
   end
 
   it 'should return a list of films' do
@@ -42,13 +40,13 @@ describe FilmServer do
 
   it 'should allow caching of a configurable number of days' do
     request = stub(:query => {'days' => '4'}, :path => "/cache" )
-    Cache.should_receive(:build).with(anything(), anything(), anything(), 4.days)
+    Cache.should_receive(:build).with(anything(), anything(), 4.days)
     film_server.handleGET request, response
   end
 
   it 'should respond to a cache call by building up the cache for 7 days' do
     request = stub(:query => {}, :path => "/cache" )
-    Cache.should_receive(:build).with(anything(), anything(), anything(), 7.days)
+    Cache.should_receive(:build).with(anything(), anything(), 7.days)
     film_server.handleGET request, response
   end
 end

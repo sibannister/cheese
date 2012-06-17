@@ -10,40 +10,39 @@ describe Television do
   
   before do
     Timecop.freeze
-    @channels = [(Channel.new 'Film 4', 123)]
     @now = Time.now
   end
 
   it 'should not attempt to retrieve any films if it has passed the required end time' do
-    rovi_source.should_receive(:get_films).with(@now, @channels).and_return film_batch(@now + 4.hours, 3)
-    tv.get_films(@channels, @now + 2.hours).should have(3).items
-    tv.get_films(@channels, @now + 2.hours).should be_empty
+    rovi_source.should_receive(:get_films).with(@now).and_return film_batch(@now + 4.hours, 3)
+    tv.get_films(@now + 2.hours).should have(3).items
+    tv.get_films(@now + 2.hours).should be_empty
   end
   
   it 'should retrieve films from rovi' do
-    rovi_source.should_receive(:get_films).with(@now, @channels).and_return film_batch(@now + 4.hours, 3)
-    tv.get_films(@channels, @now + 1.days).should have(3).items
+    rovi_source.should_receive(:get_films).with(@now).and_return film_batch(@now + 4.hours, 3)
+    tv.get_films(@now + 1.days).should have(3).items
   end
 
   it 'should know how far into the future it has retrieved films' do
-    rovi_source.should_receive(:get_films).with(@now, @channels).and_return film_batch(@now + 4.hours, 3)
-    tv.get_films(@channels, @now + 1.days)
+    rovi_source.should_receive(:get_films).with(@now).and_return film_batch(@now + 4.hours, 3)
+    tv.get_films(@now + 1.days)
     tv.films_retrieved_up_to?(@now).should be_true 
     tv.films_retrieved_up_to?(@now + 4.hours).should be_true 
     tv.films_retrieved_up_to?(@now + 5.hours).should be_false
   end
   
   it 'should begin retrieving from the point where it left off' do
-    rovi_source.should_receive(:get_films).with(@now, @channels).and_return film_batch(@now + 4.hours, 3)
-    rovi_source.should_receive(:get_films).with(@now + 4.hours, @channels).and_return film_batch(@now + 8.hours, 1)
-    tv.get_films(@channels, @now + 1.days).should have(3).items
-    tv.get_films(@channels, @now + 1.days).should have(1).items
+    rovi_source.should_receive(:get_films).with(@now).and_return film_batch(@now + 4.hours, 3)
+    rovi_source.should_receive(:get_films).with(@now + 4.hours).and_return film_batch(@now + 8.hours, 1)
+    tv.get_films(@now + 1.days).should have(3).items
+    tv.get_films(@now + 1.days).should have(1).items
   end
 
   it 'should integrate with rovi source' do
     soap_source = stub(:read => nil)
-    tv = Television.new(RoviSource.new soap_source)
-    tv.get_films(@channels, @now + 4.days)
+    tv = Television.new(RoviSource.new soap_source, [])
+    tv.get_films(@now + 4.days)
   end
 
   def film_batch end_date, number_of_films

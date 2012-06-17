@@ -3,10 +3,9 @@ require 'channel'
 require 'film_reviewer'
 
 class Cache
-  def self.build television = Television.new, reviewer = FilmReviewer.new, channels = [Channel.new('Film 4', 25409)], cache_duration_in_seconds = 10.days
+  def self.build television = Television.new, reviewer = FilmReviewer.new, cache_duration_in_seconds = 10.days
     @@tv = television
     @@reviewer = reviewer
-    @@channels = channels
     @@cache_duration_in_seconds = cache_duration_in_seconds
 
     reset
@@ -15,11 +14,10 @@ class Cache
 
   def self.reset
     @@films = []
-    @@channels
   end
 
   def self.add_films_to_cache
-    puts "BEGINNING TO CACHE " + (@@cache_duration_in_seconds / (60*60*24)).to_s + " days worth of films for channels: " + @@channels.to_s
+    puts "BEGINNING TO CACHE " + (@@cache_duration_in_seconds / (60*60*24)).to_s + " days worth of films"
     loop do
       add_from_channels
       break if @@tv.films_retrieved_up_to? Time.now + @@cache_duration_in_seconds
@@ -28,7 +26,7 @@ class Cache
   end
 
   def self.add_from_channels
-    next_batch = @@tv.get_films(@@channels, Time.now + @@cache_duration_in_seconds)
+    next_batch = @@tv.get_films(Time.now + @@cache_duration_in_seconds)
     puts 'Next batch of ' + next_batch.count.to_s + ' films being added'
     @@films += next_batch
     puts 'Kicking off review gathering on separate thread'

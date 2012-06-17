@@ -13,8 +13,8 @@ class FilmServer
     @@initialised = true
     puts 'Starting up film server'
     channels = read_channels
-    tv = Television.new(RoviSource.new(SoapSource.new))
-    Cache.build tv, FilmReviewer.new, channels, days.days
+    tv = Television.new(RoviSource.new(SoapSource.new, channels))
+    Cache.build tv, FilmReviewer.new, days.days
   end
 
   def self.read_channels
