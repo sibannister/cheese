@@ -27,8 +27,13 @@ class Cache
 
   def self.add_from_channels
     next_batch = @@tv.get_films(Time.now + @@cache_duration_in_seconds)
+    remove_duplicates next_batch
     puts 'Next batch of ' + next_batch.count.to_s + ' films being added'
     @@films += next_batch
+    gather_ratings next_batch
+  end
+
+  def self.gather_ratings next_batch
     puts 'Kicking off review gathering on separate thread'
     next_batch.each do |showing|
       Thread.new do
@@ -38,6 +43,10 @@ class Cache
       end
     end
     puts 'Threads kicked off'
+  end
+
+  def self.remove_duplicates next_batch
+    next_batch.delete_if { |film| @@films.any? { |film_in_cache| film_in_cache.name == film.name } }
   end
 
   def get_films
