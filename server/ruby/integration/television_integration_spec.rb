@@ -4,8 +4,9 @@ require 'fixnum'
 
 describe Television do
   it 'should run without failure' do
-    tv = Television.new
-    channel = Channel.new 'BBC 4', 24908
-    10.times {tv.get_films channel, Time.now + 1.days}
+    film4 = Channel.new 'Film 4', 25409
+    bbc1 = Channel.new 'BBC 1', 24872
+    tv = Television.new(RoviSource.new(SoapSource.new, [film4, bbc1]))
+    10.times {tv.get_films Time.now + 1.days}
   end
 end

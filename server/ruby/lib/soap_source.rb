@@ -34,6 +34,7 @@ class SoapSource
       puts soap.body
     end
     
+    puts response.to_xml.to_s
     response.to_xml
   end
 end

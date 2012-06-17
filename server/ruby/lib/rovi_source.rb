@@ -23,7 +23,7 @@ end
 class RoviSource
   def initialize soap_source, channels
     @channels = channels
-    @soap_source = UnreliableObjectDelegate.new soap_source, 4, 4
+    @soap_source = UnreliableObjectDelegate.new soap_source, 30, 4
   end
 
   def get_films start_time
@@ -45,7 +45,7 @@ class RoviSource
 
   def extract_films soap
     doc = Hpricot.XML(soap)
-    channels_xml = (doc/"gridchannel")
+    channels_xml = (doc/"GridChannel")
     
     films = []
     channels_xml.each {|channel_xml| films += parse_channel_xml channel_xml}
@@ -55,7 +55,7 @@ class RoviSource
   end
 
   def parse_channel_xml channel_xml
-    puts 'Soap contains films for channel ' + channel_xml['sourceid']
+    puts 'Soap contains films for channel ' + channel_xml['SourceId']
 
     films = (channel_xml/"GridAiring")
     puts films.count.to_s + ' showings in soap'
@@ -64,7 +64,7 @@ class RoviSource
   end 
 
   def channel channel_xml
-    @channels.find {|channel| channel.code.to_s == channel_xml['sourceid']}.name
+    @channels.find {|channel| channel.code.to_s == channel_xml['SourceId']}.name
   end
 
   def start_date film

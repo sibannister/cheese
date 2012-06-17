@@ -23,8 +23,8 @@
                         <timezoneinfogrid startdatetime="2012-03-25T02:00:00Z" enddatetime="2012-10-28T01:00:00Z" offset="60">
                         </timezoneinfogrid>
                     </timezones>
-                    <gridchannels>
-                        <gridchannel serviceid="891296" sourceid="25409" order="150058" channel="15" callletters="FF4" displayname="FF4" sourcelongname="Film4" type="24-Hours" sourcetype="Broadcast" parentnetworkid="0" iconavailable="false" ischanneloverride="false" sourceattributes="0">
+                    <GridChannels>
+                        <GridChannel serviceid="891296" SourceId="25409" order="150058" channel="15" callletters="FF4" displayname="FF4" sourcelongname="Film4" type="24-Hours" sourcetype="Broadcast" parentnetworkid="0" iconavailable="false" ischanneloverride="false" sourceattributes="0">
                             <channelschedules>
                                 <sourceattributetypes>
                                     <airings>
@@ -37,8 +37,8 @@
                                     </channelimages>
                                 </sourceattributetypes>
                             </channelschedules>
-                        </gridchannel>
-                        <gridchannel serviceid="891296" sourceid="24872" order="150058" channel="15" callletters="FF4" displayname="FF4" sourcelongname="BBC1" type="24-Hours" sourcetype="Broadcast" parentnetworkid="0" iconavailable="false" ischanneloverride="false" sourceattributes="0">
+                        </GridChannel>
+                        <GridChannel serviceid="891296" SourceId="24872" order="150058" channel="15" callletters="FF4" displayname="FF4" sourcelongname="BBC1" type="24-Hours" sourcetype="Broadcast" parentnetworkid="0" iconavailable="false" ischanneloverride="false" sourceattributes="0">
                             <channelschedules>
                                 <sourceattributetypes>
                                     <airings>
@@ -49,8 +49,8 @@
                                     </channelimages>
                                 </sourceattributetypes>
                             </channelschedules>
-                        </gridchannel>
-                    </gridchannels>
+                        </GridChannel>
+                    </GridChannels>
                 </errors>
             </getgridscheduleresult>
         </getgridscheduleresponse>
