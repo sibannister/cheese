@@ -55,10 +55,7 @@ class RoviSource
   end
 
   def parse_channel_xml channel_xml
-    puts 'Soap contains films for channel ' + channel_xml['SourceId']
-
     films = (channel_xml/"GridAiring")
-    puts films.count.to_s + ' showings in soap'
     films.delete_if {|film| film['Category'] != 'Movie' }
     films.map {|film| Showing.new film['Title'], start_date(film), end_date(film), channel(channel_xml) }
   end 
