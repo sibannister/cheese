@@ -47,9 +47,11 @@
     <Compile Include="ChannelsParser.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="FilmsParser.cs" />
+    <Compile Include="IFilter.cs" />
     <Compile Include="ImdbWebClient.cs" />
     <Compile Include="JTokenExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingFilter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

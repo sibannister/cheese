@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json.Linq;
@@ -44,7 +45,7 @@ namespace ImdbClientInterface
         private static string GetChannel(JToken filmJson)
         {
             string channel = null;
-            return filmJson.GetValue(NameKey, channel);
+            return filmJson.GetValue(ChannelKey, channel);
         }
 
         private static DateTime GetStartDateTime(JToken filmJson)

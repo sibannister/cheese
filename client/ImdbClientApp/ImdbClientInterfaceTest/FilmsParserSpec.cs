@@ -23,7 +23,7 @@ namespace ImdbClientInterfaceTest
 
             private It should_return_correct_number_of_channels = () => _films.Count().ShouldEqual(16);
 
-            private It should_contain_the_expected_channel_names = () => _films.Contains(new Film("The Godfather", 7.3, "ITV 1", DateTime.Parse("2012-06-14 21:13")));
+            private It should_contain_the_expected_channel_names = () => _films.ShouldContain(new Film("The Godfather", 7.3, "ITV 1", DateTime.Parse("2012-06-14 21:13")));
 
             private static string _filmsJson;
             private static Film[] _films;

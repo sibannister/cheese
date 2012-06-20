@@ -24,5 +24,14 @@ namespace ImdbClientInterface
                 return filmJObject.GetValue("rating", zero);
             }
         }
+
+        public static string GetFilms()
+        {
+            using (var webClient = new WebClient())
+            {
+                byte[] myDataBuffer = webClient.DownloadData(@"http://localhost:8080/films?");
+                return Encoding.ASCII.GetString(myDataBuffer);
+            }
+        }
     }    
 }

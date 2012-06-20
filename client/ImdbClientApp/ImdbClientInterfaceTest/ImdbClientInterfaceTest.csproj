@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChannelsParserSpec.cs" />
+    <Compile Include="RatingFilterSpec.cs" />
     <Compile Include="FilmsParserSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

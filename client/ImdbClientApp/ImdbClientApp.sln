@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbClientAppMVVM", "ImdbClientAppMVVM\ImdbClientAppMVVM.csproj", "{F1330B54-C771-41B4-96BA-A2292C390A13}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = ImdbClientApp.vsmdi
@@ -57,6 +59,16 @@ Global
 		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1604BC52-FF5A-4138-B908-5F82829EAF88}.Release|x86.ActiveCfg = Release|Any CPU
+		{F1330B54-C771-41B4-96BA-A2292C390A13}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F1330B54-C771-41B4-96BA-A2292C390A13}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F1330B54-C771-41B4-96BA-A2292C390A13}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F1330B54-C771-41B4-96BA-A2292C390A13}.Debug|x86.ActiveCfg = Debug|x86
+		{F1330B54-C771-41B4-96BA-A2292C390A13}.Debug|x86.Build.0 = Debug|x86
+		{F1330B54-C771-41B4-96BA-A2292C390A13}.Release|Any CPU.ActiveCfg = Release|x86
+		{F1330B54-C771-41B4-96BA-A2292C390A13}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F1330B54-C771-41B4-96BA-A2292C390A13}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F1330B54-C771-41B4-96BA-A2292C390A13}.Release|x86.ActiveCfg = Release|x86
+		{F1330B54-C771-41B4-96BA-A2292C390A13}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
