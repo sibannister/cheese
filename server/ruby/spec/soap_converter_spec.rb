@@ -11,5 +11,6 @@ describe SoapConverter do
     showing.start_date.should == Time.utc(2012, 5, 22, 12, 25, 0)
     showing.end_date.should == Time.utc(2012, 5, 22, 14, 30, 0)
     showing.channel.should == 'Film 4'
+    showing.image = 'some url'
   end
 end
