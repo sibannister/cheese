@@ -1,4 +1,5 @@
 require 'soap_source'
+require 'soap_converter'
 require 'unreliable_object_delegate'
 require 'fixnum'
 require 'hpricot'
@@ -55,21 +56,14 @@ class RoviSource
   end
 
   def parse_channel_xml channel_xml
+    channel = channel(channel_xml)
     films = (channel_xml/"GridAiring")
     films.delete_if {|film| film['Category'] != 'Movie' }
-    films.map {|film| Showing.new film['Title'], start_date(film), end_date(film), channel(channel_xml) }
+    films.map {|film| SoapConverter.new.convert film, channel}
   end 
 
   def channel channel_xml
     @channels.find {|channel| channel.code.to_s == channel_xml['SourceId']}.name
-  end
-
-  def start_date film
-    Time.parse(film['AiringTime'])
-  end
-
-  def end_date film
-    Time.parse(film['AiringTime']) + film['Duration'].to_i.minutes
   end
 end
 
