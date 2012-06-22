@@ -44,8 +44,10 @@ class FilmServer
         FilmServer.build_cache(days.nil? ? 7 : days.to_i)
         "Initialised movie robot"
       elsif !@@initialised
-        "Please call /cache to initialise the cache"
-      elsif request.path == "/films"
+        FilmServer.build_cache(days.nil? ? 1 : days.to_i)
+      end
+
+      if request.path == "/films"
         films = @cache.get_films
         films_json = films.map {|film| film.to_json}
         '[' + films_json.join(', ') + ']'
