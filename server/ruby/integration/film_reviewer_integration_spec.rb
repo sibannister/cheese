@@ -9,7 +9,7 @@ describe FilmReviewer do
   #end
 
   it 'should return a rating for a known unqiue film name' do
-    reviewer.review('The Godfather').should == 9.2
+    reviewer.review('The Godfather').should == [9.2, 'http://ia.media-imdb.com/images/M/MV5BMTIyMTIxNjI5NF5BMl5BanBnXkFtZTcwNzQzNDM5MQ@@.jpg']
   end
 
   it 'should handle sequels' do

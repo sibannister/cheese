@@ -37,8 +37,9 @@ class Cache
     puts 'Kicking off review gathering on separate thread'
     next_batch.each do |showing|
       Thread.new do
-        rating = @@reviewer.review(showing.name)
+        rating, image = @@reviewer.review(showing.name)
         showing.rating = rating
+        showing.image = image
         puts "  Updated showing to " + showing.to_s
       end
     end

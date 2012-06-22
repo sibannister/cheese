@@ -36,6 +36,6 @@ class Showing
   end
 
   def to_s
-    name + " (" + @channel + " from " + @start_date.strftime('%d/%m %H:%M') + " to " + @end_date.strftime('%H:%M') + ") " + rating.to_s + "/10"
+    name + " (" + @channel + " from " + @start_date.strftime('%d/%m %H:%M') + " to " + @end_date.strftime('%H:%M') + ") " + rating.to_s + "/10 " + @image.to_s
   end
 end
