@@ -5,21 +5,7 @@ require 'fixnum'
 require 'hpricot'
 require 'showing'
 require 'film_service_failure'
-
-class FilmBatch
-  def initialize films, end_date
-    @films = films
-    @end_date = end_date
-  end
-
-  def films
-    @films
-  end
-
-  def end_date
-    @end_date
-  end
-end
+require 'film_batch'
 
 class RoviSource
   def initialize soap_source, channels
