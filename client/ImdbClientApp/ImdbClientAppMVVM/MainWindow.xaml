@@ -5,28 +5,31 @@
         WindowState="Maximized">
     <Window.Resources>
         <DataTemplate x:Key="imdbFilmTemplate">
+            <Border BorderThickness="3" BorderBrush="Gold" CornerRadius="5" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Image Source="{Binding Image}" Width="96" Height="128"/>
+                <Image Source="{Binding Image,FallbackValue=NoImageAvailable.jpg}" Stretch="Fill" Width="96" Height="128"/>
             </Grid>
+            </Border>
         </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="960" />
+            <ColumnDefinition Width="996" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
             <ListView ItemsSource="{Binding Films}"
             SelectedItem="{Binding SelectedFilm}"     
             MinWidth="100" 
-            Background="LightYellow"
+            Background="Black"
             ItemTemplate="{StaticResource 
             imdbFilmTemplate}">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
+                        
                         <WrapPanel Width="{Binding (FrameworkElement.ActualWidth), RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
                                    ItemWidth="{Binding (ListView.View).ItemWidth, RelativeSource={RelativeSource AncestorType=ListView}}"
                                    MinWidth="{Binding ItemWidth, RelativeSource={RelativeSource Self}}"
