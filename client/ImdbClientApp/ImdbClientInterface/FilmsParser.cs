@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using Newtonsoft.Json.Linq;
 
@@ -13,6 +14,7 @@ namespace ImdbClientInterface
         private const string RatingKey = "rating";
         private const string ChannelKey = "channel";
         private const string StartDateTimeKey = "start";
+        private const string ImageKey = "image";
 
         public static Film[] Parse(string filmsJson)
         {
@@ -25,9 +27,16 @@ namespace ImdbClientInterface
                 double rating = GetRating(film);
                 string channel = GetChannel(film);
                 DateTime startDateTime = GetStartDateTime(film);
-                filmList.Add(new Film(name, rating, channel, startDateTime));
+                string image = GetImage(film);
+                filmList.Add(new Film(name, rating, channel, startDateTime, image));
             }
             return filmList.ToArray();
+        }
+
+        private static string GetImage(JToken film)
+        {
+            string imageUrl = string.Empty;
+            return film.GetValue(ImageKey, imageUrl);
         }
 
         private static double GetRating(JToken filmJson)

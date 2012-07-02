@@ -9,11 +9,13 @@ namespace ImdbClientInterface
 {
     public class ImdbWebClient
     {
+        private static readonly string FilmsUrl = "http://glowing-sky-4966.herokuapp.com/films?";
+        private static readonly string FilmFormat = "name={0}";
         public static double GetFilmRating(string filmTitle)
         {
             using (var webClient = new WebClient())
             {
-                byte[] myDataBuffer = webClient.DownloadData(string.Format(@"http://localhost:8080/films?name={0}", filmTitle));
+                byte[] myDataBuffer = webClient.DownloadData(string.Format(FilmsUrl + FilmFormat, filmTitle));
                 string json = Encoding.ASCII.GetString(myDataBuffer);
                 if(string.IsNullOrEmpty(json))
                 {
@@ -29,7 +31,7 @@ namespace ImdbClientInterface
         {
             using (var webClient = new WebClient())
             {
-                byte[] myDataBuffer = webClient.DownloadData(@"http://localhost:8080/films?");
+                byte[] myDataBuffer = webClient.DownloadData(FilmsUrl);
                 return Encoding.ASCII.GetString(myDataBuffer);
             }
         }

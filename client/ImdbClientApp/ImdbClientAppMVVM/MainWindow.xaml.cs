@@ -26,6 +26,10 @@ namespace ImdbClientAppMVVM
             InitializeComponent();
         }
 
+        private void OnClick(EventArgs args)
+        {
+            
+        }
         // OnClosing - Dispose.
     }
 }
