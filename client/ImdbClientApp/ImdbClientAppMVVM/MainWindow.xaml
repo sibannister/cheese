@@ -1,70 +1,94 @@
-﻿<Window x:Class="ImdbClientAppMVVM.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="IMDB Client" 
-        WindowState="Maximized">
-    <Window.Resources>
-        <DataTemplate x:Key="imdbFilmTemplate">
-            <Border BorderThickness="3" BorderBrush="Gold" CornerRadius="5" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <Image Source="{Binding Image,FallbackValue=NoImageAvailable.jpg}" Stretch="Fill" Width="96" Height="128"/>
-            </Grid>
-            </Border>
-        </DataTemplate>
-    </Window.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="996" />
-            <ColumnDefinition Width="Auto" />
+﻿<Window x:Class="ImdbClientAppMVVM.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="IMDB Client" WindowState="Maximized">
+  <Window.Resources>
+    <DataTemplate x:Key="imdbFilmTemplate">
+      <Border BorderThickness="3" BorderBrush="Gold" CornerRadius="5" HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+        <Grid>
+          <Grid.ColumnDefinitions>
             <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-            <ListView ItemsSource="{Binding Films}"
-            SelectedItem="{Binding SelectedFilm}"     
-            MinWidth="100" 
-            Background="Black"
-            ItemTemplate="{StaticResource 
+          </Grid.ColumnDefinitions>
+          <Image Source="{Binding Image,FallbackValue=NoImageAvailable.jpg}" Stretch="Fill" Width="96" Height="128" />
+        </Grid>
+      </Border>
+    </DataTemplate>
+  </Window.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="996" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+    <ListView ItemsSource="{Binding Films}" SelectedItem="{Binding SelectedFilm}" MinWidth="100" Background="Black"
+              ItemTemplate="{StaticResource 
             imdbFilmTemplate}">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        
-                        <WrapPanel Width="{Binding (FrameworkElement.ActualWidth), RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
-                                   ItemWidth="{Binding (ListView.View).ItemWidth, RelativeSource={RelativeSource AncestorType=ListView}}"
-                                   MinWidth="{Binding ItemWidth, RelativeSource={RelativeSource Self}}"
-                                   ItemHeight="{Binding (ListView.View).ItemHeight, RelativeSource={RelativeSource AncestorType=ListView}}" />
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-            </ListView>        
-        <GridSplitter Grid.Column="1" ResizeBehavior="PreviousAndNext"
-                      Width="4" Background="Black" BorderBrush="BlanchedAlmond" BorderThickness="1" />
+      <ListView.ItemsPanel>
+        <ItemsPanelTemplate>
 
-        <Grid Grid.Column="2">
-            <Grid DataContext="{Binding SelectedFilm}">
+          <WrapPanel
+Width="{Binding (FrameworkElement.ActualWidth), RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
+ItemWidth="{Binding (ListView.View).ItemWidth, RelativeSource={RelativeSource AncestorType=ListView}}"
+MinWidth="{Binding ItemWidth, RelativeSource={RelativeSource Self}}"
+ItemHeight="{Binding (ListView.View).ItemHeight, RelativeSource={RelativeSource AncestorType=ListView}}" />
+        </ItemsPanelTemplate>
+      </ListView.ItemsPanel>
+    </ListView>
+    <GridSplitter Grid.Column="1" ResizeBehavior="PreviousAndNext" Width="4" Background="Black"
+                  BorderBrush="BlanchedAlmond" BorderThickness="1" />
+
+    <Grid Grid.Column="2">
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100" />
-                    <ColumnDefinition Width="*" />                    
-                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid DataContext="{Binding SelectedFilm}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0" Content="Name" HorizontalContentAlignment="Right" />
-                <Label Grid.Row="0" Grid.Column="1" Content="{Binding Name}" Width="200"/>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Name" HorizontalContentAlignment="Right" />
+                        <Label Grid.Row="0" Grid.Column="1" Content="{Binding Name}" Width="200" />
 
-                <Label Grid.Row="1" Grid.Column="0" Content="Channel" HorizontalContentAlignment="Right" />
-                <Label Grid.Row="1" Grid.Column="1" Content="{Binding Channel}" Width="200" HorizontalContentAlignment="Left" />
+                        <Label Grid.Row="1" Grid.Column="0" Content="Channel" HorizontalContentAlignment="Right" />
+                        <Label Grid.Row="1" Grid.Column="1" Content="{Binding Channel}" Width="200"
+                   HorizontalContentAlignment="Left" />
 
-                <Label Grid.Row="2" Grid.Column="0" Content="Rating" HorizontalContentAlignment="Right" />
-                <Label Grid.Row="2" Grid.Column="1" Content="{Binding Rating}" Width="50" HorizontalContentAlignment="Left" Margin="0,0,150,0" />
+                        <Label Grid.Row="2" Grid.Column="0" Content="Rating" HorizontalContentAlignment="Right" />
+                        <Label Grid.Row="2" Grid.Column="1" Content="{Binding Rating}" Width="50" HorizontalContentAlignment="Left"
+                   Margin="0,0,150,0" />
 
-                <Label Grid.Row="3" Grid.Column="0" Content="Start Time" HorizontalContentAlignment="Right" />
-                <Label Grid.Row="3" Grid.Column="1" Content="{Binding StartDateTime}" Width="200" HorizontalContentAlignment="Left" />
+                        <Label Grid.Row="3" Grid.Column="0" Content="Start Time" HorizontalContentAlignment="Right" />
+                        <Label Grid.Row="3" Grid.Column="1" Content="{Binding StartDateTime}" Width="200"
+                   HorizontalContentAlignment="Left" />
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Border BorderThickness="3" BorderBrush="Black">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="50" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="1" Grid.Column="0" Content="Rating" HorizontalContentAlignment="Right" />
+                            <TextBox Grid.Row="1" Grid.Column="1" TextChanged="RatingFilterApplied" Width="50" HorizontalContentAlignment="Left" />
+                        </Grid>
+                    </Border>
+                </Grid>                
             </Grid>
-        </Grid>
-        </Grid>
+    </Grid>
+  </Grid>
 </Window>

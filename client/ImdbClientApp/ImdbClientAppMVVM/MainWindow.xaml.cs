@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -22,14 +23,17 @@ namespace ImdbClientAppMVVM
     {
         public MainWindow()
         {
-            DataContext = new MainViewModel();
+            DataContext = new MainViewModel(0.0);
             InitializeComponent();
         }
-
-        private void OnClick(EventArgs args)
-        {
-            
-        }
         // OnClosing - Dispose.
+        private void RatingFilterApplied(object sender, TextChangedEventArgs e)
+        {
+            var ratingTxtBox = sender as TextBox;
+            string rating = ratingTxtBox.Text;
+            double ratingFilter = 0;
+            double.TryParse(rating, out ratingFilter);
+            DataContext = new MainViewModel(ratingFilter);
+        }
     }
 }
