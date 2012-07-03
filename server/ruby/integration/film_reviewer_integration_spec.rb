@@ -5,6 +5,10 @@ describe FilmReviewer do
   let (:reviewer) { FilmReviewer.new }
 
 
+  #it 'should handle alternative film titles' do
+    #reviewer.review('Gegen die Wand').should == reviewer.review('Head-on')
+  #end
+
   it 'should not confuse The Drum with Tin Drum' do
     reviewer.review('The Drum')[0].should == 6.6
   end
@@ -21,15 +25,12 @@ describe FilmReviewer do
     #reviewer.review('there is no film with this name').should be_nil
   #end
 
-#  it 'should return a rating for a known unqiue film name' do
-#    reviewer.review('The Godfather').should == [9.2, 'http://ia.media-imdb.com/images/M/MV5BMTIyMTIxNjI5NF5BMl5BanBnXkFtZTcwNzQzNDM5MQ@@.jpg']
-#  end
-#
-#  it 'should handle sequels' do
-#    reviewer.review('Night at the museum 2').should_not be_nil
-#  end
-#
-#  it 'should handle alternative film titles' do
-#    reviewer.review('Gegen die Wand').should == reviewer.review('Head on')
-#  end
+  it 'should return a rating for a known unqiue film name' do
+    reviewer.review('The Godfather').should == [9.2, 'http://ia.media-imdb.com/images/M/MV5BMTIyMTIxNjI5NF5BMl5BanBnXkFtZTcwNzQzNDM5MQ@@.jpg']
+  end
+
+  it 'should handle sequels' do
+    reviewer.review('Night at the museum 2').should_not be_nil
+  end
+
 end

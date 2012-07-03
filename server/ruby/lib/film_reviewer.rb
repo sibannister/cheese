@@ -19,6 +19,9 @@ class FilmReviewer
     best_match_score = 0
     candidates.each do |candidate| 
       score = Showing.title_match_score(film_name, candidate.title)
+      #alternative_title = candidate.also_known_as[0] if candidate.also_known_as.length > 0
+      #puts candidate.title + " is also known as " + alternative_title
+
       if score > best_match_score
         best_match = candidate
         best_match_score = score
