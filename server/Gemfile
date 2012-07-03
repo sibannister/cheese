@@ -2,4 +2,6 @@ source :rubygems
 gem 'imdb'
 gem 'savon'
 gem 'timecop'
+gem 'ruby-string-match-scorer'
+
 
