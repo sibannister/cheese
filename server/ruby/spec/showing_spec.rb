@@ -7,6 +7,12 @@ describe Showing do
     Timecop.freeze
   end
 
+  it 'should give a better match score if all the words are included' do
+    Showing.title_match_score('The Drum', 'The Drum (1938)').should > 
+        Showing.title_match_score('The Drum', 'Die Blechtrommel (1979)')
+  end
+
+
   it 'should convert a film to a json string' do
     film = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), Time.now, 'ITV', 'imageurl', 9.2
     film.to_json.should == '{"name" : "The Godfather", "rating" : 9.2, "channel" : "ITV", "start" : "2010-04-11 23:45", "image" : "imageurl"}'
