@@ -3,6 +3,8 @@ GEM
   specs:
     akami (1.0.0)
       gyoku (>= 0.4.0)
+    amatch (0.2.10)
+      tins (~> 0.3)
     builder (3.0.0)
     diff-lcs (1.1.3)
     gyoku (0.4.4)
@@ -32,6 +34,7 @@ GEM
       nori (~> 1.1)
       wasabi (~> 2.1)
     timecop (0.3.5)
+    tins (0.4.3)
     wasabi (2.1.1)
       nokogiri (>= 1.4.0)
 
@@ -39,6 +42,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  amatch
   imdb
   rspec
   savon
