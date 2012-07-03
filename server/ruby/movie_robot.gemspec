@@ -11,5 +11,6 @@ Gem::Specification.new do |s|
     s.add_runtime_dependency 'imdb'
     s.add_runtime_dependency 'savon'
     s.add_runtime_dependency 'timecop'
+    s.add_runtime_dependency 'amatch'
 end
 
