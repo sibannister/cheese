@@ -39,6 +39,7 @@ class Showing
      '"rating" : ' + rating.to_s + ', ' +
      '"channel" : "' + @channel + '", ' +
      '"start" : "' + @start_date.strftime('%Y-%m-%d %H:%M') + '", ' +
+     '"end" : "' + @end_date.strftime('%Y-%m-%d %H:%M') + '", ' +
      '"image" : "' + @image.to_s + '"}'
   end
 

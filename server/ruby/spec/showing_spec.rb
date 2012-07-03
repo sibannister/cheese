@@ -14,8 +14,9 @@ describe Showing do
 
 
   it 'should convert a film to a json string' do
-    film = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), Time.now, 'ITV', 'imageurl', 9.2
-    film.to_json.should == '{"name" : "The Godfather", "rating" : 9.2, "channel" : "ITV", "start" : "2010-04-11 23:45", "image" : "imageurl"}'
+    film = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), 
+      Time.new(2010, 4, 12, 1, 15, 0), 'ITV', 'imageurl', 9.2
+    film.to_json.should == '{"name" : "The Godfather", "rating" : 9.2, "channel" : "ITV", "start" : "2010-04-11 23:45", "end" : "2010-04-12 01:15", "image" : "imageurl"}'
   end
 
   context 'equality' do
