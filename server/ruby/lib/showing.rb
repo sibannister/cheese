@@ -35,8 +35,8 @@ class Showing
   end
 
   def to_json
-    '{"name" : "' + name + '", ' +
-     '"rating" : ' + rating.to_s + ', ' +
+    '{"name" : "' + @name + '", ' +
+     '"rating" : ' + (@rating || 0).to_s + ', ' +
      '"channel" : "' + @channel + '", ' +
      '"start" : "' + @start_date.strftime('%Y-%m-%d %H:%M') + '", ' +
      '"end" : "' + @end_date.strftime('%Y-%m-%d %H:%M') + '", ' +

@@ -19,6 +19,12 @@ describe Showing do
     film.to_json.should == '{"name" : "The Godfather", "rating" : 9.2, "channel" : "ITV", "start" : "2010-04-11 23:45", "end" : "2010-04-12 01:15", "image" : "imageurl"}'
   end
 
+  it 'should represent null film ratings as zero in the json string' do
+    film = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), 
+      Time.new(2010, 4, 12, 1, 15, 0), 'ITV', 'imageurl', nil
+    film.to_json.should == '{"name" : "The Godfather", "rating" : 0, "channel" : "ITV", "start" : "2010-04-11 23:45", "end" : "2010-04-12 01:15", "image" : "imageurl"}'
+  end
+  
   context 'equality' do
     it 'should recognise two identical films as equal' do
       film1 = Showing.new "Birdemic", Time.now, Time.now, 'ITV', "imageurl", 1.2
