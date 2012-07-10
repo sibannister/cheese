@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mime;
-using System.Security.Policy;
-using System.Text;
 
 namespace ImdbClientInterface
 {
@@ -13,14 +8,16 @@ namespace ImdbClientInterface
         public double Rating { get; set; }
         public string Channel { get; set; }
         public DateTime StartDateTime { get; set; }
+        public DateTime EndDateTime { get; set; }
         public string Image { get; set; }
 
-        public Film(string name, double rating, string channel, DateTime startDateTime, string image)
+        public Film(string name, double rating, string channel, DateTime startDateTime, DateTime endDateTime, string image)
         {
             Name = name;
             Rating = rating;
             Channel = channel;
             StartDateTime = startDateTime;
+            EndDateTime = endDateTime;
             Image = image;
         }
 
@@ -28,7 +25,7 @@ namespace ImdbClientInterface
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
-            return Equals(other.Name, Name) && Equals(other.Channel, Channel) && other.Rating.Equals(Rating) && other.StartDateTime.Equals(StartDateTime) && other.Image.Equals(Image);
+            return Equals(other.Name, Name) && Equals(other.Channel, Channel) && other.Rating.Equals(Rating) && other.StartDateTime.Equals(StartDateTime) && other.EndDateTime.Equals(EndDateTime) && other.Image.Equals(Image);
         }
 
         public override bool Equals(object obj)
@@ -47,6 +44,7 @@ namespace ImdbClientInterface
                 result = (result*397) ^ Channel.GetHashCode();
                 result = (result*397) ^ Rating.GetHashCode();
                 result = (result*397) ^ StartDateTime.GetHashCode();
+                result = (result * 397) ^ EndDateTime.GetHashCode();
                 result = (result*397) ^ Image.GetHashCode();
                 return result;
             }

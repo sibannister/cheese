@@ -38,4 +38,5 @@ namespace ImdbClientInterfaceTest
             private static IEnumerable<Film> _filteredFilms;
             private static double _rating;
         }
-    }}
+    }
+}

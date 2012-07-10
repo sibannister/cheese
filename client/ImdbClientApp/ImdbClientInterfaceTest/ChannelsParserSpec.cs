@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using ImdbClientInterface;
 using Machine.Specifications;
+using Machine.Specifications.Annotations;
 
 namespace ImdbClientInterfaceTest
 {
     [Subject(typeof(ChannelsParser))]
+    [UsedImplicitly]
     public class ChannelsParserSpec
     {
         public class when_parsing_channels_without_films
