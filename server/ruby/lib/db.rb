@@ -5,10 +5,12 @@ class Database
     puts "db url is " + ENV['DATABASE_URL'].to_s
 
     conn = PG.connect("dbname=mikeltcdkp user=mikeltcdkp password=pOE1_m3Nq80BhGWCyG5N host=ec2-23-21-44-44.compute-1.amazonaws.com")
-    conn.exec("CREATE TABLE SHOWING (name varchar(50), channel varchar(20), rating numeric, start timestamp, finish timestamp, image_url varchar(100));")
+    #conn.exec("CREATE TABLE SHOWING (name varchar(50), channel varchar(20), rating numeric, start timestamp, finish timestamp, image_url varchar(100));")
+    puts "connected"
     conn.exec("INSERT INTO SHOWING(name, channel, rating, start, finish, image_url) VALUES('Birdemic', 'Film4', 2.4, '2012-01-08 04:05:00', '2012-01-08 04:05:00', 'url');")
-    conn.flush()
+    puts "inserted"
     conn.exec("SELECT * from SHOWING") do |result|
+      puts "retrieved"
       result.each do |row|
         puts "%s" % row.to_s
       end
