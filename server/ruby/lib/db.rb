@@ -16,6 +16,7 @@ class Database
         puts "%s" % row.to_s
       end
     end
+    "Completed"
   end
 end
 
