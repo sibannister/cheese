@@ -1,3 +1,4 @@
+require 'db'
 require 'showing'
 require 'film_reviewer'
 require 'television'
@@ -51,6 +52,8 @@ class FilmServer
         films = @cache.get_films
         films_json = films.map {|film| film.to_json}
         '[' + films_json.join(', ') + ']'
+      elsif request.path == "/db"
+        Database.new.get
       else
         "Unexpected url.  Should be in the format [ip:port]/films"
       end

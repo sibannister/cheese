@@ -11,7 +11,7 @@ class MyServlet < WEBrick::HTTPServlet::AbstractServlet
 end
 
 
-puts "DB is " + ENV.keys.to_s# ['SHARED_DATABASE_URL'].to_s
+puts "DB is " + ENV['SHARED_DATABASE_URL'].to_s
 
 server = WEBrick::HTTPServer.new( :Port => ARGV[0] )
 server.mount "/", MyServlet
