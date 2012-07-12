@@ -16,6 +16,7 @@ GEM
       hpricot (~> 0.8.4)
     nokogiri (1.5.2)
     nori (1.1.0)
+    pg (0.14.0)
     rack (1.4.1)
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
@@ -44,6 +45,7 @@ PLATFORMS
 DEPENDENCIES
   amatch
   imdb
+  pg
   rspec
   savon
   timecop
