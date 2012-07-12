@@ -2,6 +2,7 @@ require 'pg'
 
 class Database
   def get
+    puts "STARTING DB STUFF!!!"
     puts "db url is " + ENV['DATABASE_URL'].to_s
 
     conn = PG.connect("dbname=mikeltcdkp user=mikeltcdkp password=pOE1_m3Nq80BhGWCyG5N host=ec2-23-21-44-44.compute-1.amazonaws.com")
