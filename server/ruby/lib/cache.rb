@@ -3,6 +3,12 @@ require 'channel'
 require 'film_reviewer'
 
 class Cache
+ 
+  def self.database= database
+    @@database = database
+  end
+
+
   def self.build television = Television.new, reviewer = FilmReviewer.new, cache_duration_in_seconds = 10.days
     @@tv = television
     @@reviewer = reviewer

@@ -6,8 +6,10 @@ require 'timecop'
 describe Cache do
   let (:tv) { stub }
   let (:reviewer) { stub }
+  let (:database) { stub }
 
   before do
+    Cache.database = database
     Timecop.freeze
   end
 

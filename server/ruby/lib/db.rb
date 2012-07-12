@@ -5,7 +5,9 @@ require 'pg'
 #exec "psql -h localhost -p 5432 -U postgres -c 'GRANT ALL PRIVILEGES ON DATABASE test to app2;'"
 
 
-conn = PG.connect(dbname: 'test', port: 5432, user: 'app2', host: 'localhost')
+puts "DB URL is " + ENV['DATABASE_URL'].to_s
+
+conn = PG.connect("dbname=test port=5432 user=app2 host=localhost")
 #conn.exec("DROP TABLE SHOWING;")
 conn.exec("CREATE TABLE IF NOT EXISTS SHOWING (name varchar(50), channel varchar(20), rating numeric, start timestamp, finish timestamp, image_url varchar(100));")
 conn.exec("INSERT INTO SHOWING(name, channel, rating, start, finish, image_url) VALUES('Birdemic', 'Film4', 2.4, '2012-01-08 04:05:00', '2012-01-08 04:05:00', 'url');")
