@@ -49,9 +49,7 @@ class FilmServer
       end
 
       if request.path == "/films"
-        films = @cache.get_films
-        films_json = films.map {|film| film.to_json}
-        '[' + films_json.join(', ') + ']'
+        films_json = @cache.get_films
       elsif request.path == "/db"
         Database.new.get
       else

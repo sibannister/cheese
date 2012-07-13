@@ -3,7 +3,6 @@ require 'channel'
 require 'film_reviewer'
 
 class Cache
- 
   def self.database= database
     @@database = database
   end
@@ -20,6 +19,7 @@ class Cache
 
   def self.reset
     @@films = []
+    @@films_json = "{}"
   end
 
   def self.add_films_to_cache
@@ -28,6 +28,9 @@ class Cache
       add_from_channels
       break if @@tv.films_retrieved_up_to? Time.now + @@cache_duration_in_seconds
     end
+    
+    @@films_json = @@films.map {|film| film.to_json}
+    @@films_json = '[' + @@films_json.join(', ') + ']'
     puts "CACHING COMPLETE" 
   end
 
@@ -58,7 +61,7 @@ class Cache
 
   def get_films
     puts "Retrieving films from cache"
-    @@films
+    @@films_json
   end
 end
 
