@@ -11,8 +11,14 @@ describe FilmServer do
   let (:cache) { stub }
   let (:film_server) { FilmServer.new cache  }
   let (:response) { MockResponse.new }
+  let (:store) { stub }
 
+  before do
+    Cache.store = store
+  end
+  
   it 'should handle a large number of films' do
+    store.should_receive(:reset)
     request = stub(:query => {}, :path => "/films" )
     film_names = ['The Godfather', 'Birdemic', 'M', 'Seven', 'Suspicion', 'Notorious', 'Frenzy', 'Torn Curtain', 'Annie Hall', 'Manhatten', 'Gone With The Wind', 'Metropolis', 'The Great Dictator', 'Siwss Young Boys', 'All About Eve', 'It Happened One Night']
     time = Time.new 2012, 6, 14, 17, 13, 0
@@ -49,6 +55,9 @@ describe FilmServer do
   end
 
   it 'should integrate with the cache' do
+    store.should_receive(:reset)
+    store.should_receive(:add)
+    store.should_receive(:contents).and_return([])
     film_server = FilmServer.new
     tv = stub(:get_films => [], :films_retrieved_up_to? => true)
     reviewer = stub

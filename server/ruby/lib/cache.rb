@@ -1,3 +1,4 @@
+require 'store'
 require 'television' 
 require 'channel'
 require 'film_reviewer'
@@ -17,6 +18,7 @@ class Cache
     @@tv = television
     @@reviewer = reviewer
     @@cache_duration_in_seconds = cache_duration_in_seconds
+    @@store ||= Store.new
 
     @@store.reset
     add_films_to_cache

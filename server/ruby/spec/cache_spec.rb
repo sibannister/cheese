@@ -23,6 +23,7 @@ describe Cache do
     Showing.new 'The Godfather', Time.now, Time.now + 3.hours, 'Film 4', 'image', 9.2
   end
 
+
   it 'should handle batches without any films' do
     tv.should_receive(:get_films).and_return([film1], [], [film2])
     reviewer.should_receive(:review).with('Birdemic').and_return([1.2, 'image'])
