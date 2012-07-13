@@ -6,11 +6,9 @@ require 'timecop'
 describe Cache do
   let (:tv) { stub }
   let (:reviewer) { stub }
-  let (:database) { stub }
-  let (:store) { stub }
+  let (:store) { MemoryStore.new }
 
   before do
-    Cache.database = database
     Cache.store = store
     Timecop.freeze
   end
@@ -23,17 +21,11 @@ describe Cache do
     Showing.new 'The Godfather', Time.now, Time.now + 3.hours, 'Film 4', 'image', 9.2
   end
 
-
   it 'should handle batches without any films' do
     tv.should_receive(:get_films).and_return([film1], [], [film2])
     reviewer.should_receive(:review).with('Birdemic').and_return([1.2, 'image'])
     reviewer.should_receive(:review).with('The Godfather').and_return([9.2, 'image'])
     tv.should_receive(:films_retrieved_up_to?).and_return(false, false, true)
-    store.should_receive(:reset)
-    store.should_receive(:add).with([film1])
-    store.should_receive(:add).with([])
-    store.should_receive(:add).with([film2])
-    store.should_receive(:contents).and_return([film1, film2])
     Cache.build tv, reviewer, 0.minutes
     sleep 1
     Cache.new.get_films.should == jsonify([film1, film2])
@@ -42,9 +34,6 @@ describe Cache do
   it 'should handle the case where there are no films at all' do
     tv.should_receive(:get_films).and_return([])
     tv.should_receive(:films_retrieved_up_to?).and_return(true)
-    store.should_receive(:reset)
-    store.should_receive(:add).with([])
-    store.should_receive(:contents).and_return([])
     Cache.build tv, reviewer, 0.minutes
     Cache.new.get_films.should == "[]"
   end
@@ -52,9 +41,6 @@ describe Cache do
   it 'should integrate correctly with the Television class' do
     rovi_source = stub(:get_films => FilmBatch.new([], Time.now + 5.hours))
     tv = Television.new rovi_source
-    store.should_receive(:reset)
-    store.should_receive(:add).with([])
-    store.should_receive(:contents).and_return([])
     Cache.build tv, reviewer, 0.minutes
     Cache.new.get_films
   end
@@ -62,9 +48,6 @@ describe Cache do
   it 'should integrate correctly with the FilmReviewer class' do
     tv.should_receive(:get_films).and_return([])
     tv.should_receive(:films_retrieved_up_to?).and_return(true)
-    store.should_receive(:reset)
-    store.should_receive(:add).with([])
-    store.should_receive(:contents).and_return([])
     reviewer = stub
     Cache.build tv, reviewer, 0.minutes
     Cache.new.get_films
