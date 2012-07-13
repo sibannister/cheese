@@ -47,6 +47,7 @@ class Cache
         showing.rating = rating
         showing.image = image
         puts "  Updated showing to " + showing.to_s
+        add_to_cache showing
       end
     end
     puts 'Threads kicked off'
