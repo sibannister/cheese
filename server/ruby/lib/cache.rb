@@ -16,7 +16,6 @@ class Cache
     @@cache_duration_in_seconds = cache_duration_in_seconds
     @@store ||= Store.new
     @@review_threads = []
-    @@films = []
     add_films_to_cache
   end
 
@@ -37,14 +36,14 @@ class Cache
     end
     puts "Review threads complete.  Films json will now be cached in database"
 
-    @@store.add('films_json', jsonify(@@films))
+    @@store.persist
   end
 
   def self.add_from_channels
     next_batch = @@tv.get_films(Time.now + @@cache_duration_in_seconds)
     remove_duplicates next_batch
     puts 'Next batch of ' + next_batch.count.to_s + ' films being added'
-    @@films += next_batch
+    @@store.add next_batch
     gather_ratings next_batch
   end
 
@@ -63,13 +62,13 @@ class Cache
   end
 
   def self.remove_duplicates next_batch
-    next_batch.delete_if { |film| @@films.any? { |film_in_cache| film_in_cache.name == film.name } }
+    next_batch.delete_if { |film| @@store.get.any? { |film_in_cache| film_in_cache.name == film.name } }
   end
 
   def get_films
     puts "Retrieving films from cache"
 #    jsonify @@store.contents
-    @@store.get 'films_json'
+    @@store.get_json
   end
 
   def self.jsonify films
