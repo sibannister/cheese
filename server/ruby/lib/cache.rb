@@ -4,6 +4,10 @@ require 'film_reviewer'
 
 class Cache
  
+  def self.store= store
+    @@store = store
+  end
+
   def self.database= database
     @@database = database
   end
@@ -14,12 +18,8 @@ class Cache
     @@reviewer = reviewer
     @@cache_duration_in_seconds = cache_duration_in_seconds
 
-    reset
+    @@store.reset
     add_films_to_cache
-  end
-
-  def self.reset
-    @@films = []
   end
 
   def self.add_films_to_cache
@@ -33,9 +33,8 @@ class Cache
 
   def self.add_from_channels
     next_batch = @@tv.get_films(Time.now + @@cache_duration_in_seconds)
-    remove_duplicates next_batch
     puts 'Next batch of ' + next_batch.count.to_s + ' films being added'
-    @@films += next_batch
+    @@store.add next_batch
     gather_ratings next_batch
   end
 
@@ -53,13 +52,13 @@ class Cache
     puts 'Threads kicked off'
   end
 
-  def self.remove_duplicates next_batch
-    next_batch.delete_if { |film| @@films.any? { |film_in_cache| film_in_cache.name == film.name } }
-  end
+  #def self.remove_duplicates next_batch
+    #next_batch.delete_if { |film| @@films.any? { |film_in_cache| film_in_cache.name == film.name } }
+  #end
 
   def get_films
     puts "Retrieving films from cache"
-    jsonify @@films
+    jsonify @@store.contents
   end
 
   def jsonify films
