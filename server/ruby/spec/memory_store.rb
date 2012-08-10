@@ -16,9 +16,7 @@ class MemoryStore
   end
 
   def get_json
-    puts "constructing json for " + @entries.size.to_s + " films in cache"
-    films_json = @entries.map {|film| film.to_json}
-    '[' + films_json.join(', ') + ']'
+    @entries.to_json
   end
 end
 

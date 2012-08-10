@@ -1,8 +1,5 @@
-require 'timecop'
-require 'fixnum'
+require 'spec_helper'
 require 'television'
-require 'film_service_failure'
-require 'channel'
 
 describe Television do
   let(:rovi_source) { stub }
@@ -13,40 +10,40 @@ describe Television do
     @now = Time.now
   end
 
-  it 'should not attempt to retrieve any films if it has passed the required end time' do
-    rovi_source.should_receive(:get_films).with(@now).and_return film_batch(@now + 4.hours, 3)
-    tv.get_films(@now + 2.hours).should have(3).items
-    tv.get_films(@now + 2.hours).should be_empty
+  it 'should not attempt to retrieve any showings if it has passed the required end time' do
+    rovi_source.should_receive(:get_showings).with(@now).and_return showing_batch(@now + 4.hours, 3)
+    tv.get_showings(@now + 2.hours).should have(3).items
+    tv.get_showings(@now + 2.hours).should be_empty
   end
   
-  it 'should retrieve films from rovi' do
-    rovi_source.should_receive(:get_films).with(@now).and_return film_batch(@now + 4.hours, 3)
-    tv.get_films(@now + 1.days).should have(3).items
+  it 'should retrieve showings from rovi' do
+    rovi_source.should_receive(:get_showings).with(@now).and_return showing_batch(@now + 4.hours, 3)
+    tv.get_showings(@now + 1.days).should have(3).items
   end
 
-  it 'should know how far into the future it has retrieved films' do
-    rovi_source.should_receive(:get_films).with(@now).and_return film_batch(@now + 4.hours, 3)
-    tv.get_films(@now + 1.days)
-    tv.films_retrieved_up_to?(@now).should be_true 
-    tv.films_retrieved_up_to?(@now + 4.hours).should be_true 
-    tv.films_retrieved_up_to?(@now + 5.hours).should be_false
+  it 'should know how far into the future it has retrieved showings' do
+    rovi_source.should_receive(:get_showings).with(@now).and_return showing_batch(@now + 4.hours, 3)
+    tv.get_showings(@now + 1.days)
+    tv.showings_retrieved_up_to?(@now).should be_true 
+    tv.showings_retrieved_up_to?(@now + 4.hours).should be_true 
+    tv.showings_retrieved_up_to?(@now + 5.hours).should be_false
   end
   
   it 'should begin retrieving from the point where it left off' do
-    rovi_source.should_receive(:get_films).with(@now).and_return film_batch(@now + 4.hours, 3)
-    rovi_source.should_receive(:get_films).with(@now + 4.hours).and_return film_batch(@now + 8.hours, 1)
-    tv.get_films(@now + 1.days).should have(3).items
-    tv.get_films(@now + 1.days).should have(1).items
+    rovi_source.should_receive(:get_showings).with(@now).and_return showing_batch(@now + 4.hours, 3)
+    rovi_source.should_receive(:get_showings).with(@now + 4.hours).and_return showing_batch(@now + 8.hours, 1)
+    tv.get_showings(@now + 1.days).should have(3).items
+    tv.get_showings(@now + 1.days).should have(1).items
   end
 
   it 'should integrate with rovi source' do
     soap_source = stub(:read => nil)
-    tv = Television.new(RoviSource.new soap_source, [])
-    tv.get_films(@now + 4.days)
+    tv = Television.new RoviSource.new soap_source
+    tv.get_showings(@now + 4.days)
   end
 
-  def film_batch end_date, number_of_films
-    film = Showing.new 'Birdemic', @now, @now, 'imageurl', 'ITV'
-    stub(:end_date => end_date, :films => [film] * number_of_films)
+  def showing_batch end_date, number_of_showings
+    showing = build :showing
+    stub(:end_date => end_date, :showings => [showing] * number_of_showings)
   end
 end

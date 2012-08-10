@@ -5,7 +5,7 @@ require 'fixnum'
 require 'hpricot'
 require 'showing'
 require 'film_service_failure'
-require 'film_batch'
+require 'showing_batch'
 
 class RoviSource
   def initialize soap_source = SoapSource.new, channels = []
@@ -13,39 +13,39 @@ class RoviSource
     @soap_source = UnreliableObjectDelegate.new soap_source, 30, 4
   end
 
-  def get_films start_time
-    puts 'Requesting films starting at ' + start_time.to_s
+  def get_showings start_time
+    puts 'Requesting showings starting at ' + start_time.to_s
     soap = @soap_source.read start_time, @channels
     return empty_batch(start_time) if soap.nil? || soap.empty? || has_no_programmes(soap)
 
-    films = extract_films soap
-    FilmBatch.new films, start_time + 4.hours
+    showings = extract_showings soap
+    ShowingBatch.new showings, start_time + 4.hours
   end
 
   def empty_batch start_time
-    FilmBatch.new [], start_time + 240.minutes
+    ShowingBatch.new [], start_time + 240.minutes
   end
 
   def has_no_programmes soap
     !soap.include?("GridAiring")
   end
 
-  def extract_films soap
+  def extract_showings soap
     doc = Hpricot.XML(soap)
     channels_xml = (doc/"GridChannel")
     
-    films = []
-    channels_xml.each {|channel_xml| films += parse_channel_xml channel_xml}
+    showings = []
+    channels_xml.each {|channel_xml| showings += parse_channel_xml channel_xml}
     
-    puts '  Films in soap: ' + films.to_s
-    films
+    puts '  showings in soap: ' + showings.to_s
+    showings
   end
 
   def parse_channel_xml channel_xml
     channel = channel(channel_xml)
-    films = (channel_xml/"GridAiring")
-    films.delete_if {|film| film['Category'] != 'Movie' }
-    films.map {|film| SoapConverter.new.convert film, channel}
+    showings = (channel_xml/"GridAiring")
+    showings.delete_if {|showing| showing['Category'] != 'Movie' }
+    showings.map {|showing| SoapConverter.new.convert showing, channel}
   end 
 
   def channel channel_xml
