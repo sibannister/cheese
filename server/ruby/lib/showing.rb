@@ -26,14 +26,6 @@ class Showing
     @image = image_url
   end
 
-  def self.match_title? actual_title, candidate_title
-    candidate_title.upcase.start_with? actual_title.upcase
-  end
-
-  def self.title_match_score actual_title, candidate_title
-    actual_title.levenshtein_similar(candidate_title)
-  end
-
   def to_json
     '{"name" : "' + @name + '", ' +
      '"rating" : ' + (@rating || 0).to_s + ', ' +
