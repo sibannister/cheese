@@ -1,5 +1,5 @@
 class MemoryStore
-  def initialize
+  def reset
     @entries = []
   end
 
@@ -11,7 +11,7 @@ class MemoryStore
   def persist
   end
 
-  def get
+  def contents
     @entries
   end
 

@@ -2,6 +2,7 @@ require 'cache'
 require 'channel'
 require 'showing'
 require 'timecop'
+require 'memory_store'
 
 describe Cache do
   let (:tv) { stub }

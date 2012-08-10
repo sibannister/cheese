@@ -8,10 +8,7 @@ require 'fixnum'
 class FilmServer
   attr_writer :days_to_search
 
-  @@initialised = false
-
   def self.build_cache days
-    @@initialised = true
     puts 'Starting up film server'
     channels = read_channels
     tv = Television.new(RoviSource.new(SoapSource.new, channels))
@@ -44,8 +41,6 @@ class FilmServer
         days = request.query['days']
         FilmServer.build_cache(days.nil? ? 7 : days.to_i)
         "Initialised movie robot"
-      elsif !@@initialised
-        FilmServer.build_cache(days.nil? ? 1 : days.to_i)
       end
 
       if request.path == "/films"

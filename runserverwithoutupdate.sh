@@ -8,5 +8,5 @@ ruby -Ilib lib/server.rb 1234 &
 
 echo INITIALISING THE SERVER...
 sleep 3
-wget "http://localhost:1234/cache?days=1"
+#wget "http://localhost:1234/cache?days=1"
 
