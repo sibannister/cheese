@@ -4,13 +4,14 @@ require 'channel'
 require 'film_reviewer'
 
 class Cache
- 
+  @@store = nil
+
   def self.store= store
     @@store = store
   end
 
   def self.store
-    Store.new
+    @@store || Store.new
   end
 
   def self.build television = Television.new, reviewer = FilmReviewer.new, cache_duration_in_seconds = 10.days

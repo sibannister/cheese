@@ -29,6 +29,7 @@ describe Cache do
     tv.should_receive(:films_retrieved_up_to?).and_return(false, false, true)
     Cache.build tv, reviewer, 0.minutes
     sleep 1
+
     Cache.new.get_films.should == jsonify([film1, film2])
   end
 

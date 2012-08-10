@@ -4,44 +4,40 @@ require 'showing'
 require 'fixnum'
 
 describe Store do
-  let (:store) { Store.new }
+  let (:persister) { mock }
+  let (:store) { Store.new persister }
 
   before do
     Timecop.freeze
-    store.reset
   end
 
-  def film1
+  def showing1
     Showing.new 'Birdemic', Time.now, Time.now + 2.hours, 'ITV', 'image', 1.2
   end
 
-  def film2
-    Showing.new 'The Godfather', Time.now, Time.now + 3.hours, 'Film 4', 'image', 9.2
+  def showing2
+    Showing.new 'The Godfather', Time.now, Time.now + 3.hours, 'showing 4', 'image', 9.2
   end
 
   it "should allow adding and retrieving" do
-    store.add [film1]
-    store.add [film2]
-    store.contents.should eq [film1, film2]
+    store.add [showing1]
+    store.add [showing2]
+    store.contents.should eq [showing1, showing2]
   end
 
-  it "should return the films in json format" do
-    store.add [film1]
-    store.add [film2]
-    store.get_json.should eq "[" + film1.to_json + ", " + film2.to_json + "]"
+  it "should return the showings in json format" do
+    persister.should_receive(:retrieve).and_return nil
+    store.add [showing1]
+    store.add [showing2]
+    store.get_json.should eq "[" + showing1.to_json + ", " + showing2.to_json + "]"
   end
 
-  it "should retrieve the persisted films json" do
-    store.add [film1]
+  it "should retrieve the persisted showings json" do
+    persister.should_receive(:save).with "[" + showing1.to_json + "]"
+    persister.should_receive(:retrieve).and_return "some json"
+    store.add [showing1]
     store.persist
-    store.get_json.should eq "[" + film1.to_json + "]"
-  end
-
-  it "should use the persisted films rather than the in memory films" do
-    store.add [film1]
-    store.persist
-    store.add [film2]
-    store.get_json.should eq "[" + film1.to_json + "]"
+    store.get_json.should eq "some json"
   end
 
 end
