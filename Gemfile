@@ -5,4 +5,4 @@ gem 'timecop'
 gem 'rspec'
 gem 'amatch'
 gem 'pg'
-
+gem 'dalli'

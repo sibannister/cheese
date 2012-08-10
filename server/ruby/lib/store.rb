@@ -31,6 +31,6 @@ class Store
   end
 
   def cache
-    Dalli::Client.new('localhost:11211')
+    Dalli::Client.new 'mc5.ec2.northscale.net:11211', :username => 'app5077305%40heroku.com', :password => 'YvePBrvyZp3pPLs0'
   end
 end
