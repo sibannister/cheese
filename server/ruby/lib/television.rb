@@ -6,7 +6,7 @@ require 'soap_source'
 require 'rovi_source'
 
 class Television
-  def initialize rovi_source
+  def initialize rovi_source = RoviSource.new
     @rovi_source = rovi_source
     @next_batch_start_time = Time.now
   end

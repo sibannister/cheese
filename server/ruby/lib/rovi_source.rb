@@ -8,7 +8,7 @@ require 'film_service_failure'
 require 'film_batch'
 
 class RoviSource
-  def initialize soap_source, channels
+  def initialize soap_source = SoapSource.new, channels = []
     @channels = channels
     @soap_source = UnreliableObjectDelegate.new soap_source, 30, 4
   end

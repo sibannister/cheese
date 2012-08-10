@@ -8,8 +8,12 @@ require 'fixnum'
 class FilmServer
   attr_writer :days_to_search
 
+  def initialize cache = Cache.new
+    @days_to_search = 7
+    @cache = cache
+  end
+
   def build_cache days
-    puts 'Starting up film server'
     channels = read_channels
     tv = Television.new(RoviSource.new(SoapSource.new, channels))
     @cache.build tv, FilmReviewer.new, days.days
@@ -24,12 +28,6 @@ class FilmServer
     puts channel
     channel
   end
-
-  def initialize cache = Cache.new
-    @days_to_search = 7
-    @cache = cache
-  end
-
 
   def handleGET request, response
     response.body = get_response_body request

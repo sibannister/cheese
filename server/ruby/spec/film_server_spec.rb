@@ -49,8 +49,8 @@ describe FilmServer do
   end
 
   it 'should integrate with the cache' do
-    real_cache = Cache.new
-    real_cache.store = stub :get_json => "some json"
+    store = stub :get_json => "some json"
+    real_cache = Cache.new stub, stub, store, 0
     film_server = FilmServer.new real_cache
     request = stub(:query => {}, :path => "/films" )
     film_server.handleGET request, response
