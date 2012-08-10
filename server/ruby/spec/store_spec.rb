@@ -3,6 +3,8 @@ require 'timecop'
 require 'store'
 require 'showing'
 require 'fixnum'
+require 'jsonifier'
+
 
 FactoryGirl.find_definitions
 
@@ -26,7 +28,8 @@ describe Store do
     persister.should_receive(:retrieve).and_return nil
     store.add [showing]
     store.add [another_showing]
-    store.get_json.should eq "[" + showing.to_json + ", " + another_showing.to_json + "]"
+   # store.get_json.should eq "[" + showing.to_json + ", " + another_showing.to_json + "]"
+    store.get_json.should eq [showing, another_showing].to_json
   end
 
   it "should retrieve the persisted showings json" do

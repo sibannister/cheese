@@ -33,6 +33,6 @@ class Store
 
   def build_json
     films_json = @films.map {|film| film.to_json}
-    '[' + films_json.join(', ') + ']'
+    '[' + films_json.join(',') + ']'
   end
 end

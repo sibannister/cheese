@@ -12,7 +12,6 @@ describe Showing do
         Showing.title_match_score('The Drum', 'Die Blechtrommel (1979)')
   end
 
-
   it 'should convert a film to a json string' do
     film = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), 
       Time.new(2010, 4, 12, 1, 15, 0), 'ITV', 'imageurl', 9.2
