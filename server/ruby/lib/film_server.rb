@@ -2,21 +2,21 @@ require 'db'
 require 'showing'
 require 'film_reviewer'
 require 'television'
-require 'cache'
+require 'presenter'
 require 'fixnum'
 
 class FilmServer
   attr_writer :days_to_search
 
-  def initialize cache = Cache.new
+  def initialize presenter = Presenter.new
     @days_to_search = 7
-    @cache = cache
+    @presenter = presenter
   end
 
   def build_cache days
     channels = read_channels
     tv = Television.new(RoviSource.new(SoapSource.new, channels))
-    @cache.build tv, FilmReviewer.new, days.days
+    @presenter.build tv, FilmReviewer.new, days.days
   end
 
   def read_channels
@@ -42,7 +42,7 @@ class FilmServer
       end
 
       if request.path == "/films"
-        films_json = @cache.get_films
+        films_json = @presenter.get_films
       elsif request.path == "/db"
         Database.new.get
       else

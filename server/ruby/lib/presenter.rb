@@ -3,9 +3,7 @@ require 'television'
 require 'channel'
 require 'film_reviewer'
 
-class Cache
-  @store = nil
-
+class Presenter
   def initialize television = Television.new, reviewer = FilmReviewer.new, store = Store.new, cache_duration_in_seconds = 10.days
     @tv = television
     @reviewer = reviewer
