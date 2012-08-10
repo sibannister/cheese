@@ -6,15 +6,15 @@ require 'film_reviewer'
 class Cache
   @@store = nil
 
-  def self.store= store
+  def store= store
     @@store = store
   end
 
-  def self.store
+  def store
     @@store || Store.new
   end
 
-  def self.build television = Television.new, reviewer = FilmReviewer.new, cache_duration_in_seconds = 10.days
+  def build television = Television.new, reviewer = FilmReviewer.new, cache_duration_in_seconds = 10.days
     @@tv = television
     @@reviewer = reviewer
     @@cache_duration_in_seconds = cache_duration_in_seconds
@@ -23,7 +23,7 @@ class Cache
     add_films_to_cache
   end
 
-  def self.add_films_to_cache
+  def add_films_to_cache
     puts "BEGINNING TO CACHE " + (@@cache_duration_in_seconds / (60*60*24)).to_s + " days worth of films"
     loop do
       add_from_channels
@@ -33,25 +33,25 @@ class Cache
     cache_everything
   end
 
-  def self.cache_everything
+  def cache_everything
     puts "Waiting for " + @@review_threads.size.to_s + " review threads to complete before caching result"
     @@review_threads.each do |thread| 
       thread.join
     end
     puts "Review threads complete.  Films json will now be cached in database"
 
-    Cache.store.persist
+    store.persist
   end
 
-  def self.add_from_channels
+  def add_from_channels
     next_batch = @@tv.get_films(Time.now + @@cache_duration_in_seconds)
     remove_duplicates next_batch
     puts 'Next batch of ' + next_batch.count.to_s + ' films being added'
-    Cache.store.add next_batch
+    store.add next_batch
     gather_ratings next_batch
   end
 
-  def self.gather_ratings next_batch
+  def gather_ratings next_batch
     puts 'Kicking off review gathering on separate thread' + next_batch.size.to_s
     next_batch.each do |showing|
       puts "Creating thread for " + showing.to_s
@@ -65,17 +65,17 @@ class Cache
     end
   end
 
-  def self.remove_duplicates next_batch
+  def remove_duplicates next_batch
     next_batch.delete_if { |film| store.contents.any? { |film_in_cache| film_in_cache.name == film.name } }
   end
 
   def get_films
     puts "Retrieving films from cache"
 #    jsonify @@store.contents
-    Cache.store.get_json
+    store.get_json
   end
 
-  def self.jsonify films
+  def jsonify films
     films_json = films.map {|film| film.to_json}
     '[' + films_json.join(', ') + ']'
   end

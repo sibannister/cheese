@@ -8,18 +8,18 @@ require 'fixnum'
 class FilmServer
   attr_writer :days_to_search
 
-  def self.build_cache days
+  def build_cache days
     puts 'Starting up film server'
     channels = read_channels
     tv = Television.new(RoviSource.new(SoapSource.new, channels))
-    Cache.build tv, FilmReviewer.new, days.days
+    @cache.build tv, FilmReviewer.new, days.days
   end
 
-  def self.read_channels
+  def read_channels
     File.open("channels.txt").map {|line| read_channel(line)}
   end
 
-  def self.read_channel line
+  def read_channel line
     channel = Channel.new line.split(',')[0], line.split(',')[1].to_i
     puts channel
     channel
@@ -39,7 +39,7 @@ class FilmServer
     begin
       if request.path == "/cache"
         days = request.query['days']
-        FilmServer.build_cache(days.nil? ? 7 : days.to_i)
+        build_cache(days.nil? ? 7 : days.to_i)
         "Initialised movie robot"
       end
 

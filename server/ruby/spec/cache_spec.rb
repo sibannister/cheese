@@ -8,9 +8,10 @@ describe Cache do
   let (:tv) { stub }
   let (:reviewer) { stub }
   let (:store) { MemoryStore.new }
+  let (:cache) { Cache.new }
 
   before do
-    Cache.store = store
+    cache.store = store
     Timecop.freeze
   end
 
@@ -27,32 +28,32 @@ describe Cache do
     reviewer.should_receive(:review).with('Birdemic').and_return([1.2, 'image'])
     reviewer.should_receive(:review).with('The Godfather').and_return([9.2, 'image'])
     tv.should_receive(:films_retrieved_up_to?).and_return(false, false, true)
-    Cache.build tv, reviewer, 0.minutes
+    cache.build tv, reviewer, 0.minutes
     sleep 1
 
-    Cache.new.get_films.should == jsonify([film1, film2])
+    cache.get_films.should == jsonify([film1, film2])
   end
 
   it 'should handle the case where there are no films at all' do
     tv.should_receive(:get_films).and_return([])
     tv.should_receive(:films_retrieved_up_to?).and_return(true)
-    Cache.build tv, reviewer, 0.minutes
-    Cache.new.get_films.should == "[]"
+    cache.build tv, reviewer, 0.minutes
+    cache.get_films.should == "[]"
   end
 
   it 'should integrate correctly with the Television class' do
     rovi_source = stub(:get_films => FilmBatch.new([], Time.now + 5.hours))
     tv = Television.new rovi_source
-    Cache.build tv, reviewer, 0.minutes
-    Cache.new.get_films
+    cache.build tv, reviewer, 0.minutes
+    cache.get_films
   end
 
   it 'should integrate correctly with the FilmReviewer class' do
     tv.should_receive(:get_films).and_return([])
     tv.should_receive(:films_retrieved_up_to?).and_return(true)
     reviewer = stub
-    Cache.build tv, reviewer, 0.minutes
-    Cache.new.get_films
+    cache.build tv, reviewer, 0.minutes
+    cache.get_films
   end
 
   def jsonify films

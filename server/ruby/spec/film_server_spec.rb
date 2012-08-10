@@ -2,7 +2,6 @@ require 'film_server'
 require 'film_reviewer'
 require 'net/http'
 require 'fixnum'
-require 'memory_store'
 
 class MockResponse
   attr_accessor :body
@@ -12,12 +11,7 @@ describe FilmServer do
   let (:cache) { stub }
   let (:film_server) { FilmServer.new cache  }
   let (:response) { MockResponse.new }
-  let (:store) { MemoryStore.new }
 
-  before do
-    Cache.store = store
-  end
-  
   it 'should handle a large number of films' do
     request = stub(:query => {}, :path => "/films" )
     film_names = ['The Godfather', 'Birdemic', 'M', 'Seven', 'Suspicion', 'Notorious', 'Frenzy', 'Torn Curtain', 'Annie Hall', 'Manhatten', 'Gone With The Wind', 'Metropolis', 'The Great Dictator', 'Siwss Young Boys', 'All About Eve', 'It Happened One Night']
@@ -44,24 +38,23 @@ describe FilmServer do
 
   it 'should allow caching of a configurable number of days' do
     request = stub(:query => {'days' => '4'}, :path => "/cache" )
-    Cache.should_receive(:build).with(anything(), anything(), 4.days)
+    cache.should_receive(:build).with(anything(), anything(), 4.days)
     film_server.handleGET request, response
   end
 
   it 'should respond to a cache call by building up the cache for 7 days' do
     request = stub(:query => {}, :path => "/cache" )
-    Cache.should_receive(:build).with(anything(), anything(), 7.days)
+    cache.should_receive(:build).with(anything(), anything(), 7.days)
     film_server.handleGET request, response
   end
 
   it 'should integrate with the cache' do
-    film_server = FilmServer.new
-    tv = stub(:get_films => [], :films_retrieved_up_to? => true)
-    reviewer = stub
-    Cache.build tv, reviewer
+    real_cache = Cache.new
+    real_cache.store = stub :get_json => "some json"
+    film_server = FilmServer.new real_cache
     request = stub(:query => {}, :path => "/films" )
     film_server.handleGET request, response
-    response.body.should == "[]"
+    response.body.should == "some json"
   end
 end
 

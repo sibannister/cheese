@@ -1,8 +1,8 @@
-require 'json'
+require 'jsonifier'
 require 'amatch'
 include Amatch
 
-class Showing
+class Showing < Jsonifiable
   include Comparable
 
   attr_reader :name, :start_date, :end_date, :channel
@@ -15,10 +15,6 @@ class Showing
     @rating = rating
     @channel = channel
     @image = image_url
-  end
-
-  def to_json
-    to_hash.to_json.to_s
   end
 
   def to_hash
@@ -38,9 +34,5 @@ class Showing
          @end_date == other.end_date &&
          @start_date == other.start_date &&
          @image == other.image
-  end
-
-  def to_s
-    name + " (" + @channel + " from " + @start_date.strftime('%d/%m %H:%M') + " to " + @end_date.strftime('%H:%M') + ") " + rating.to_s + "/10 " + @image.to_s
   end
 end
