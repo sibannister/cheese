@@ -1,12 +1,9 @@
-require 'factory_girl'
 require 'timecop'
 require 'store'
 require 'showing'
 require 'fixnum'
 require 'jsonifier'
-
-
-FactoryGirl.find_definitions
+require 'spec_helper'
 
 describe Store do
   let (:persister) { mock }

@@ -1,66 +1,54 @@
 require 'showing'
-require 'fixnum'
-require 'timecop'
+require 'spec_helper'
 
 describe Showing do
-  before do
-    Timecop.freeze
-  end
+  let(:showing) { build :showing }
 
-  it 'should convert a film to a json string' do
-    film = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), 
+  it 'should convert a showing to a json string' do
+    showing = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), 
       Time.new(2010, 4, 12, 1, 15, 0), 'ITV', 'imageurl', 9.2
-    film.to_json.should == '{"name" : "The Godfather", "rating" : 9.2, "channel" : "ITV", "start" : "2010-04-11 23:45", "end" : "2010-04-12 01:15", "image" : "imageurl"}'
+    showing.to_json.should == '{"name" : "The Godfather", "rating" : 9.2, "channel" : "ITV", "start" : "2010-04-11 23:45", "end" : "2010-04-12 01:15", "image" : "imageurl"}'
   end
 
-  it 'should represent null film ratings as zero in the json string' do
-    film = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), 
-      Time.new(2010, 4, 12, 1, 15, 0), 'ITV', 'imageurl', nil
-    film.to_json.should == '{"name" : "The Godfather", "rating" : 0, "channel" : "ITV", "start" : "2010-04-11 23:45", "end" : "2010-04-12 01:15", "image" : "imageurl"}'
+  it 'should represent nil ratings as zero in the json string' do
+    showing = build :showing, :rating => nil
+    showing.to_json.should include '"rating" : 0'
   end
   
   context 'equality' do
-    it 'should recognise two identical films as equal' do
-      film1 = Showing.new "Birdemic", Time.now, Time.now, 'ITV', "imageurl", 1.2
-      film2 = Showing.new "Birdemic", Time.now, Time.now, 'ITV', "imageurl", 1.2
-      film1.should == film2
+    it 'should recognise two identical showings as equal' do
+      identical_showing = build :showing
+      showing.should == identical_showing
     end
 
-    it 'should recognise films on different channels as unequal' do
-      film1 = Showing.new "Birdemic", Time.now, Time.now, 'ITV', "imageurl", 1.2
-      film2 = Showing.new "Birdemic", Time.now, Time.now, 'Film 4', "imageurl", 1.2
-      film1.should_not == film2
+    it 'should recognise showings on different channels as unequal' do
+      different_showing = build :showing, :channel => 'different'
+      showing.should_not == different_showing
     end
 
-    it 'should recognise two differently rated films as unequal' do
-      film1 = Showing.new "Birdemic", Time.now, Time.now, 'ITV', "imageurl", 1.2
-      film2 = Showing.new "Birdemic", Time.now, Time.now, 'ITV', "imageurl", 4.2
-      film1.should_not == film2
+    it 'should recognise two differently rated showings as unequal' do
+      different_showing = build :showing, :rating => 3.5
+      showing.should_not == different_showing
     end
 
-    it 'should recognise two differently named films as unequal' do
-      film1 = Showing.new "Birdemic", Time.now, Time.now, 'ITV', "imageurl", 1.2
-      film2 = Showing.new "Titanic", Time.now, Time.now, 'ITV', "imageurl", 1.2
-      film1.should_not == film2
+    it 'should recognise two differently named showings as unequal' do
+      different_showing = build :showing, :name => 'different'
+      showing.should_not == different_showing
     end
 
-    it 'should recognise films with different end times unequal' do
-      film1 = Showing.new "Birdemic", Time.now, Time.now, "imageurl", 'ITV'
-      film2 = Showing.new "Birdemic", Time.now, Time.now + 1.hours, "imageurl", 'ITV'
-      film1.should_not == film2
+    it 'should recognise showings with different end times unequal' do
+      different_showing = build :showing, :end_date => Time.now
+      showing.should_not == different_showing
     end
 
-    it 'should recognise films with different start times unequal' do
-      film1 = Showing.new "Birdemic", Time.now, Time.now, "imageurl", 'ITV'
-      film2 = Showing.new "Birdemic", Time.now + 1.hours, Time.now, "imageurl", 'ITV'
-      film1.should_not == film2
+    it 'should recognise showings with different start times unequal' do
+      different_showing = build :showing, :start_date => Time.now
+      showing.should_not == different_showing
     end
     
-    it 'should recognise films with different images as unequal' do
-      film1 = Showing.new "Birdemic", Time.now, Time.now, "imageurl", 'ITV'
-      film2 = Showing.new "Birdemic", Time.now, Time.now, "differentimageurl", 'ITV'
-      film1.should_not == film2
+    it 'should recognise showings with different images as unequal' do
+      different_showing = build :showing, :image_url => 'different'
+      showing.should_not == different_showing
     end
   end
-
 end

@@ -8,8 +8,8 @@ FactoryGirl.define do
   factory :showing do
     ignore do
       name        "Birdemic"
-      start_date  Time.now
-      end_date    Time.now
+      start_date  Time.new(2010, 4, 12, 1, 15, 0)
+      end_date    Time.new(2010, 4, 12, 2, 45, 0)
       channel     "Film4"
       image_url   "Some url"
       rating      1.2
