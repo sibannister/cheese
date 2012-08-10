@@ -14,6 +14,7 @@ namespace ImdbClientInterface
         private const string RatingKey = "rating";
         private const string ChannelKey = "channel";
         private const string StartDateTimeKey = "start";
+        private const string EndDateTimeKey = "end";
         private const string ImageKey = "image";
 
         public static Film[] Parse(string filmsJson)
@@ -27,10 +28,18 @@ namespace ImdbClientInterface
                 double rating = GetRating(film);
                 string channel = GetChannel(film);
                 DateTime startDateTime = GetStartDateTime(film);
+                DateTime endDateTime = GetEndDateTime(film);
                 string image = GetImage(film);
-                filmList.Add(new Film(name, rating, channel, startDateTime, image));
+                filmList.Add(new Film(name, rating, channel, startDateTime, endDateTime, image));
             }
             return filmList.ToArray();
+        }
+
+        private static DateTime GetEndDateTime(JToken filmJson)
+        {
+            string endDateTime = "1900/1/1";
+            string endJson = filmJson.GetValue(EndDateTimeKey, endDateTime);
+            return DateTime.Parse(endJson);
         }
 
         private static string GetImage(JToken film)

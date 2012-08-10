@@ -49,6 +49,7 @@ ItemHeight="{Binding (ListView.View).ItemHeight, RelativeSource={RelativeSource 
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100" />
@@ -68,6 +69,10 @@ ItemHeight="{Binding (ListView.View).ItemHeight, RelativeSource={RelativeSource 
 
                         <Label Grid.Row="3" Grid.Column="0" Content="Start Time" HorizontalContentAlignment="Right" />
                         <Label Grid.Row="3" Grid.Column="1" Content="{Binding StartDateTime}" Width="200"
+                   HorizontalContentAlignment="Left" />
+
+                        <Label Grid.Row="4" Grid.Column="0" Content="Finish Time" HorizontalContentAlignment="Right" />
+                        <Label Grid.Row="4" Grid.Column="1" Content="{Binding EndDateTime}" Width="200"
                    HorizontalContentAlignment="Left" />
                     </Grid>
                 </Grid>
