@@ -22,8 +22,8 @@ describe Presenter do
     reviewer.should_receive(:review).with(showing.name).and_return [1.2, 'image']
     reviewer.should_receive(:review).with(another_showing.name).and_return [9.2, 'image']
     tv.should_receive(:all_showings_retrieved?).and_return false, false, true
-    presenter.build_cache 0
 
+    presenter.build_cache(0).should == [showing, another_showing].to_json
     presenter.get_showings.should == [showing, another_showing].to_json
   end
 

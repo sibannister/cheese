@@ -3,9 +3,12 @@ require 'television'
 require 'film_reviewer'
 
 class Presenter
+  TIMEOUT_FOR_IMDB_CALL_S = 60
+  MAX_ATTEMPTS_TO_CALL_IMDB = 4
+
   def initialize television = Television.new, reviewer = FilmReviewer.new, store = Store.new
     @tv = television
-    @reviewer = reviewer
+    @reviewer = UnreliableObjectDelegate.new reviewer, TIMEOUT_FOR_IMDB_CALL_S, MAX_ATTEMPTS_TO_CALL_IMDB
     @store = store
     @review_threads = []
   end

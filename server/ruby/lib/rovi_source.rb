@@ -8,8 +8,8 @@ require 'showing_batch'
 require 'channel_source'
 
 class RoviSource
-  MAX_ATTEMPTS_TO_CALL_ROVI = 4
   TIMEOUT_FOR_ROVI_CALL_S = 20
+  MAX_ATTEMPTS_TO_CALL_ROVI = 4
   SCHEDULE_REQUEST_DURATION_S = 4.hours
 
   def initialize soap_source = SoapSource.new, channels = ChannelSource.new

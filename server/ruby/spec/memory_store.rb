@@ -9,6 +9,7 @@ class MemoryStore
   end
 
   def persist
+    get_json
   end
 
   def contents

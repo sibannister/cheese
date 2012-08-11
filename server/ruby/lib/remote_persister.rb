@@ -12,6 +12,7 @@ class RemotePersister
 
   def save data
     @dalli_cache.set @@key, data
+    data
   end
 
   def retrieve
