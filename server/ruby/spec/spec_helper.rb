@@ -1,4 +1,3 @@
-require 'fixnum'
 require 'timecop'
 require 'factory_girl'
 

@@ -5,8 +5,8 @@ class Informer
     opts[:server]      ||= 'smtp.gmail.com'
     opts[:from]        ||= 'email@example.com'
     opts[:from_alias]  ||= 'Example Emailer'
-    opts[:subject]     ||= "You need to see this"
-    opts[:body]        ||= "Important stuff!"
+    opts[:subject]     ||= 'You need to see this'
+    opts[:body]        ||= 'Important stuff!'
 
     message = "Subject: Test\n\nThis works"
     smtp = Net::SMTP.new 'smtp.gmail.com', 587

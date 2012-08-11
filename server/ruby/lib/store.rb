@@ -5,37 +5,32 @@ require 'remote_persister'
 class Store
   def initialize persister = RemotePersister.new
     @persister = persister
-    @films = []
+    @showings = []
   end
 
   def reset
-    puts "* Resetting films in store"
-    @films = []
+    puts "* Resetting showings in store"
+    @showings = []
     @persister.reset
   end
 
-  def add films
-    puts "Adding films to store " + films.to_s
-    @films += films
+  def add showings
+    puts "Adding showings to store #{showings}"
+    @showings += showings
   end
 
   def contents
-    @films
+    @showings
   end
 
   def persist
-    @persister.save build_json 
+    puts "Persisting #{@showings.size} showings"
+    @persister.save @showings.to_json
   end
   
   def get_json
     json = @persister.retrieve
-    puts "Cached json:" + json.to_s 
-    json || build_json() 
-  end
-
-  def build_json
-    puts "Films in store: " + @films.to_s
-    films_json = @films.map {|film| film.to_json}
-    '[' + films_json.join(',') + ']'
+    puts "Cached json: #{json}"
+    json || @showings.to_json
   end
 end

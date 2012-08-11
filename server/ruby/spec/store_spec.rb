@@ -11,10 +11,6 @@ describe Store do
   let (:showing) { build :showing }
   let (:another_showing) { build :another_showing }
 
-  before do
-    Timecop.freeze
-  end
-
   it "should allow adding and retrieving" do
     store.add [showing]
     store.add [another_showing]
@@ -25,16 +21,14 @@ describe Store do
     persister.should_receive(:retrieve).and_return nil
     store.add [showing]
     store.add [another_showing]
-   # store.get_json.should eq "[" + showing.to_json + ", " + another_showing.to_json + "]"
     store.get_json.should eq [showing, another_showing].to_json
   end
 
   it "should retrieve the persisted showings json" do
-    persister.should_receive(:save).with "[" + showing.to_json + "]"
+    persister.should_receive(:save).with [showing].to_json
     persister.should_receive(:retrieve).and_return "some json"
     store.add [showing]
     store.persist
     store.get_json.should eq "some json"
   end
-
 end

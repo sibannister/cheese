@@ -12,6 +12,6 @@ class Channel
   end
 
   def to_s
-    @name.to_s + " (" + @code.to_s + ")"
+    "#{@name} (#{@code})"
   end
 end

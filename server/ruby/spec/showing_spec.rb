@@ -5,8 +5,13 @@ describe Showing do
   let(:showing) { build :showing }
 
   it 'should convert a showing to a json string' do
-    showing = Showing.new "The Godfather", Time.new(2010, 4, 11, 23, 45, 0), 
-      Time.new(2010, 4, 12, 1, 15, 0), 'ITV', 'imageurl', 9.2
+    showing = Showing.new 'The Godfather', 
+                          Time.new(2010, 4, 11, 23, 45, 0),
+                          Time.new(2010, 4, 12, 1, 15, 0),
+                          'ITV',
+                          'imageurl',
+                          9.2
+
     showing.to_json.should == '{"name":"The Godfather","rating":9.2,"channel":"ITV","start":"2010-04-11 23:45","end":"2010-04-12 01:15","image":"imageurl"}'
   end
 
@@ -17,7 +22,7 @@ describe Showing do
 
   it 'should give a better match score if all the words are included' do
     Showing.title_match_score('The Drum', 'The Drum (1938)').should > 
-    Showing.title_match_score('The Drum', 'Die Blechtrommel (1979)')
+                          Showing.title_match_score('The Drum', 'Die Blechtrommel (1979)')
   end
 
   context 'equality' do

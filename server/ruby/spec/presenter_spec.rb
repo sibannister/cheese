@@ -1,7 +1,7 @@
+require 'spec_helper'
 require 'presenter'
 require 'channel'
 require 'showing'
-require 'spec_helper'
 require 'memory_store'
 
 describe Presenter do
@@ -9,39 +9,34 @@ describe Presenter do
   let (:reviewer) { stub }
   let (:store) { MemoryStore.new }
   let (:presenter) { Presenter.new tv, reviewer, store }
+  let (:showing) { build :showing }
+  let (:another_showing) { build :another_showing }
 
   before do
     Timecop.freeze
   end
 
-  def showing1
-    Showing.new 'Birdemic', Time.now, Time.now + 2.hours, 'ITV', 'image', 1.2
-  end
-
-  def showing2
-    Showing.new 'The Godfather', Time.now, Time.now + 3.hours, 'Film 4', 'image', 9.2
-  end
-
   it 'should handle batches without any showings' do
-    tv.should_receive(:get_showings).and_return([showing1], [], [showing2])
-    reviewer.should_receive(:review).with('Birdemic').and_return([1.2, 'image'])
-    reviewer.should_receive(:review).with('The Godfather').and_return([9.2, 'image'])
-    tv.should_receive(:showings_retrieved_up_to?).and_return(false, false, true)
+    tv.should_receive(:reset)
+    tv.should_receive(:get_next).and_return [showing], [], [another_showing]
+    reviewer.should_receive(:review).with(showing.name).and_return [1.2, 'image']
+    reviewer.should_receive(:review).with(another_showing.name).and_return [9.2, 'image']
+    tv.should_receive(:all_showings_retrieved?).and_return false, false, true
     presenter.build_cache 0
-    sleep 1
 
-    presenter.get_showings.should == [showing1, showing2].to_json
+    presenter.get_showings.should == [showing, another_showing].to_json
   end
 
   it 'should handle the case where there are no showings at all' do
-    tv.should_receive(:get_showings).and_return([])
-    tv.should_receive(:showings_retrieved_up_to?).and_return(true)
+    tv.should_receive(:reset)
+    tv.should_receive(:get_next).and_return []
+    tv.should_receive(:all_showings_retrieved?).and_return true
     presenter.build_cache 0
-    presenter.get_showings.should == "[]"
+    presenter.get_showings.should == [].to_json
   end
 
   it 'should integrate correctly with the Television class' do
-    rovi_source = stub :get_showings => ShowingBatch.new([], Time.now + 5.hours)
+    rovi_source = stub :get_next => ShowingBatch.new([], Time.now)
     real_tv = Television.new rovi_source
     presenter = Presenter.new real_tv, reviewer, store
     presenter.build_cache 0
@@ -49,9 +44,21 @@ describe Presenter do
   end
 
   it 'should integrate correctly with the FilmReviewer class' do
-    tv.should_receive(:get_showings).and_return([])
-    tv.should_receive(:showings_retrieved_up_to?).and_return(true)
-    reviewer = stub
+    tv.should_receive(:reset)
+    tv.should_receive(:get_next).and_return []
+    tv.should_receive(:all_showings_retrieved?).and_return true
+    real_reviewer = FilmReviewer.new
+    presenter = Presenter.new tv, real_reviewer, store
+    presenter.build_cache 0
+    presenter.get_showings
+  end
+
+  it 'should integrate correctly with the Store class' do
+    tv.should_receive(:reset)
+    tv.should_receive(:get_next).and_return []
+    tv.should_receive(:all_showings_retrieved?).and_return true
+    real_store = Store.new
+    presenter = Presenter.new tv, stub, real_store
     presenter.build_cache 0
     presenter.get_showings
   end

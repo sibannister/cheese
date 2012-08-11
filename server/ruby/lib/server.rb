@@ -11,7 +11,6 @@ class MyServlet < WEBrick::HTTPServlet::AbstractServlet
   end
 
   def self.get_instance server, *options
-    puts "REQUESTING SERVLET"
     @@instance = MyServlet.new server, *options if @@instance.nil?
     @@instance
   end

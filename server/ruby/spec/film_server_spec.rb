@@ -48,7 +48,7 @@ describe FilmServer do
 
   it 'should integrate with the presenter for the cache url' do
     store = stub :reset => nil, :add => nil, :persist => nil
-    tv = stub :get_showings => [], :showings_retrieved_up_to? => true
+    tv = stub :get_next => [], :all_showings_retrieved? => true, :reset => nil
     real_presenter = Presenter.new tv, stub, store
     film_server = FilmServer.new real_presenter
     request = stub :query => {}, :path => "/cache"
