@@ -14,7 +14,12 @@ describe Showing do
     showing = build :showing, :rating => nil
     showing.to_json.should include '"rating":0'
   end
-  
+
+  it 'should give a better match score if all the words are included' do
+    Showing.title_match_score('The Drum', 'The Drum (1938)').should > 
+    Showing.title_match_score('The Drum', 'Die Blechtrommel (1979)')
+  end
+
   context 'equality' do
     it 'should recognise two identical showings as equal' do
       identical_showing = build :showing
@@ -45,7 +50,7 @@ describe Showing do
       different_showing = build :showing, :start_date => Time.now
       showing.should_not == different_showing
     end
-    
+
     it 'should recognise showings with different images as unequal' do
       different_showing = build :showing, :image_url => 'different'
       showing.should_not == different_showing

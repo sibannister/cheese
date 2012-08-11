@@ -60,5 +60,12 @@ describe 'RoviSource' do
     soap_source.stub(:read).with(Time.now, channels).and_return soap_response
     source.get_showings(Time.now).end_date.should == Time.now + 4.hours
   end
+  
+  it 'should integrate with the channel source' do
+    soap_source.stub(:read).and_return nil
+    rovi = RoviSource.new soap_source
+    rovi.get_showings Time.now
+  end
+
 end
 

@@ -6,9 +6,10 @@ require 'hpricot'
 require 'showing'
 require 'film_service_failure'
 require 'showing_batch'
+require 'channel_source'
 
 class RoviSource
-  def initialize soap_source = SoapSource.new, channels = []
+  def initialize soap_source = SoapSource.new, channels = ChannelSource.new
     @channels = channels
     @soap_source = UnreliableObjectDelegate.new soap_source, 30, 4
   end

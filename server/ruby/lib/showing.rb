@@ -26,13 +26,21 @@ class Showing < Jsonifiable
       :image => @image }
   end
 
+  def self.match_title? actual_title, candidate_title
+    candidate_title.upcase.start_with? actual_title.upcase
+  end
+
+  def self.title_match_score actual_title, candidate_title
+    actual_title.levenshtein_similar(candidate_title)
+  end
+
   def ==(other)
     return false if other.nil?
     @name == other.name &&
-         @rating ==  other.rating &&
-         @channel == other.channel &&
-         @end_date == other.end_date &&
-         @start_date == other.start_date &&
-         @image == other.image
+      @rating ==  other.rating &&
+      @channel == other.channel &&
+      @end_date == other.end_date &&
+      @start_date == other.start_date &&
+      @image == other.image
   end
 end

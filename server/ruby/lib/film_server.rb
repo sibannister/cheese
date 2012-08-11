@@ -12,14 +12,6 @@ class FilmServer
     @presenter = presenter
   end
 
-  def read_channels
-    File.open("channels.txt").map {|line| read_channel(line)}
-  end
-
-  def read_channel line
-    Channel.new line.split(',')[0], line.split(',')[1].to_i
-  end
-
   def handleGET request, response
     response.body = get_response_body request
   end 
